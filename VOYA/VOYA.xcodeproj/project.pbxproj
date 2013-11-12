@@ -21,6 +21,10 @@
 		5CD35A171832A6410033A090 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD359F91832A6410033A090 /* UIKit.framework */; };
 		5CD35A1F1832A6410033A090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5CD35A1D1832A6410033A090 /* InfoPlist.strings */; };
 		5CD35A211832A6410033A090 /* VOYATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD35A201832A6410033A090 /* VOYATests.m */; };
+		5CD35A2C1832A7200033A090 /* VOYALoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD35A2B1832A7200033A090 /* VOYALoginViewController.m */; };
+		5CD35A2F1832A72F0033A090 /* VOYASignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD35A2E1832A72F0033A090 /* VOYASignUpViewController.m */; };
+		5CD35A321832A73F0033A090 /* VOYAODataEntityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD35A311832A73F0033A090 /* VOYAODataEntityViewController.m */; };
+		5CD35A351832A74E0033A090 /* VOYAPersonalPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD35A341832A74E0033A090 /* VOYAPersonalPageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,14 @@
 		5CD35A1C1832A6410033A090 /* VOYATests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VOYATests-Info.plist"; sourceTree = "<group>"; };
 		5CD35A1E1832A6410033A090 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5CD35A201832A6410033A090 /* VOYATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VOYATests.m; sourceTree = "<group>"; };
+		5CD35A2A1832A7200033A090 /* VOYALoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOYALoginViewController.h; sourceTree = "<group>"; };
+		5CD35A2B1832A7200033A090 /* VOYALoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOYALoginViewController.m; sourceTree = "<group>"; };
+		5CD35A2D1832A72F0033A090 /* VOYASignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOYASignUpViewController.h; sourceTree = "<group>"; };
+		5CD35A2E1832A72F0033A090 /* VOYASignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOYASignUpViewController.m; sourceTree = "<group>"; };
+		5CD35A301832A73F0033A090 /* VOYAODataEntityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOYAODataEntityViewController.h; sourceTree = "<group>"; };
+		5CD35A311832A73F0033A090 /* VOYAODataEntityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOYAODataEntityViewController.m; sourceTree = "<group>"; };
+		5CD35A331832A74E0033A090 /* VOYAPersonalPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOYAPersonalPageViewController.h; sourceTree = "<group>"; };
+		5CD35A341832A74E0033A090 /* VOYAPersonalPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOYAPersonalPageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +124,14 @@
 		5CD359FB1832A6410033A090 /* VOYA */ = {
 			isa = PBXGroup;
 			children = (
+				5CD35A2A1832A7200033A090 /* VOYALoginViewController.h */,
+				5CD35A2B1832A7200033A090 /* VOYALoginViewController.m */,
+				5CD35A2D1832A72F0033A090 /* VOYASignUpViewController.h */,
+				5CD35A2E1832A72F0033A090 /* VOYASignUpViewController.m */,
+				5CD35A301832A73F0033A090 /* VOYAODataEntityViewController.h */,
+				5CD35A311832A73F0033A090 /* VOYAODataEntityViewController.m */,
+				5CD35A331832A74E0033A090 /* VOYAPersonalPageViewController.h */,
+				5CD35A341832A74E0033A090 /* VOYAPersonalPageViewController.m */,
 				5CD35A041832A6410033A090 /* VOYAAppDelegate.h */,
 				5CD35A051832A6410033A090 /* VOYAAppDelegate.m */,
 				5CD35A071832A6410033A090 /* Main.storyboard */,
@@ -252,7 +272,11 @@
 			files = (
 				5CD35A021832A6410033A090 /* main.m in Sources */,
 				5CD35A0C1832A6410033A090 /* VOYAViewController.m in Sources */,
+				5CD35A351832A74E0033A090 /* VOYAPersonalPageViewController.m in Sources */,
 				5CD35A061832A6410033A090 /* VOYAAppDelegate.m in Sources */,
+				5CD35A2C1832A7200033A090 /* VOYALoginViewController.m in Sources */,
+				5CD35A321832A73F0033A090 /* VOYAODataEntityViewController.m in Sources */,
+				5CD35A2F1832A72F0033A090 /* VOYASignUpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
