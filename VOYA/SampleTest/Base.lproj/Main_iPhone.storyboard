@@ -66,26 +66,27 @@
             </objects>
             <point key="canvasLocation" x="406" y="109"/>
         </scene>
-        <!--Page View Controller - Item-->
+        <!--Personal Info View Controller - Item-->
         <scene sceneID="uas-4z-OVu">
             <objects>
-                <viewController id="P8U-eR-Lms" customClass="PageViewController" sceneMemberID="viewController">
+                <viewController id="P8U-eR-Lms" customClass="PersonalInfoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FL9-l8-KHq"/>
                         <viewControllerLayoutGuide type="bottom" id="vBb-9h-hhx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Fzb-Y2-8xp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sl-ri-Fej">
                                 <rect key="frame" x="29" y="29" width="35" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Zh7-9A-QPP" kind="push" id="Wr3-Qn-rMO"/>
+                                    <action selector="backToPageView:" destination="P8U-eR-Lms" eventType="touchUpInside" id="PXk-eK-I8v"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ljo-Bk-q2t">
@@ -93,73 +94,115 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="P8U-eR-Lms" id="ErZ-dm-0MR"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="last name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fgl-Qp-FDC">
                                 <rect key="frame" x="20" y="122" width="240" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="P8U-eR-Lms" id="WJ6-c1-7qW"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ugT-Z1-gzP">
                                 <rect key="frame" x="20" y="160" width="240" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="P8U-eR-Lms" id="ioe-PX-JGt"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="gender" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rwb-xe-LCB">
                                 <rect key="frame" x="20" y="198" width="240" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="P8U-eR-Lms" id="Hl3-hH-Skp"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AVJ-Ew-VKw">
                                 <rect key="frame" x="20" y="236" width="240" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="P8U-eR-Lms" id="vrW-Tq-WST"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPT-Xm-uRo">
                                 <rect key="frame" x="261" y="29" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Edit">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="editButtonClick:" destination="P8U-eR-Lms" eventType="touchUpInside" id="XK2-io-16X"/>
+                                </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYI-q8-HPi">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYI-q8-HPi">
                                 <rect key="frame" x="214" y="311" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitButtonClick:" destination="P8U-eR-Lms" eventType="touchUpInside" id="bDU-sM-04X"/>
+                                </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nia-Ts-W3T">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nia-Ts-W3T">
                                 <rect key="frame" x="136" y="311" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelButtonClick:" destination="P8U-eR-Lms" eventType="touchUpInside" id="01d-Gs-PHR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFV-OA-ORJ">
                                 <rect key="frame" x="20" y="453" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <state key="normal" title="LOG OUT">
-                                    <color key="titleColor" red="0.60283627719999999" green="0.1969981599" blue="0.2442824851" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.60283627719999999" green="0.1969981599" blue="0.2442824851" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoutButtonClick:" destination="P8U-eR-Lms" eventType="touchUpInside" id="YX4-wj-DHa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" enabled="NO" title="Item" id="BRc-oR-CXA"/>
+                    <navigationItem key="navigationItem" id="QoB-sW-tdc"/>
+                    <connections>
+                        <outlet property="backButton" destination="4sl-ri-Fej" id="7lX-NV-k3f"/>
+                        <outlet property="cancelButton" destination="Nia-Ts-W3T" id="eK9-l7-mCU"/>
+                        <outlet property="editButton" destination="MPT-Xm-uRo" id="ltC-Q3-8sd"/>
+                        <outlet property="emailTextField" destination="ugT-Z1-gzP" id="zdW-lz-En9"/>
+                        <outlet property="firstnameTextField" destination="Ljo-Bk-q2t" id="Aqh-qr-RIi"/>
+                        <outlet property="genderTextField" destination="rwb-xe-LCB" id="ZjD-o9-vfU"/>
+                        <outlet property="lastnameTextField" destination="fgl-Qp-FDC" id="vDc-Ca-rnR"/>
+                        <outlet property="locationTextField" destination="AVJ-Ew-VKw" id="KCM-nx-FG1"/>
+                        <outlet property="logoutButton" destination="mFV-OA-ORJ" id="wDO-is-UBQ"/>
+                        <outlet property="submitButton" destination="nYI-q8-HPi" id="cue-cZ-TH5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EN3-gn-81m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="358" y="1334"/>
         </scene>
-        <!--Personal Info View Controller - Item-->
+        <!--Page View Controller - Item-->
         <scene sceneID="Sm3-3R-BZn">
             <objects>
-                <viewController id="Zh7-9A-QPP" customClass="PersonalInfoViewController" sceneMemberID="viewController">
+                <viewController id="Zh7-9A-QPP" customClass="PageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dQJ-QA-kEZ"/>
                         <viewControllerLayoutGuide type="bottom" id="0kq-zJ-j2j"/>
@@ -191,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jf2-ky-sS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928" y="820"/>
+            <point key="canvasLocation" x="770" y="780"/>
         </scene>
         <!--Login View Controller - Login-->
         <scene sceneID="nQ7-eN-37l">
@@ -256,6 +299,16 @@
                                 </state>
                                 <connections>
                                     <segue destination="9Gt-bd-Mrn" kind="push" id="O87-aG-ARX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TW5-rN-Ld5">
+                                <rect key="frame" x="95" y="359" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="P8U-eR-Lms" kind="push" id="PVU-3L-QJt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -396,6 +449,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Wr3-Qn-rMO"/>
+        <segue reference="PVU-3L-QJt"/>
     </inferredMetricsTieBreakers>
 </document>
