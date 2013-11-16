@@ -47,12 +47,12 @@
         else
         {
             NSString *post = [[NSString alloc] initWithFormat:@"username=%@&password=%@", username, password];
-            NSLog(@"PostData: %@", get);
+            NSLog(@"PostData: %@", post);
             
-            NSURL *url = [NSURL URLWithString:@"http://localhost/xampp/jsongetPersonalInfo.php"];
+            NSURL *url = [NSURL URLWithString:@"http://localhost/xampp/jsonGetPersonalInfo.php"];
             NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
             
-            NSData *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+            NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
             
             NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
             [request setURL:url];
@@ -76,17 +76,22 @@
                 NSDictionary *jsonData = (NSDictionary *) [jsonParser objectWithString:responseData error:nil];
                 NSLog(@"%@", jsonData);
                 
-                NSInteger *success =[(NSNumber *) [jsonData objectForKey:@"success"] integerValue];
+                NSInteger success =[(NSNumber *) [jsonData objectForKey:@"success"] integerValue];
                 NSLog(@"%d", success);
                 if(success == 1)
                 {
                     NSLog(@"Get Prersonal Information SUCCESS");
-                    firstname = [[NSString alloc] [(NSString *) [jsonData objectForKey:@"firstname"]]];
+                    [self.firstnameTextField setText:(NSString *) [jsonData objectForKey:@"firstname"]];
+                    [self.lastnameTextField setText:(NSString *) [jsonData objectForKey:@"lastname"]];
+                    [self.emailTextField setText:(NSString *) [jsonData objectForKey:@"email"]];
+                    [self.genderTextField setText:(NSString *) [jsonData objectForKey:@"gender"]];
+                    [self.locationTextField setText:(NSString *) [jsonData objectForKey:@"location"]];
                     
-                    lastname = [(NSString *) [jsonData objectForKey:@"lastname"]];
-                    email = [(NSString *) [jsonData objectForKey:@"email"]];
-                    gender = [(NSString *) [jsonData objectForKey:@"gender"] ];
-                    
+                    firstname = [self.firstnameTextField text];
+                    lastname = [self.lastnameTextField text];
+                    email = [self.emailTextField text];
+                    gender = [self.genderTextField text];
+                    location = [self.locationTextField text];
                 }
             }
             
@@ -119,6 +124,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self getPersonalInfoFromServer];
 	// Do any additional setup after loading the view.
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
     tap.cancelsTouchesInView = NO;
@@ -136,19 +142,18 @@
     [self.emailTextField setEnabled:NO];
     [self.genderTextField setEnabled:NO];
     [self.locationTextField setEnabled:NO];
+
     
-    firstname = [self.firstnameTextField text];
-    lastname = [self.lastnameTextField text];
-    email = [self.emailTextField text];
-    gender = [self.genderTextField text];
-    location = [self.locationTextField text];
-    
-    //username = viewController
 }
 
 -(void)setUserName:(NSString *)str
 {
     username = str;
+}
+
+-(void)setPassword:(NSString *)str
+{
+    password = str;
 }
 
 -(IBAction)cancelButtonClick:(UIButton *)sender
