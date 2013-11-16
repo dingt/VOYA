@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
 #import "SBJson.h"
+#import "PersonalInfoViewController.h"
 @interface LoginViewController ()
 
 @end
@@ -89,6 +90,12 @@
                 NSLog(@"%d",success);
                 if(success == 1)
                 {
+                    //add by Xiaolan Lin
+                    //set the personalinfo page username
+                    PersonalInfoViewController *personalInfoViewController = [[PersonalInfoViewController alloc]initWithNibName:@"PersonalInfoViewController" bundle:nil];
+                    [personalInfoViewController setUserName : self.UserName];
+                    [personalInfoViewController setPassword :self.Password];
+                    //add end
                     NSLog(@"Login SUCCESS");
                     [self alertStatus:@"Logged in Successfully." :@"Login Success!"];
                     

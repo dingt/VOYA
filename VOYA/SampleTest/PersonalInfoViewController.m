@@ -7,6 +7,7 @@
 //
 
 #import "PersonalInfoViewController.h"
+#import "SBJson.h"
 
 @interface PersonalInfoViewController ()
 {
@@ -15,6 +16,9 @@
     NSString *email;
     NSString *gender;
     NSString *location;
+    
+    NSString *username; //used to communicate with the server.
+    NSString *password; //used to communicate with the server.
 }
 
 @end
@@ -31,6 +35,68 @@
 @synthesize cancelButton = _cancelButton;
 @synthesize submitButton = _submitButton;
 @synthesize logoutButton = _logoutButton;
+
+
+-(void)getPersonalInfoFromServer
+{
+    @try {
+        if ([username isEqualToString:@""] || [password isEqualToString:@""])
+        {
+            [self alertStatus:@"Cannot reach your personal account" :@"Connnect Error"];
+        }
+        else
+        {
+            NSString *post = [[NSString alloc] initWithFormat:@"username=%@&password=%@", username, password];
+            NSLog(@"PostData: %@", get);
+            
+            NSURL *url = [NSURL URLWithString:@"http://localhost/xampp/jsongetPersonalInfo.php"];
+            NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+            
+            NSData *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+            
+            NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+            [request setURL:url];
+            [request setHTTPMethod:@"POST"];
+            [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+            [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+            [request setValue:@"application/x-www-from-urlencoded" forHTTPHeaderField:@"Content-Type"];
+            [request setHTTPBody:postData];
+            
+            NSError *error = [[NSError alloc] init];
+            NSHTTPURLResponse *response = nil;
+            NSData *urlData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+            
+            NSLog(@"Response code %d", [response statusCode]);
+            if ([response statusCode] >= 200 && [response statusCode] < 300)
+            {
+                NSString *responseData = [[NSString alloc] initWithData:urlData encoding:NSUTF8StringEncoding];
+                NSLog(@"Response = %@", responseData);
+                
+                SBJsonParser *jsonParser = [SBJsonParser new];
+                NSDictionary *jsonData = (NSDictionary *) [jsonParser objectWithString:responseData error:nil];
+                NSLog(@"%@", jsonData);
+                
+                NSInteger *success =[(NSNumber *) [jsonData objectForKey:@"success"] integerValue];
+                NSLog(@"%d", success);
+                if(success == 1)
+                {
+                    NSLog(@"Get Prersonal Information SUCCESS");
+                    firstname = [[NSString alloc] [(NSString *) [jsonData objectForKey:@"firstname"]]];
+                    
+                    lastname = [(NSString *) [jsonData objectForKey:@"lastname"]];
+                    email = [(NSString *) [jsonData objectForKey:@"email"]];
+                    gender = [(NSString *) [jsonData objectForKey:@"gender"] ];
+                    
+                }
+            }
+            
+        }
+    }
+    @catch (NSExpression *e) {
+        NSLog(@"Exception: %@", e);
+        [self alertStatus:@"Get PersonalInfo Failed" :@"Failed"];
+    }
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -76,6 +142,13 @@
     email = [self.emailTextField text];
     gender = [self.genderTextField text];
     location = [self.locationTextField text];
+    
+    //username = viewController
+}
+
+-(void)setUserName:(NSString *)str
+{
+    username = str;
 }
 
 -(IBAction)cancelButtonClick:(UIButton *)sender
@@ -110,18 +183,15 @@
         [self alertStatus:@"" :@""];
     }*/
     
-    UIAlertView *alertView = [[UIAlertView alloc]
-                              initWithTitle:@"Your information has been saved."
-                              message:@"Update Information"
-                              delegate:self
-                              cancelButtonTitle:@"Ok"
-                              otherButtonTitles:nil, nil];
-    [alertView show];
+    
+    // tell client that their operation is updated.
+    [self alertStatus:@"Your information has been saved." :@"Update Information"];
     
     
 }
 - (IBAction)logoutButtonClick:(UIButton *)sender {
     
+    [self alertStatus:@"Are you srue to log out?" :@"Warning"];
     
     [self.navigationController popToRootViewControllerAnimated:YES];
     
