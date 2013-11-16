@@ -30,7 +30,11 @@
 - (IBAction)urlRequest:(UITextField *)sender {
     
     NSURL *url = [[NSURL alloc] initWithString:self.urlTextField.text];
-    [self.pageWebView loadRequest:[[NSURLRequest alloc] initWithURL:url]];
+    NSData *urlData = [NSData dataWithContentsOfURL:url];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.pageWebView loadData:urlData MIMEType:@"text/text" textEncodingName:@"URF-8" baseURL:[NSURL URLWithString:@""]];
+         });
+    //[self.pageWebView loadRequest:[[NSURLRequest alloc] initWithURL:url]];
 }
 
 
