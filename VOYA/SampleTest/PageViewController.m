@@ -14,7 +14,8 @@
 
 @implementation PageViewController
 
-
+@synthesize urlTextField = _urlTextField;
+@synthesize pageWebView = _pageWebView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,6 +27,11 @@
 }
 
 
+- (IBAction)urlRequest:(UITextField *)sender {
+    
+    NSURL *url = [[NSURL alloc] initWithString:self.urlTextField.text];
+    [self.pageWebView loadRequest:[[NSURLRequest alloc] initWithURL:url]];
+}
 
 
 - (void)viewDidLoad
@@ -44,4 +50,9 @@
 }
 
 
+- (void)dealloc {
+    [_urlTextField release];
+    [_pageWebView release];
+    [super dealloc];
+}
 @end

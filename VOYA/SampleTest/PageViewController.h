@@ -11,7 +11,9 @@
 @interface PageViewController : UIViewController
 
 
+@property (retain, nonatomic) IBOutlet UITextField *urlTextField;
 
+@property (retain, nonatomic) IBOutlet UIWebView *pageWebView;
 
 
 @end
