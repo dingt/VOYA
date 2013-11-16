@@ -47,7 +47,7 @@
         else
         {
             NSString *post = [[NSString alloc] initWithFormat:@"username=%@&password=%@", username, password];
-            NSLog(@"PostData: %@", get);
+            NSLog(@"PostData: %@", post);
             
             NSURL *url = [NSURL URLWithString:@"http://localhost/xampp/jsongetPersonalInfo.php"];
             NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
