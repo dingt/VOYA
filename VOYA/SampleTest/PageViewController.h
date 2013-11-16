@@ -15,5 +15,7 @@
 
 @property (retain, nonatomic) IBOutlet UIWebView *pageWebView;
 
+@property (retain, nonatomic) IBOutlet UIButton *goButton;
+
 
 @end

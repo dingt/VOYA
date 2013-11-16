@@ -26,21 +26,30 @@
     return self;
 }
 
-
-- (IBAction)urlRequest:(UITextField *)sender {
+- (IBAction)goPageView:(UIButton *)sender {
     
     NSURL *url = [[NSURL alloc] initWithString:self.urlTextField.text];
     NSData *urlData = [NSData dataWithContentsOfURL:url];
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.pageWebView loadData:urlData MIMEType:@"text/text" textEncodingName:@"URF-8" baseURL:[NSURL URLWithString:@""]];
-         });
+        [self.pageWebView loadData:urlData MIMEType:@"text/stylesheet" textEncodingName:@"URF-8" baseURL:[NSURL URLWithString:@""]];
+    });
+}
+
+- (IBAction)urlRequest:(UITextField *)sender {
+    
     //[self.pageWebView loadRequest:[[NSURLRequest alloc] initWithURL:url]];
+    
 }
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.urlTextField.delegate self];
+   // self.pageWebView.scrollView.scrollEnabled=YES;
+   // self.pageWebView.scrollView.bounces=YES;
+   // self.pageWebView.scrollView.zooming = YES;
 
 	// Do any additional setup after loading the view.
 }
@@ -57,6 +66,7 @@
 - (void)dealloc {
     [_urlTextField release];
     [_pageWebView release];
+    [_goButton release];
     [super dealloc];
 }
 @end
