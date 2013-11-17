@@ -7,6 +7,7 @@
 //
 
 #import "PageViewController.h"
+#import "PersonalInfoViewController.h"
 
 @interface PageViewController ()
 
@@ -40,6 +41,11 @@
     //[self.pageWebView loadRequest:[[NSURLRequest alloc] initWithURL:url]];
     
 }
+- (IBAction)largerFontBarButtonClick:(UIBarButtonItem *)sender {
+    
+    
+}
+
 
 
 - (void)viewDidLoad
@@ -67,6 +73,9 @@
     [_urlTextField release];
     [_pageWebView release];
     [_goButton release];
+    [_smallerFontBarButton release];
+    [_largerFontBarButton release];
+    [_settingBarButton release];
     [super dealloc];
 }
 @end
