@@ -10,6 +10,7 @@
 #import "RegisterViewController.h"
 #import "SBJson.h"
 #import "PersonalInfoViewController.h"
+#import "VOYAData.h"
 @interface LoginViewController ()
 
 @end
@@ -57,7 +58,7 @@
             NSString *post =[[NSString alloc] initWithFormat:@"username=%@&password=%@",[UserName text],[Password text]];
             NSLog(@"PostData: %@",post);
             
-            NSURL *url=[NSURL URLWithString:@"http://localhost/xampp/jsonlogin.php"];
+            NSURL *url=[NSURL URLWithString:@"http://localhost/xampp/login_3.php"];
             
             NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
             
@@ -90,13 +91,9 @@
                 NSLog(@"%d",success);
                 if(success == 1)
                 {
-                    //add by Xiaolan Lin
-                    //set the personalinfo page username
-                    PersonalInfoViewController *personalInfoViewController = [[PersonalInfoViewController alloc]initWithNibName:@"PersonalInfoViewController" bundle:nil];
-                    [personalInfoViewController setUserName : self.UserName];
-                    [personalInfoViewController setPassword :self.Password];
-                    //add end
                     NSLog(@"Login SUCCESS");
+                    VOYAData *loginUserName=[VOYAData getCurrentUserName];
+                    loginUserName.currentUserName = [UserName text];
                     [self alertStatus:@"Logged in Successfully." :@"Login Success!"];
                     
                 } else {
