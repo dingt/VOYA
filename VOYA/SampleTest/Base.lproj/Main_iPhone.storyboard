@@ -78,17 +78,6 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sl-ri-Fej">
-                                <rect key="frame" x="29" y="29" width="35" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="backToPageView:" destination="P8U-eR-Lms" eventType="touchUpInside" id="PXk-eK-I8v"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ljo-Bk-q2t">
                                 <rect key="frame" x="20" y="84" width="240" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -135,7 +124,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPT-Xm-uRo">
-                                <rect key="frame" x="261" y="29" width="39" height="30"/>
+                                <rect key="frame" x="224" y="28" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Edit">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -184,7 +173,6 @@
                     <tabBarItem key="tabBarItem" enabled="NO" title="Item" id="BRc-oR-CXA"/>
                     <navigationItem key="navigationItem" id="QoB-sW-tdc"/>
                     <connections>
-                        <outlet property="backButton" destination="4sl-ri-Fej" id="7lX-NV-k3f"/>
                         <outlet property="cancelButton" destination="Nia-Ts-W3T" id="eK9-l7-mCU"/>
                         <outlet property="editButton" destination="MPT-Xm-uRo" id="ltC-Q3-8sd"/>
                         <outlet property="emailTextField" destination="ugT-Z1-gzP" id="zdW-lz-En9"/>

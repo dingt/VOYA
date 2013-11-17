@@ -8,6 +8,7 @@
 
 #import "PersonalInfoViewController.h"
 #import "SBJson.h"
+#import "VOYAData.h"
 
 @interface PersonalInfoViewController ()
 {
@@ -16,9 +17,7 @@
     NSString *email;
     NSString *gender;
     NSString *location;
-    
-    NSString *username; //used to communicate with the server.
-    NSString *password; //used to communicate with the server.
+
 }
 
 @end
@@ -39,63 +38,61 @@
 
 -(void)getPersonalInfoFromServer
 {
+    VOYAData *username = [VOYAData getCurrentUserName];
     @try {
-        if ([username isEqualToString:@""] || [password isEqualToString:@""])
-        {
-            [self alertStatus:@"Cannot reach your personal account" :@"Connnect Error"];
-        }
-        else
-        {
-            NSString *post = [[NSString alloc] initWithFormat:@"username=%@&password=%@", username, password];
-            NSLog(@"PostData: %@", post);
+       
+//        else
+//        {
+//           NSString *post = [[NSString alloc] initWithFormat:@"username=%@&password=%@", username, password];
+//            NSLog(@"PostData: %@", post);
+//            
+//            NSURL *url = [NSURL URLWithString:@"http://localhost/xampp/jsonGetPersonalInfo.php"];
+//            NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+//            
+//            NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+//            
+//            NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+//            [request setURL:url];
+//            [request setHTTPMethod:@"POST"];
+//            [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+//            [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+//            [request setValue:@"application/x-www-from-urlencoded" forHTTPHeaderField:@"Content-Type"];
+//            [request setHTTPBody:postData];
+//            
+//            NSError *error = [[NSError alloc] init];
+//            NSHTTPURLResponse *response = nil;
+//            NSData *urlData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+//            
+//            NSLog(@"Response code %d", [response statusCode]);
+//            if ([response statusCode] >= 200 && [response statusCode] < 300)
+//            {
+//                NSString *responseData = [[NSString alloc] initWithData:urlData encoding:NSUTF8StringEncoding];
+//                NSLog(@"Response = %@", responseData);
+//                
+//                SBJsonParser *jsonParser = [SBJsonParser new];
+//                NSDictionary *jsonData = (NSDictionary *) [jsonParser objectWithString:responseData error:nil];
+//                NSLog(@"%@", jsonData);
+//                
+//                NSInteger success =[(NSNumber *) [jsonData objectForKey:@"success"] integerValue];
+//                NSLog(@"%d", success);
+//                if(success == 1)
+//                {
+//                    NSLog(@"Get Prersonal Information SUCCESS");
+//                    [self.firstnameTextField setText:(NSString *) [jsonData objectForKey:@"firstname"]];
+//                    [self.lastnameTextField setText:(NSString *) [jsonData objectForKey:@"lastname"]];
+//                    [self.emailTextField setText:(NSString *) [jsonData objectForKey:@"email"]];
+//                    [self.genderTextField setText:(NSString *) [jsonData objectForKey:@"gender"]];
+//                    [self.locationTextField setText:(NSString *) [jsonData objectForKey:@"location"]];
+//                    
+//                    firstname = [self.firstnameTextField text];
+//                    lastname = [self.lastnameTextField text];
+//                    email = [self.emailTextField text];
+//                    gender = [self.genderTextField text];
+//                    location = [self.locationTextField text];
+//                }
+//            }
             
-            NSURL *url = [NSURL URLWithString:@"http://localhost/xampp/jsonGetPersonalInfo.php"];
-            NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-            
-            NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
-            
-            NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-            [request setURL:url];
-            [request setHTTPMethod:@"POST"];
-            [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-            [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-            [request setValue:@"application/x-www-from-urlencoded" forHTTPHeaderField:@"Content-Type"];
-            [request setHTTPBody:postData];
-            
-            NSError *error = [[NSError alloc] init];
-            NSHTTPURLResponse *response = nil;
-            NSData *urlData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-            
-            NSLog(@"Response code %d", [response statusCode]);
-            if ([response statusCode] >= 200 && [response statusCode] < 300)
-            {
-                NSString *responseData = [[NSString alloc] initWithData:urlData encoding:NSUTF8StringEncoding];
-                NSLog(@"Response = %@", responseData);
-                
-                SBJsonParser *jsonParser = [SBJsonParser new];
-                NSDictionary *jsonData = (NSDictionary *) [jsonParser objectWithString:responseData error:nil];
-                NSLog(@"%@", jsonData);
-                
-                NSInteger success =[(NSNumber *) [jsonData objectForKey:@"success"] integerValue];
-                NSLog(@"%d", success);
-                if(success == 1)
-                {
-                    NSLog(@"Get Prersonal Information SUCCESS");
-                    [self.firstnameTextField setText:(NSString *) [jsonData objectForKey:@"firstname"]];
-                    [self.lastnameTextField setText:(NSString *) [jsonData objectForKey:@"lastname"]];
-                    [self.emailTextField setText:(NSString *) [jsonData objectForKey:@"email"]];
-                    [self.genderTextField setText:(NSString *) [jsonData objectForKey:@"gender"]];
-                    [self.locationTextField setText:(NSString *) [jsonData objectForKey:@"location"]];
-                    
-                    firstname = [self.firstnameTextField text];
-                    lastname = [self.lastnameTextField text];
-                    email = [self.emailTextField text];
-                    gender = [self.genderTextField text];
-                    location = [self.locationTextField text];
-                }
-            }
-            
-        }
+        
     }
     @catch (NSExpression *e) {
         NSLog(@"Exception: %@", e);
@@ -131,6 +128,12 @@
     
     [self.view addGestureRecognizer:tap];
     
+    //get personal info
+    
+    VOYAData *username = [VOYAData getCurrentUserName];
+    
+    [[self navigationItem] setTitle:username.currentUserName];
+    
     [self.firstnameTextField.delegate self];
     [self.lastnameTextField.delegate self];
     [self.emailTextField.delegate self];
@@ -146,15 +149,7 @@
     
 }
 
--(void)setUserName:(NSString *)str
-{
-    username = str;
-}
 
--(void)setPassword:(NSString *)str
-{
-    password = str;
-}
 
 -(IBAction)cancelButtonClick:(UIButton *)sender
 {

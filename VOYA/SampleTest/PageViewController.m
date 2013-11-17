@@ -8,6 +8,7 @@
 
 #import "PageViewController.h"
 #import "PersonalInfoViewController.h"
+#import "VOYAData.h"
 
 @interface PageViewController ()
 
@@ -53,6 +54,10 @@
     [super viewDidLoad];
     
     [self.urlTextField.delegate self];
+    
+    
+    
+    
    // self.pageWebView.scrollView.scrollEnabled=YES;
    // self.pageWebView.scrollView.bounces=YES;
    // self.pageWebView.scrollView.zooming = YES;

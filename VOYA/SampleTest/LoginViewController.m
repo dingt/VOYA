@@ -10,6 +10,7 @@
 #import "RegisterViewController.h"
 #import "SBJson.h"
 #import "PersonalInfoViewController.h"
+#import "VOYAData.h"
 @interface LoginViewController ()
 
 @end
@@ -90,13 +91,9 @@
                 NSLog(@"%d",success);
                 if(success == 1)
                 {
-                    //add by Xiaolan Lin
-                    //set the personalinfo page username
-                    PersonalInfoViewController *personalInfoViewController = [[PersonalInfoViewController alloc]initWithNibName:@"PersonalInfoViewController" bundle:nil];
-                    [personalInfoViewController setUserName : self.UserName];
-                    [personalInfoViewController setPassword :self.Password];
-                    //add end
                     NSLog(@"Login SUCCESS");
+                    VOYAData *loginUserName=[VOYAData getCurrentUserName];
+                    loginUserName.currentUserName = [UserName text];
                     [self alertStatus:@"Logged in Successfully." :@"Login Success!"];
                     
                 } else {

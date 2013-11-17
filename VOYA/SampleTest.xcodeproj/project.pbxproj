@@ -35,6 +35,7 @@
 		5C4A2061183536F600C09BAD /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4A2053183536F600C09BAD /* SBJsonTokeniser.m */; };
 		5C4A2062183536F600C09BAD /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4A2055183536F600C09BAD /* SBJsonUTF8Stream.m */; };
 		5C4A2063183536F600C09BAD /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4A2057183536F600C09BAD /* SBJsonWriter.m */; };
+		5C5CDD4218396FB2005AF8C2 /* VOYAData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CDD4118396FB2005AF8C2 /* VOYAData.m */; };
 		A6ED4FC518352BF700CB85C1 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED4FC418352BF700CB85C1 /* PageViewController.m */; };
 		A6ED4FC818352C0B00CB85C1 /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED4FC718352C0B00CB85C1 /* PersonalInfoViewController.m */; };
 /* End PBXBuildFile section */
@@ -98,6 +99,8 @@
 		5C4A2055183536F600C09BAD /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		5C4A2056183536F600C09BAD /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		5C4A2057183536F600C09BAD /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		5C5CDD4018396FB2005AF8C2 /* VOYAData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VOYAData.h; path = ../VOYAData.h; sourceTree = "<group>"; };
+		5C5CDD4118396FB2005AF8C2 /* VOYAData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VOYAData.m; path = ../VOYAData.m; sourceTree = "<group>"; };
 		A6ED4FC318352BF700CB85C1 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		A6ED4FC418352BF700CB85C1 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		A6ED4FC618352C0B00CB85C1 /* PersonalInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalInfoViewController.h; sourceTree = "<group>"; };
@@ -177,6 +180,8 @@
 				A6ED4FC418352BF700CB85C1 /* PageViewController.m */,
 				A6ED4FC618352C0B00CB85C1 /* PersonalInfoViewController.h */,
 				A6ED4FC718352C0B00CB85C1 /* PersonalInfoViewController.m */,
+				5C5CDD4018396FB2005AF8C2 /* VOYAData.h */,
+				5C5CDD4118396FB2005AF8C2 /* VOYAData.m */,
 			);
 			path = SampleTest;
 			sourceTree = "<group>";
@@ -357,6 +362,7 @@
 				5C4A205E183536F600C09BAD /* SBJsonStreamWriter.m in Sources */,
 				5C4A2060183536F600C09BAD /* SBJsonStreamWriterState.m in Sources */,
 				5C4A205A183536F600C09BAD /* SBJsonStreamParser.m in Sources */,
+				5C5CDD4218396FB2005AF8C2 /* VOYAData.m in Sources */,
 				5C4A205C183536F600C09BAD /* SBJsonStreamParserAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
