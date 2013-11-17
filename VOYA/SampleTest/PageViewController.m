@@ -7,6 +7,7 @@
 //
 
 #import "PageViewController.h"
+#import "PersonalInfoViewController.h"
 
 @interface PageViewController ()
 
@@ -14,7 +15,8 @@
 
 @implementation PageViewController
 
-
+@synthesize urlTextField = _urlTextField;
+@synthesize pageWebView = _pageWebView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,12 +27,35 @@
     return self;
 }
 
+- (IBAction)goPageView:(UIButton *)sender {
+    
+    NSURL *url = [[NSURL alloc] initWithString:self.urlTextField.text];
+    NSData *urlData = [NSData dataWithContentsOfURL:url];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.pageWebView loadData:urlData MIMEType:@"text/stylesheet" textEncodingName:@"URF-8" baseURL:[NSURL URLWithString:@""]];
+    });
+}
+
+- (IBAction)urlRequest:(UITextField *)sender {
+    
+    //[self.pageWebView loadRequest:[[NSURLRequest alloc] initWithURL:url]];
+    
+}
+- (IBAction)largerFontBarButtonClick:(UIBarButtonItem *)sender {
+    
+    
+}
 
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.urlTextField.delegate self];
+   // self.pageWebView.scrollView.scrollEnabled=YES;
+   // self.pageWebView.scrollView.bounces=YES;
+   // self.pageWebView.scrollView.zooming = YES;
 
 	// Do any additional setup after loading the view.
 }
@@ -44,4 +69,13 @@
 }
 
 
+- (void)dealloc {
+    [_urlTextField release];
+    [_pageWebView release];
+    [_goButton release];
+    [_smallerFontBarButton release];
+    [_largerFontBarButton release];
+    [_settingBarButton release];
+    [super dealloc];
+}
 @end
