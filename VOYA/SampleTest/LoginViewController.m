@@ -58,7 +58,7 @@
             NSString *post =[[NSString alloc] initWithFormat:@"username=%@&password=%@",[UserName text],[Password text]];
             NSLog(@"PostData: %@",post);
             
-            NSURL *url=[NSURL URLWithString:@"http://localhost/xampp/login_3.php"];
+            NSURL *url=[NSURL URLWithString:@"http://www.beyoutoo.net/login_3.php"];
             
             NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
             
