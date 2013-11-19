@@ -30,4 +30,7 @@
 
 @property (retain, nonatomic) IBOutlet UITextField *locationTextField;
 
+@property (retain, nonatomic) IBOutlet UITextView *personalPageView;
+
+
 @end

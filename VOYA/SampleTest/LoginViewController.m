@@ -58,7 +58,7 @@
             NSString *post =[[NSString alloc] initWithFormat:@"username=%@&password=%@",[UserName text],[Password text]];
             NSLog(@"PostData: %@",post);
             
-            NSURL *url=[NSURL URLWithString:@"http://www.beyoutoo.net/login_3.php"];
+            NSURL *url=[NSURL URLWithString:@"http://www.beyoutoo.net/login.php"];
             
             NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
             
@@ -186,7 +186,7 @@ float prewMoveY; //编辑的时候移动的高度
                               initWithTitle:title
                               message:msg
                               delegate:self
-                              cancelButtonTitle:@"Ok"
+                              cancelButtonTitle:@"OK"
                               otherButtonTitles:nil, nil];
     [alertView show];
 }

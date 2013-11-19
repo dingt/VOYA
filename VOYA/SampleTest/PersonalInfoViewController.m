@@ -17,6 +17,8 @@
     NSString *email;
     NSString *gender;
     NSString *location;
+    
+    NSString *currentusername;
 
 }
 
@@ -35,64 +37,61 @@
 @synthesize submitButton = _submitButton;
 @synthesize logoutButton = _logoutButton;
 
+@synthesize personalPageView = _personalPageView;
+
 
 -(void)getPersonalInfoFromServer
 {
-    VOYAData *username = [VOYAData getCurrentUserName];
+
+    //VOYAData *username = [VOYAData getCurrentUserName];
     @try {
-       
-//        else
-//        {
-//           NSString *post = [[NSString alloc] initWithFormat:@"username=%@&password=%@", username, password];
-//            NSLog(@"PostData: %@", post);
-//            
-//            NSURL *url = [NSURL URLWithString:@"http://localhost/xampp/jsonGetPersonalInfo.php"];
-//            NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-//            
-//            NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
-//            
-//            NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-//            [request setURL:url];
-//            [request setHTTPMethod:@"POST"];
-//            [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-//            [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-//            [request setValue:@"application/x-www-from-urlencoded" forHTTPHeaderField:@"Content-Type"];
-//            [request setHTTPBody:postData];
-//            
-//            NSError *error = [[NSError alloc] init];
-//            NSHTTPURLResponse *response = nil;
-//            NSData *urlData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-//            
-//            NSLog(@"Response code %d", [response statusCode]);
-//            if ([response statusCode] >= 200 && [response statusCode] < 300)
-//            {
-//                NSString *responseData = [[NSString alloc] initWithData:urlData encoding:NSUTF8StringEncoding];
-//                NSLog(@"Response = %@", responseData);
-//                
-//                SBJsonParser *jsonParser = [SBJsonParser new];
-//                NSDictionary *jsonData = (NSDictionary *) [jsonParser objectWithString:responseData error:nil];
-//                NSLog(@"%@", jsonData);
-//                
-//                NSInteger success =[(NSNumber *) [jsonData objectForKey:@"success"] integerValue];
-//                NSLog(@"%d", success);
-//                if(success == 1)
-//                {
-//                    NSLog(@"Get Prersonal Information SUCCESS");
-//                    [self.firstnameTextField setText:(NSString *) [jsonData objectForKey:@"firstname"]];
-//                    [self.lastnameTextField setText:(NSString *) [jsonData objectForKey:@"lastname"]];
-//                    [self.emailTextField setText:(NSString *) [jsonData objectForKey:@"email"]];
-//                    [self.genderTextField setText:(NSString *) [jsonData objectForKey:@"gender"]];
-//                    [self.locationTextField setText:(NSString *) [jsonData objectForKey:@"location"]];
-//                    
-//                    firstname = [self.firstnameTextField text];
-//                    lastname = [self.lastnameTextField text];
-//                    email = [self.emailTextField text];
-//                    gender = [self.genderTextField text];
-//                    location = [self.locationTextField text];
-//                }
-//            }
-            
         
+        NSString *post = [[NSString alloc] initWithFormat:@"username=%@",currentusername];
+        NSLog(@"PostData: %@", post);
+        
+        NSURL *url = [NSURL URLWithString:@"http://www.beyoutoo.net/getinfo.php"];
+        NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+        NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+        
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+        [request setURL:url];
+        [request setHTTPMethod:@"POST"];
+        [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+        [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+        [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+        [request setHTTPBody:postData];
+        
+        NSError *error = [[NSError alloc] init];
+        NSHTTPURLResponse *response = nil;
+        NSData *urlData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+        
+        NSLog(@"Response code %d", [response statusCode]);
+        if ([response statusCode] >= 200 && [response statusCode] < 300)
+        {
+            NSString *responseData = [[NSString alloc] initWithData:urlData encoding:NSUTF8StringEncoding];
+            NSLog(@"Response = %@", responseData);
+            
+            SBJsonParser *jsonParser = [SBJsonParser new];
+            NSDictionary *jsonData = (NSDictionary *) [jsonParser objectWithString:responseData error:nil];
+            NSLog(@"jasonData=%@", jsonData);
+            NSLog(@"Get Prersonal Information SUCCESS");
+            
+            [self.firstnameTextField setText:(NSString *) [jsonData objectForKey:@"firstname"]];
+            [self.lastnameTextField setText:(NSString *) [jsonData objectForKey:@"lastname"]];
+            [self.emailTextField setText:(NSString *) [jsonData objectForKey:@"email"]];
+            [self.genderTextField setText:(NSString *) [jsonData objectForKey:@"gender"]];
+            [self.locationTextField setText:(NSString *) [jsonData objectForKey:@"location"]];
+            
+            firstname = [self.firstnameTextField text];
+            lastname =[self.lastnameTextField text];
+            email = [self.emailTextField text];
+            gender = [self.genderTextField text];
+            location = [self.locationTextField text];
+            
+            [[self navigationItem] setTitle:currentusername];
+            
+            NSLog(@"%@", firstname);
+        }
     }
     @catch (NSExpression *e) {
         NSLog(@"Exception: %@", e);
@@ -121,7 +120,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self getPersonalInfoFromServer];
+    
 	// Do any additional setup after loading the view.
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
     tap.cancelsTouchesInView = NO;
@@ -132,7 +131,9 @@
     
     VOYAData *username = [VOYAData getCurrentUserName];
     
-    [[self navigationItem] setTitle:username.currentUserName];
+    currentusername = [username currentUserName];
+    
+   // [[self navigationItem] setTitle:username.currentUserName];
     
     [self.firstnameTextField.delegate self];
     [self.lastnameTextField.delegate self];
@@ -145,10 +146,11 @@
     [self.emailTextField setEnabled:NO];
     [self.genderTextField setEnabled:NO];
     [self.locationTextField setEnabled:NO];
+    
+    [self getPersonalInfoFromServer];
 
     
 }
-
 
 
 -(IBAction)cancelButtonClick:(UIButton *)sender
@@ -173,27 +175,130 @@
     
 }
 - (IBAction)submitButtonClick:(UIButton *)sender {
+    firstname = [self.firstnameTextField text];
+    lastname = [self.lastnameTextField text];
+    email = [self.emailTextField text];
+    gender = [self.genderTextField text];
+    location = [self.locationTextField text];
     
-/*    @try {
-        
-            
+   @try {
+       //NSString *currentusername = [user currentUserName];
+       
+       NSString *post = [[NSString alloc] initWithFormat:@"username=%@&firstname=%@&lastname=%@&email=%@&gender=%@&location=%@",currentusername,
+                         firstname, lastname, email, gender, location];
+       NSLog(@"PostData: %@", post);
+       
+       NSURL *url = [NSURL URLWithString:@"http://www.beyoutoo.net/updateinfo.php"];
+       NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+       NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+       
+       NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+       [request setURL:url];
+       [request setHTTPMethod:@"POST"];
+       [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+       [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+       [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+       [request setHTTPBody:postData];
+       
+       NSError *error = [[NSError alloc] init];
+       NSHTTPURLResponse *response = nil;
+       NSData *urlData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+       
+       NSLog(@"Response code %d", [response statusCode]);
+       if ([response statusCode] >= 200 && [response statusCode] < 300)
+       {
+           NSString *responseData = [[NSString alloc] initWithData:urlData encoding:NSUTF8StringEncoding];
+           NSLog(@"Response = %@", responseData);
+           
+           SBJsonParser *jsonParser = [SBJsonParser new];
+           NSDictionary *jsonData = (NSDictionary *) [jsonParser objectWithString:responseData error:nil];
+           NSLog(@"jasonData=%@", jsonData);
+           NSInteger success = [(NSNumber *) [jsonData objectForKey:@"success"] integerValue];
+           NSLog(@"%d",success);
+           if(success == 1)
+           {
+               NSLog(@"Update SUCCESS");
+               [self alertStatus:@"Update Personal Information Successfully." :@"Update Success!"];
+               
+           } else {
+               
+               NSString *error_msg = (NSString *) [jsonData objectForKey:@"error_message"];
+               [self alertStatus:error_msg :@"Update Failed!"];
+           }
+       }
+
+       
+       
+       
     }
-    @catch (NSException *exception) {
+    @catch (NSException *e) {
         NSLog(@"Exception: %@", e);
         [self alertStatus:@"" :@""];
-    }*/
+    }
     
     
     // tell client that their operation is updated.
-    [self alertStatus:@"Your information has been saved." :@"Update Information"];
+    //[self alertStatus:@"Your information has been saved." :@"Update Information"];
     
     
 }
 - (IBAction)logoutButtonClick:(UIButton *)sender {
+
+    @try {
+        //NSString *currentusername = [user currentUserName];
+        
+        NSString *post = [[NSString alloc] initWithFormat:@"username=%@",currentusername];
+        NSLog(@"PostData: %@", post);
+        
+        NSURL *url = [NSURL URLWithString:@"http://www.beyoutoo.net/logout.php"];
+        NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+        NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+        
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+        [request setURL:url];
+        [request setHTTPMethod:@"POST"];
+        [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+        [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+        [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+        [request setHTTPBody:postData];
+        
+        NSError *error = [[NSError alloc] init];
+        NSHTTPURLResponse *response = nil;
+        NSData *urlData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+        
+        NSLog(@"Response code %d", [response statusCode]);
+        if ([response statusCode] >= 200 && [response statusCode] < 300)
+        {
+            NSString *responseData = [[NSString alloc] initWithData:urlData encoding:NSUTF8StringEncoding];
+            NSLog(@"Response = %@", responseData);
+            
+            SBJsonParser *jsonParser = [SBJsonParser new];
+            NSDictionary *jsonData = (NSDictionary *) [jsonParser objectWithString:responseData error:nil];
+            NSLog(@"jasonData=%@", jsonData);
+            NSInteger success = [(NSNumber *) [jsonData objectForKey:@"success"] integerValue];
+            NSLog(@"%d",success);
+            if(success == 1)
+            {
+                NSLog(@"Logout SUCCESS");
+                [self alertStatus:@"Logout Successfully." :@"Logout Success!"];
+                
+                
+            } else {
+                
+                NSString *error_msg = (NSString *) [jsonData objectForKey:@"error_message"];
+                [self alertStatus:error_msg :@"Update Failed!"];
+            }
+        }     
+        
+    }
+    @catch (NSException *e) {
+        NSLog(@"Exception: %@", e);
+        [self alertStatus:@"" :@""];
+    }
     
-    [self alertStatus:@"Are you srue to log out?" :@"Warning"];
     
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    
+    [self.navigationController popToRootViewControllerAnimated:NO];
     
 }
 
@@ -214,6 +319,7 @@
     [_emailTextField release];
     [_genderTextField release];
     [_locationTextField release];
+    [_personalPageView release];
     [super dealloc];
 }
 
@@ -310,7 +416,7 @@ float prewMoveY;
                               initWithTitle:title
                               message:msg
                               delegate:self
-                              cancelButtonTitle:@"Ok"
+                              cancelButtonTitle:@"OK"
                               otherButtonTitles:nil, nil];
     [alertView show];
 }

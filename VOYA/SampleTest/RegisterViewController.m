@@ -61,7 +61,7 @@
             NSString *post =[[NSString alloc] initWithFormat:@"username=%@&password=%@",[UserName text],[Password text]];
             NSLog(@"PostData: %@",post);
             
-            NSURL *url=[NSURL URLWithString:@"http://localhost/xampp/register.php"];
+            NSURL *url=[NSURL URLWithString:@"http://www.beyoutoo.net/register.php"];
             
             NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
             
@@ -191,7 +191,7 @@ float prewMoveY;
                               initWithTitle:title
                               message:msg
                               delegate:self
-                              cancelButtonTitle:@"Ok"
+                              cancelButtonTitle:@"OK"
                               otherButtonTitles:nil, nil];
     [alertView show];
 }
