@@ -11,17 +11,23 @@
 #import "VOYAData.h"
 #import "PageViewController.h"
 @interface ViewController ()
+{
+    NSMutableArray *cities;
+}
 
 @end
 
 @implementation ViewController
 @synthesize LoginButton,SearchBar;
-@synthesize cities = _cities;
-@synthesize results = _results;
+@synthesize cityTableView=_cityTableView;
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    cities = [NSMutableArray arrayWithObjects:@"Dollar", @"Euro", @"Pound", nil];
+    [cities addObject:@"Boston"];
     
     VOYAData *user = [VOYAData getisLogin];
     
@@ -53,15 +59,6 @@
         }
     }
     
-    
-    [self.cities addObject:@"Boston"];
-    [self.cities addObject:@"Boston"];
-    [self.cities addObject:@"Boston"];
-    [self.cities addObject:@"Boston"];
-    [self.cities addObject:@"Boston"];
-    [self.cities addObject:@"Boston"];
-    [self.cities addObject:@"oooo"];
-    [self.cities addObject:@"Boston"];
     
     
 }
@@ -132,7 +129,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return self.cities.count;
+    return cities.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -140,7 +137,12 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    cell.textLabel.text = self.cities[indexPath.row];
+    
+    
+    
+    cell.textLabel.text = cities[indexPath.row];
+
+    //cell.textLabel.text = self.cities[indexPath.row];
     
     return cell;
 }
@@ -149,10 +151,11 @@
 {
     if([segue.identifier isEqualToString:@"showPageView"])
     {
-        NSString *city = nil;
+       
         NSIndexPath *indexpath =nil;
         indexpath = [self.cityTableView indexPathForSelectedRow];
-        city = self.cities[indexpath.row];
+        NSString *city = [cities objectAtIndex:indexpath.row];
+        NSLog(@"bb");
         
         [[segue destinationViewController] setCityLabel:city];
     }

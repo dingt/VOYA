@@ -13,9 +13,9 @@
 @property(nonatomic,retain)IBOutlet UISearchBar *SearchBar;
  @property(nonatomic,retain)IBOutlet UIButton * LoginButton;
 
-@property(nonatomic, strong)NSMutableArray *cities;
+
 
 @property (retain, nonatomic) IBOutlet UITableView *cityTableView;
 
-@property(nonatomic, strong)NSMutableArray *results;
+
 @end
