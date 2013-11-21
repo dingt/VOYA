@@ -53,21 +53,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4EC63F021834DE7F00D4E90A /* SampleTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EC63F021834DE7F00D4E90A /* VOYA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VOYA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC63F051834DE7F00D4E90A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4EC63F071834DE7F00D4E90A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4EC63F091834DE7F00D4E90A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		4EC63F0D1834DE7F00D4E90A /* SampleTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SampleTest-Info.plist"; sourceTree = "<group>"; };
+		4EC63F0D1834DE7F00D4E90A /* VOYA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VOYA-Info.plist"; sourceTree = "<group>"; };
 		4EC63F0F1834DE7F00D4E90A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4EC63F111834DE7F00D4E90A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4EC63F131834DE7F00D4E90A /* SampleTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleTest-Prefix.pch"; sourceTree = "<group>"; };
+		4EC63F131834DE7F00D4E90A /* VOYA-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VOYA-Prefix.pch"; sourceTree = "<group>"; };
 		4EC63F141834DE7F00D4E90A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4EC63F151834DE7F00D4E90A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4EC63F181834DE7F00D4E90A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		4EC63F1D1834DE7F00D4E90A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4EC63F1E1834DE7F00D4E90A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4EC63F201834DE7F00D4E90A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		4EC63F261834DE7F00D4E90A /* SampleTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EC63F261834DE7F00D4E90A /* VOYATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VOYATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC63F271834DE7F00D4E90A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4EC63F2F1834DE7F00D4E90A /* SampleTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SampleTestTests-Info.plist"; sourceTree = "<group>"; };
 		4EC63F311834DE7F00D4E90A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -151,8 +151,8 @@
 		4EC63F031834DE7F00D4E90A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4EC63F021834DE7F00D4E90A /* SampleTest.app */,
-				4EC63F261834DE7F00D4E90A /* SampleTestTests.xctest */,
+				4EC63F021834DE7F00D4E90A /* VOYA.app */,
+				4EC63F261834DE7F00D4E90A /* VOYATests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,10 +199,10 @@
 		4EC63F0C1834DE7F00D4E90A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4EC63F0D1834DE7F00D4E90A /* SampleTest-Info.plist */,
+				4EC63F0D1834DE7F00D4E90A /* VOYA-Info.plist */,
 				4EC63F0E1834DE7F00D4E90A /* InfoPlist.strings */,
 				4EC63F111834DE7F00D4E90A /* main.m */,
-				4EC63F131834DE7F00D4E90A /* SampleTest-Prefix.pch */,
+				4EC63F131834DE7F00D4E90A /* VOYA-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -260,9 +260,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4EC63F011834DE7F00D4E90A /* SampleTest */ = {
+		4EC63F011834DE7F00D4E90A /* VOYA */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4EC63F371834DE7F00D4E90A /* Build configuration list for PBXNativeTarget "SampleTest" */;
+			buildConfigurationList = 4EC63F371834DE7F00D4E90A /* Build configuration list for PBXNativeTarget "VOYA" */;
 			buildPhases = (
 				4EC63EFE1834DE7F00D4E90A /* Sources */,
 				4EC63EFF1834DE7F00D4E90A /* Frameworks */,
@@ -272,14 +272,14 @@
 			);
 			dependencies = (
 			);
-			name = SampleTest;
+			name = VOYA;
 			productName = SampleTest;
-			productReference = 4EC63F021834DE7F00D4E90A /* SampleTest.app */;
+			productReference = 4EC63F021834DE7F00D4E90A /* VOYA.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4EC63F251834DE7F00D4E90A /* SampleTestTests */ = {
+		4EC63F251834DE7F00D4E90A /* VOYATests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4EC63F3A1834DE7F00D4E90A /* Build configuration list for PBXNativeTarget "SampleTestTests" */;
+			buildConfigurationList = 4EC63F3A1834DE7F00D4E90A /* Build configuration list for PBXNativeTarget "VOYATests" */;
 			buildPhases = (
 				4EC63F221834DE7F00D4E90A /* Sources */,
 				4EC63F231834DE7F00D4E90A /* Frameworks */,
@@ -290,9 +290,9 @@
 			dependencies = (
 				4EC63F2C1834DE7F00D4E90A /* PBXTargetDependency */,
 			);
-			name = SampleTestTests;
+			name = VOYATests;
 			productName = SampleTestTests;
-			productReference = 4EC63F261834DE7F00D4E90A /* SampleTestTests.xctest */;
+			productReference = 4EC63F261834DE7F00D4E90A /* VOYATests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -309,7 +309,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4EC63EFD1834DE7F00D4E90A /* Build configuration list for PBXProject "SampleTest" */;
+			buildConfigurationList = 4EC63EFD1834DE7F00D4E90A /* Build configuration list for PBXProject "VOYA" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -322,8 +322,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4EC63F011834DE7F00D4E90A /* SampleTest */,
-				4EC63F251834DE7F00D4E90A /* SampleTestTests */,
+				4EC63F011834DE7F00D4E90A /* VOYA */,
+				4EC63F251834DE7F00D4E90A /* VOYATests */,
 			);
 		};
 /* End PBXProject section */
@@ -392,7 +392,7 @@
 /* Begin PBXTargetDependency section */
 		4EC63F2C1834DE7F00D4E90A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4EC63F011834DE7F00D4E90A /* SampleTest */;
+			target = 4EC63F011834DE7F00D4E90A /* VOYA */;
 			targetProxy = 4EC63F2B1834DE7F00D4E90A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -505,10 +505,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SampleTest/SampleTest-Prefix.pch";
-				INFOPLIST_FILE = "SampleTest/SampleTest-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "SampleTest/VOYA-Prefix.pch";
+				INFOPLIST_FILE = "SampleTest/VOYA-Info.plist";
+				PRODUCT_NAME = VOYA;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -519,10 +520,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SampleTest/SampleTest-Prefix.pch";
-				INFOPLIST_FILE = "SampleTest/SampleTest-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "SampleTest/VOYA-Prefix.pch";
+				INFOPLIST_FILE = "SampleTest/VOYA-Info.plist";
+				PRODUCT_NAME = VOYA;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -544,7 +546,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "SampleTestTests/SampleTestTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = VOYATests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -563,7 +565,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SampleTest/SampleTest-Prefix.pch";
 				INFOPLIST_FILE = "SampleTestTests/SampleTestTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = VOYATests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -572,7 +574,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4EC63EFD1834DE7F00D4E90A /* Build configuration list for PBXProject "SampleTest" */ = {
+		4EC63EFD1834DE7F00D4E90A /* Build configuration list for PBXProject "VOYA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4EC63F351834DE7F00D4E90A /* Debug */,
@@ -581,7 +583,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4EC63F371834DE7F00D4E90A /* Build configuration list for PBXNativeTarget "SampleTest" */ = {
+		4EC63F371834DE7F00D4E90A /* Build configuration list for PBXNativeTarget "VOYA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4EC63F381834DE7F00D4E90A /* Debug */,
@@ -590,7 +592,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4EC63F3A1834DE7F00D4E90A /* Build configuration list for PBXNativeTarget "SampleTestTests" */ = {
+		4EC63F3A1834DE7F00D4E90A /* Build configuration list for PBXNativeTarget "VOYATests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4EC63F3B1834DE7F00D4E90A /* Debug */,
