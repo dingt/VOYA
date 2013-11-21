@@ -13,6 +13,8 @@
 
 @property (retain, nonatomic) IBOutlet UITextField *urlTextField;
 
+@property (nonatomic, strong) NSString *cityLabel;
+
 @property (retain, nonatomic) IBOutlet UIWebView *pageWebView;
 
 @property (retain, nonatomic) IBOutlet UIButton *goButton;

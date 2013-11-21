@@ -18,6 +18,12 @@
 
 @synthesize urlTextField = _urlTextField;
 @synthesize pageWebView = _pageWebView;
+@synthesize cityLabel = _cityLabel;
+
+- (void)setCityLabel:(NSString *)cityLabel
+{
+    _cityLabel = cityLabel;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
