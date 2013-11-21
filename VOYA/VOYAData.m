@@ -11,7 +11,21 @@
 @implementation VOYAData
 @synthesize currentUserName;
 static VOYAData *userName=nil;
+
+
 +(VOYAData *)getCurrentUserName
+{
+    @synchronized(self)
+    {
+        if(userName==nil)
+        {
+            userName = [VOYAData new];
+        }
+    }
+    return userName;
+}
+
++(VOYAData *)getisLogin
 {
     @synchronized(self)
     {

@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface LoginViewController : UIViewController<UITextFieldDelegate>
-@property(nonatomic,retain)IBOutlet UITextField*
+
+@property BOOL *isLogin;
+@property (nonatomic,retain)IBOutlet UITextField*
 UserName;
 @property (nonatomic,retain)IBOutlet UITextField *Password;
 @property (nonatomic,retain)IBOutlet UIButton *LoginButton;
@@ -18,4 +20,6 @@ CancleButton;
 @property (nonatomic,retain)IBOutlet UIButton *RegisterButton;
 -(IBAction)CancleButtonClick:(id)sender;
 -(IBAction)LoginButtonClick:(id)sender;
+
+
 @end

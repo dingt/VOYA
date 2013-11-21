@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "LoginViewController.h"
+#import "VOYAData.h"
 @interface ViewController ()
 
 @end
@@ -17,8 +18,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    VOYAData *user = [VOYAData getisLogin];
+    
+    if([user isLogin] == YES)
+    {
+        [self.LoginButton setHidden:YES];
+    }
+    
     SearchBar.delegate = self;
     SearchBar.showsCancelButton=YES;
+    
+    
     if([[[UIDevice currentDevice] systemVersion] floatValue]<7.0){
          SearchBar.backgroundColor = [UIColor clearColor];
          SearchBar.multipleTouchEnabled = YES;

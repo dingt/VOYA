@@ -3,7 +3,7 @@
 //  SampleTest
 //
 //  Created by yangxia on 13-11-14.
-//  Copyright (c) 2013年 yangxia. All rights reserved.
+//  Copyright (c) 2013 Chiru. All rights reserved.
 //
 
 #import "LoginViewController.h"
@@ -11,6 +11,7 @@
 #import "SBJson.h"
 #import "PersonalInfoViewController.h"
 #import "VOYAData.h"
+#import "ViewController.h"
 @interface LoginViewController ()
 
 @end
@@ -93,8 +94,10 @@
                 {
                     NSLog(@"Login SUCCESS");
                     VOYAData *loginUserName=[VOYAData getCurrentUserName];
+                    loginUserName.isLogin = YES;
                     loginUserName.currentUserName = [UserName text];
                     [self alertStatus:@"Logged in Successfully." :@"Login Success!"];
+                    //[self.navigationController popToRootViewControllerAnimated:YES];
                     
                 } else {
                     
@@ -126,14 +129,14 @@
     return YES;
 }
 
-int prewTag ;  //编辑上一个UITextField的TAG,需要在XIB文件中定义或者程序中添加，不能让两个控件的TAG相同
-float prewMoveY; //编辑的时候移动的高度
+int prewTag ;
+float prewMoveY;
 -(void) textFieldDidBeginEditing:(UITextField *)textField
 {
     CGRect textFrame =  textField.frame;
     float textY = textFrame.origin.y+textFrame.size.height;
     float bottomY = self.view.frame.size.height-textY;
-    if(bottomY>=216)  //判断当前的高度是否已经有216，如果超过了就不需要再移动主界面的View高度
+    if(bottomY>=216)
     {
         prewTag = -1;
         return;
@@ -144,32 +147,32 @@ float prewMoveY; //编辑的时候移动的高度
     
     NSTimeInterval animationDuration = 0.30f;
     CGRect frame = self.view.frame;
-    frame.origin.y -=moveY;//view的Y轴上移
-    frame.size.height +=moveY; //View的高度增加
+    frame.origin.y -=moveY;
+    frame.size.height +=moveY;
     self.view.frame = frame;
     [UIView beginAnimations:@"ResizeForKeyBoard" context:nil];
     [UIView setAnimationDuration:animationDuration];
     self.view.frame = frame;
-    [UIView commitAnimations];//设置调整界面的动画效果
+    [UIView commitAnimations];
 }
 
 -(void) textFieldDidEndEditing:(UITextField *)textField
 {
-    if(prewTag == -1) //当编辑的View不是需要移动的View
+    if(prewTag == -1)
     {
         return;
     }
     float moveY ;
     NSTimeInterval animationDuration = 0.30f;
     CGRect frame = self.view.frame;
-    if(prewTag == textField.tag) //当结束编辑的View的TAG是上次的就移动
-    {   //还原界面
+    if(prewTag == textField.tag)
+    {
         moveY =  prewMoveY;
         frame.origin.y +=moveY;
         frame.size. height -=moveY;
         self.view.frame = frame;
     }
-    //self.view移回原位置
+    
     [UIView beginAnimations:@"ResizeForKeyBoard" context:nil];
     [UIView setAnimationDuration:animationDuration];
     self.view.frame = frame;

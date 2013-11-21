@@ -11,9 +11,12 @@
 @interface VOYAData : NSObject{
 
     NSString *currentUserName;
+    Boolean *isLogin;
 }
 
 @property(nonatomic, retain)NSString *currentUserName;
+@property Boolean isLogin;
 +(VOYAData *)getCurrentUserName;
 
++(VOYAData *)getisLogin;
 @end
