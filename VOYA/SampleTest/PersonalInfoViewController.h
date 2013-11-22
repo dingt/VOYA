@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PersonalInfoViewController : UIViewController
-
+<UIAlertViewDelegate>
 @property (retain, nonatomic) IBOutlet UIButton *backButton;
 
 @property (retain, nonatomic) IBOutlet UIButton *editButton;

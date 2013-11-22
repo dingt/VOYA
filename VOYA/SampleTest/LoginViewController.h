@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController<UITextFieldDelegate>
+@interface LoginViewController : UIViewController<UITextFieldDelegate,UIAlertViewDelegate>
 
 @property BOOL *isLogin;
 @property (nonatomic,retain)IBOutlet UITextField*

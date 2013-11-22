@@ -126,14 +126,14 @@
     tap.cancelsTouchesInView = NO;
     
     [self.view addGestureRecognizer:tap];
-    
+   // [self.navigationItem setHidesBackButton:YES];
     //get personal info
     
     VOYAData *username = [VOYAData getCurrentUserName];
     
     currentusername = [username currentUserName];
-    
-   // [[self navigationItem] setTitle:username.currentUserName];
+    self.title=currentusername;
+      // [[self navigationItem] setTitle:username.currentUserName];
     
     [self.firstnameTextField.delegate self];
     [self.lastnameTextField.delegate self];
@@ -155,7 +155,7 @@
 
 -(IBAction)cancelButtonClick:(UIButton *)sender
 {
-   
+  
     self.firstnameTextField.text = firstname;
     self.lastnameTextField.text = lastname;
     self.emailTextField.text = email;
@@ -298,7 +298,6 @@
     
     
     
-    [self.navigationController popToRootViewControllerAnimated:NO];
     
 }
 
@@ -420,5 +419,9 @@ float prewMoveY;
                               otherButtonTitles:nil, nil];
     [alertView show];
 }
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex{
+    [[NSUserDefaults standardUserDefaults] setObject:@"NO" forKey:@"isLogin"];
+    [self.navigationController popToRootViewControllerAnimated:NO];
 
+}
 @end

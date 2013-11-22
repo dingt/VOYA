@@ -12,6 +12,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (![defaults objectForKey:@"isLogin"]) {
+        [defaults setObject:@"NO" forKey:@"isLogin"];
+    }
+       if (![defaults objectForKey:@"isLogin"]) {
+        [defaults setObject:@"root" forKey:@"UserName"];
+    }
+    [defaults setObject:@"NO" forKey:@"isLogin"];
     // Override point for customization after application launch.
     return YES;
 }

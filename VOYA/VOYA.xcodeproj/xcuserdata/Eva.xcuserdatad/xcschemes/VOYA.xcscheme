@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4EC63F011834DE7F00D4E90A"
-               BuildableName = "SampleTest.app"
-               BlueprintName = "SampleTest"
-               ReferencedContainer = "container:SampleTest.xcodeproj">
+               BuildableName = "VOYA.app"
+               BlueprintName = "VOYA"
+               ReferencedContainer = "container:VOYA.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,31 +28,20 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4EC63F251834DE7F00D4E90A"
-               BuildableName = "SampleTestTests.xctest"
-               BlueprintName = "SampleTestTests"
-               ReferencedContainer = "container:SampleTest.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4EC63F011834DE7F00D4E90A"
-            BuildableName = "SampleTest.app"
-            BlueprintName = "SampleTest"
-            ReferencedContainer = "container:SampleTest.xcodeproj">
+            BuildableName = "VOYA.app"
+            BlueprintName = "VOYA"
+            ReferencedContainer = "container:VOYA.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      debugAsWhichUser = "root"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Debug"
@@ -63,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4EC63F011834DE7F00D4E90A"
-            BuildableName = "SampleTest.app"
-            BlueprintName = "SampleTest"
-            ReferencedContainer = "container:SampleTest.xcodeproj">
+            BuildableName = "VOYA.app"
+            BlueprintName = "VOYA"
+            ReferencedContainer = "container:VOYA.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4EC63F011834DE7F00D4E90A"
-            BuildableName = "SampleTest.app"
-            BlueprintName = "SampleTest"
-            ReferencedContainer = "container:SampleTest.xcodeproj">
+            BuildableName = "VOYA.app"
+            BlueprintName = "VOYA"
+            ReferencedContainer = "container:VOYA.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

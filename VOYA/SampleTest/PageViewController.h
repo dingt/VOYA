@@ -9,20 +9,23 @@
 #import <UIKit/UIKit.h>
 
 @interface PageViewController : UIViewController
+<UITextFieldDelegate,UIWebViewDelegate>
 
+@property (retain, nonatomic) IBOutlet UITextField *URLTextField;
 
-@property (retain, nonatomic) IBOutlet UITextField *urlTextField;
+//@property (nonatomic, strong) NSString *cityLabel;
 
-@property (nonatomic, strong) NSString *cityLabel;
-
-@property (retain, nonatomic) IBOutlet UIWebView *pageWebView;
+@property (retain, nonatomic) UIWebView * pageWebView;
 
 @property (retain, nonatomic) IBOutlet UIButton *goButton;
 
-@property (retain, nonatomic) IBOutlet UIBarButtonItem *smallerFontBarButton;
+@property (retain, nonatomic) UIBarButtonItem *smallerFontBarButton;
 
-@property (retain, nonatomic) IBOutlet UIBarButtonItem *largerFontBarButton;
+@property (retain, nonatomic)  UIBarButtonItem *largerFontBarButton;
 
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *settingBarButton;
-
+@property(nonatomic,retain)UIToolbar *toolBar;
+// for http request
+@property (nonatomic,retain)NSString* urlString;
+@property(nonatomic,retain)UIBarButtonItem *activityItem;
 @end

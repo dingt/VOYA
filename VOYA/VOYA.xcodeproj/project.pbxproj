@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EBEC1BD183EF23D007B007A /* CityList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EBEC1BC183EF23D007B007A /* CityList.plist */; };
 		4EC63F061834DE7F00D4E90A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC63F051834DE7F00D4E90A /* Foundation.framework */; };
 		4EC63F081834DE7F00D4E90A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC63F071834DE7F00D4E90A /* CoreGraphics.framework */; };
 		4EC63F0A1834DE7F00D4E90A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC63F091834DE7F00D4E90A /* UIKit.framework */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4EBEC1BC183EF23D007B007A /* CityList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CityList.plist; sourceTree = "<group>"; };
 		4EC63F021834DE7F00D4E90A /* VOYA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VOYA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC63F051834DE7F00D4E90A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4EC63F071834DE7F00D4E90A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -185,6 +187,7 @@
 				4EC63F431834E6E000D4E90A /* RegisterViewController.h */,
 				4EC63F441834E6E000D4E90A /* RegisterViewController.m */,
 				4EC63F201834DE7F00D4E90A /* Images.xcassets */,
+				4EBEC1BC183EF23D007B007A /* CityList.plist */,
 				4EC63F0C1834DE7F00D4E90A /* Supporting Files */,
 				A6ED4FC318352BF700CB85C1 /* PageViewController.h */,
 				A6ED4FC418352BF700CB85C1 /* PageViewController.m */,
@@ -335,6 +338,7 @@
 			files = (
 				4EC63F211834DE7F00D4E90A /* Images.xcassets in Resources */,
 				4EC63F191834DE7F00D4E90A /* Main_iPhone.storyboard in Resources */,
+				4EBEC1BD183EF23D007B007A /* CityList.plist in Resources */,
 				4EC63F101834DE7F00D4E90A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,6 +514,7 @@
 				GCC_PREFIX_HEADER = "SampleTest/VOYA-Prefix.pch";
 				INFOPLIST_FILE = "SampleTest/VOYA-Info.plist";
 				PRODUCT_NAME = VOYA;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -525,6 +530,7 @@
 				GCC_PREFIX_HEADER = "SampleTest/VOYA-Prefix.pch";
 				INFOPLIST_FILE = "SampleTest/VOYA-Info.plist";
 				PRODUCT_NAME = VOYA;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

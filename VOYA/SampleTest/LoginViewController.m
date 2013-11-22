@@ -97,6 +97,9 @@
                     loginUserName.isLogin = YES;
                     loginUserName.currentUserName = [UserName text];
                     [self alertStatus:@"Logged in Successfully." :@"Login Success!"];
+                    [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"isLogin"];
+                   
+                    [[NSUserDefaults standardUserDefaults] setObject:[UserName text] forKey:@"UserName"];
                     //[self.navigationController popToRootViewControllerAnimated:YES];
                     
                 } else {
@@ -192,5 +195,11 @@ float prewMoveY;
                               cancelButtonTitle:@"OK"
                               otherButtonTitles:nil, nil];
     [alertView show];
+}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+}
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end

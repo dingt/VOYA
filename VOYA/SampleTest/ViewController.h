@@ -10,12 +10,15 @@
 
 @interface ViewController : UITableViewController
 <UISearchBarDelegate>
+@property(nonatomic, retain)NSMutableArray *cities;
+@property(nonatomic, retain)NSMutableArray *allFilteredFile;  //the filter cities
+
 @property(nonatomic,retain)IBOutlet UISearchBar *SearchBar;
  @property(nonatomic,retain)IBOutlet UIButton * LoginButton;
 
 
 
-@property (retain, nonatomic) IBOutlet UITableView *cityTableView;
+//@property (retain, nonatomic) IBOutlet UITableView *cityTableView;
 
 
 @end
