@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>New York</key>
-	<string></string>
+	<string>http://www.baidu.com</string>
 	<key>Los Angeles</key>
 	<string></string>
 	<key>Chicago</key>
@@ -33,7 +33,7 @@
 	<key>Columbus</key>
 	<string></string>
 	<key>Austin</key>
-	<string></string>
+	<string>http://www.gmail.com</string>
 	<key>Memphis</key>
 	<string></string>
 	<key>Fort Worth</key>

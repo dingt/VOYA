@@ -71,7 +71,10 @@
     [super viewDidLoad];
     
     self.URLTextField.delegate=self;
-
+    NSString *city = self.title;
+    NSDictionary *dict = [[NSDictionary alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"CityList" ofType:@"plist"]];
+    NSURL *url = [dict objectForKey:city];
+    self.URLTextField.text = (NSString *)url;
     UIActivityIndicatorView* spinner =
     [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:
       UIActivityIndicatorViewStyleWhite] autorelease];
@@ -106,12 +109,13 @@
 	[toolBar setItems:toolItems animated:NO];
     
     // just for test
-     NSURL *url;
-    if([self.urlString length]==0)
-       url = [NSURL URLWithString:@"http://www.google.com"];
-    else{
-       url = [NSURL URLWithString:self.urlString];
-    }
+  //   NSURL *url;
+   // if([self.urlString length]==0)
+  //     url = [NSURL URLWithString:@"http://www.google.com"];
+//    else{
+ //      url = [NSURL URLWithString:self.urlString];
+   // }
+    NSURL *url = [[NSURL alloc] initWithString:self.URLTextField.text];
     
     pageWebView=[[UIWebView alloc] init];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
