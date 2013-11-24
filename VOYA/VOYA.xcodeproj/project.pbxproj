@@ -37,6 +37,9 @@
 		5C4A2062183536F600C09BAD /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4A2055183536F600C09BAD /* SBJsonUTF8Stream.m */; };
 		5C4A2063183536F600C09BAD /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4A2057183536F600C09BAD /* SBJsonWriter.m */; };
 		5C5CDD4218396FB2005AF8C2 /* VOYAData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CDD4118396FB2005AF8C2 /* VOYAData.m */; };
+		5CDC8FEE1842A5CA004D09E4 /* travel1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CDC8FED1842A5CA004D09E4 /* travel1.jpg */; };
+		5CDC8FF01842A7C7004D09E4 /* travel2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CDC8FEF1842A7C7004D09E4 /* travel2.jpg */; };
+		5CDC8FF21842AD57004D09E4 /* travel1-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CDC8FF11842AD57004D09E4 /* travel1-2.jpg */; };
 		A6189A27183E740F00BDB2EC /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6189A26183E740F00BDB2EC /* SearchTableViewController.m */; };
 		A6189A2D183E7CA600BDB2EC /* SearchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6189A2C183E7CA600BDB2EC /* SearchTableView.m */; };
 		A6ED4FC518352BF700CB85C1 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED4FC418352BF700CB85C1 /* PageViewController.m */; };
@@ -105,6 +108,9 @@
 		5C4A2057183536F600C09BAD /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		5C5CDD4018396FB2005AF8C2 /* VOYAData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VOYAData.h; path = ../VOYAData.h; sourceTree = "<group>"; };
 		5C5CDD4118396FB2005AF8C2 /* VOYAData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VOYAData.m; path = ../VOYAData.m; sourceTree = "<group>"; };
+		5CDC8FED1842A5CA004D09E4 /* travel1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = travel1.jpg; sourceTree = "<group>"; };
+		5CDC8FEF1842A7C7004D09E4 /* travel2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = travel2.jpg; sourceTree = "<group>"; };
+		5CDC8FF11842AD57004D09E4 /* travel1-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "travel1-2.jpg"; sourceTree = "<group>"; };
 		A6189A25183E740F00BDB2EC /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
 		A6189A26183E740F00BDB2EC /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
 		A6189A2B183E7CA600BDB2EC /* SearchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableView.h; sourceTree = "<group>"; };
@@ -202,6 +208,9 @@
 		4EC63F0C1834DE7F00D4E90A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5CDC8FEF1842A7C7004D09E4 /* travel2.jpg */,
+				5CDC8FF11842AD57004D09E4 /* travel1-2.jpg */,
+				5CDC8FED1842A5CA004D09E4 /* travel1.jpg */,
 				4EC63F0D1834DE7F00D4E90A /* VOYA-Info.plist */,
 				4EC63F0E1834DE7F00D4E90A /* InfoPlist.strings */,
 				4EC63F111834DE7F00D4E90A /* main.m */,
@@ -336,8 +345,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CDC8FF01842A7C7004D09E4 /* travel2.jpg in Resources */,
+				5CDC8FF21842AD57004D09E4 /* travel1-2.jpg in Resources */,
 				4EC63F211834DE7F00D4E90A /* Images.xcassets in Resources */,
 				4EC63F191834DE7F00D4E90A /* Main_iPhone.storyboard in Resources */,
+				5CDC8FEE1842A5CA004D09E4 /* travel1.jpg in Resources */,
 				4EBEC1BD183EF23D007B007A /* CityList.plist in Resources */,
 				4EC63F101834DE7F00D4E90A /* InfoPlist.strings in Resources */,
 			);

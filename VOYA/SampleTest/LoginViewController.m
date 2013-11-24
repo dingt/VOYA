@@ -28,6 +28,8 @@
 	UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
     tap.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:tap];
+    //add backgroud img
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"travel1.jpg"]];
 
 }
 -(void)viewTapped:(UITapGestureRecognizer*)tap{

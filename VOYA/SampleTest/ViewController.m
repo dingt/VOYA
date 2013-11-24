@@ -67,7 +67,7 @@
     tap.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:tap];
 
-    
+
     
 }
 -(void)viewTapped:(UITapGestureRecognizer*)tap{
