@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>New York</key>
+	<string>http://www.baidu.com</string>
+	<key>Los Angeles</key>
+	<string></string>
+	<key>Chicago</key>
+	<string></string>
+	<key>Houston</key>
+	<string></string>
+	<key>Phoenix</key>
+	<string></string>
+	<key>Philadelphia</key>
+	<string></string>
+	<key>San Antonio</key>
+	<string></string>
+	<key>San Diego</key>
+	<string></string>
+	<key>Dalias</key>
+	<string></string>
+	<key>San Jose</key>
+	<string></string>
+	<key>Detroit</key>
+	<string></string>
+	<key>Jacksonvile</key>
+	<string></string>
+	<key>Indianapolis</key>
+	<string></string>
+	<key>San Francisco</key>
+	<string></string>
+	<key>Columbus</key>
+	<string></string>
+	<key>Austin</key>
+	<string>http://www.gmail.com</string>
+	<key>Memphis</key>
+	<string></string>
+	<key>Fort Worth</key>
+	<string></string>
+	<key>Baltimore</key>
+	<string></string>
+	<key>Charlotte</key>
+	<string></string>
+	<key>El Paso</key>
+	<string></string>
+	<key>Boston</key>
+	<string></string>
+	<key>Seattle</key>
+	<string></string>
+</dict>
+</plist>
