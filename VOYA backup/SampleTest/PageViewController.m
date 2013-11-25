@@ -9,6 +9,7 @@
 #import "PageViewController.h"
 #import "PersonalInfoViewController.h"
 #import "VOYAData.h"
+#import "MoreTableViewController.h"
 
 @interface PageViewController ()
 
@@ -20,7 +21,8 @@
 @synthesize pageWebView ;
 @synthesize activityItem;
 @synthesize toolBar;
-@synthesize smallerFontBarButton,largerFontBarButton,settingBarButton;
+
+@synthesize moreBarButton,navigationBarButton,settingBarButton;
 //@synthesize cityLabel = _cityLabel;
 //
 //- (void)setCityLabel:(NSString *)cityLabel
@@ -51,11 +53,13 @@
     //[self.pageWebView loadRequest:[[NSURLRequest alloc] initWithURL:url]];
     
 }
-- (void)largerFontBarButtonClick:(UIBarButtonItem *)sender {
-    
+- (void)moreBarButtonClick:(UIBarButtonItem *)sender {
+    MoreTableViewController *more=[[MoreTableViewController alloc] init];
+    [self.navigationController pushViewController:more animated:YES];
+    [more release];
     
 }
-- (void)smallFontBarButtonClick:(UIBarButtonItem *)sender {
+- (void)navigationBarButtonClick:(UIBarButtonItem *)sender {
     
     
 }
@@ -95,15 +99,15 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    largerFontBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"A" style:UIBarButtonItemStyleBordered target:self action:@selector(largerFontBarButtonClick:)] autorelease];
-    smallerFontBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"a" style:UIBarButtonItemStyleBordered target:self action:@selector(smallFontBarButtonClick:)] autorelease];
+    navigationBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"Navigation" style:UIBarButtonItemStyleBordered target:self action:@selector(NavigationBarButtonClick:)] autorelease];
+    moreBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"More" style:UIBarButtonItemStyleBordered target:self action:@selector(moreBarButtonClick:)] autorelease];
 //    settingBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"Setting" style:UIBarButtonItemStyleBordered target:self action:@selector(settingButtonClick:)] autorelease];
     UIBarItem* space = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:
 						 UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
     toolBar = [[[UIToolbar alloc] initWithFrame:CGRectZero] autorelease];
 	toolBar.tintColor = [UIColor blueColor];
-	NSArray *toolItems=[NSArray arrayWithObjects:smallerFontBarButton,space,
-                        largerFontBarButton,space,
+	NSArray *toolItems=[NSArray arrayWithObjects:navigationBarButton,space,
+                        moreBarButton,space,
                         settingBarButton,
                         nil ];
 	[toolBar setItems:toolItems animated:NO];
@@ -158,7 +162,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"showMoreSuegue"])
+    if([segue.identifier isEqualToString:@"showMoreSegue"])
     {
         [[segue destinationViewController] setTitle:self.title];
     }

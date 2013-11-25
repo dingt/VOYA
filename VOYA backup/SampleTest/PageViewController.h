@@ -19,9 +19,9 @@
 
 @property (retain, nonatomic) IBOutlet UIButton *goButton;
 
-@property (retain, nonatomic) UIBarButtonItem *smallerFontBarButton;
+@property (retain, nonatomic) UIBarButtonItem *moreBarButton;
 
-@property (retain, nonatomic)  UIBarButtonItem *largerFontBarButton;
+@property (retain, nonatomic)  UIBarButtonItem *navigationBarButton;
 
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *settingBarButton;
 @property(nonatomic,retain)UIToolbar *toolBar;
