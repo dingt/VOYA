@@ -9,7 +9,7 @@
 #import "PageViewController.h"
 #import "PersonalInfoViewController.h"
 #import "VOYAData.h"
-#import "MoreTableViewController.h"
+
 
 @interface PageViewController ()
 
@@ -54,9 +54,9 @@
     
 }
 - (void)moreBarButtonClick:(UIBarButtonItem *)sender {
-    MoreTableViewController *more=[[MoreTableViewController alloc] init];
-    [self.navigationController pushViewController:more animated:YES];
-    [more release];
+    //MoreTableViewController *more=[[MoreTableViewController alloc] init];
+    //[self.navigationController pushViewController:more animated:YES];
+    //[more release];
     
 }
 - (void)navigationBarButtonClick:(UIBarButtonItem *)sender {
