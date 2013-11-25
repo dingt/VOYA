@@ -296,9 +296,6 @@
         [self alertStatus:@"" :@""];
     }
     
-    
-    
-    
 }
 
 - (void)didReceiveMemoryWarning

@@ -61,6 +61,9 @@
     
     
 }
+- (IBAction)navigationItemClicked:(UIBarButtonItem *)sender {
+    
+}
 
 - (void)settingButtonClick:(UIBarButtonItem *)sender {
     PersonalInfoViewController *info=[[PersonalInfoViewController alloc] init];
@@ -93,8 +96,10 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    largerFontBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"A" style:UIBarButtonItemStyleBordered target:self action:@selector(largerFontBarButtonClick:)] autorelease];
-    smallerFontBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"a" style:UIBarButtonItemStyleBordered target:self action:@selector(smallFontBarButtonClick:)] autorelease];
+    largerFontBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"Navigation" style:UIBarButtonItemStyleBordered target:self action:@selector(largerFontBarButtonClick:)] autorelease];
+    smallerFontBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"More" style:UIBarButtonItemStyleBordered target:self action:@selector(navigationItemClicked:)] autorelease];
+    
+    
 //    settingBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"Setting" style:UIBarButtonItemStyleBordered target:self action:@selector(settingButtonClick:)] autorelease];
     UIBarItem* space = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:
 						 UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
