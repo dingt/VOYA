@@ -9,16 +9,9 @@
 #import "PageViewController.h"
 #import "PersonalInfoViewController.h"
 #import "VOYAData.h"
-#import "xmlElement.h"
+#import "MoreTableViewController.h"
 
 @interface PageViewController ()
-
-
-@property(nonatomic, strong) NSXMLParser *xmlParser;
-
-@property (nonatomic, strong) xmlElement *rootElement;
-
-@property (nonatomic, strong) xmlElement *currentElementPointer;
 
 @end
 
@@ -28,9 +21,8 @@
 @synthesize pageWebView ;
 @synthesize activityItem;
 @synthesize toolBar;
-@synthesize smallerFontBarButton,largerFontBarButton,settingBarButton;
 
-@synthesize xmlParser, rootElement, currentElementPointer;
+@synthesize moreBarButton,navigationBarButton,settingBarButton;
 //@synthesize cityLabel = _cityLabel;
 //
 //- (void)setCityLabel:(NSString *)cityLabel
@@ -61,11 +53,13 @@
     //[self.pageWebView loadRequest:[[NSURLRequest alloc] initWithURL:url]];
     
 }
-- (void)largerFontBarButtonClick:(UIBarButtonItem *)sender {
-    
+- (void)moreBarButtonClick:(UIBarButtonItem *)sender {
+    MoreTableViewController *more=[[MoreTableViewController alloc] init];
+    [self.navigationController pushViewController:more animated:YES];
+    [more release];
     
 }
-- (void)smallFontBarButtonClick:(UIBarButtonItem *)sender {
+- (void)navigationBarButtonClick:(UIBarButtonItem *)sender {
     
     
 }
@@ -91,25 +85,11 @@
 	[spinner startAnimating];
 	activityItem = [[UIBarButtonItem alloc] initWithCustomView:spinner];
    
-	//add by linxiaolan
 	
-	self.xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:(NSURL *)url];
-    [self.xmlParser setDelegate:self];
-    [self.xmlParser setShouldProcessNamespaces:NO];
-    [self.xmlParser setShouldReportNamespacePrefixes:NO];
-    [self.xmlParser setShouldResolveExternalEntities:NO];
-    if([self.xmlParser parse]) {
-        NSLog(@"the xml is parsed.");
-        xmlElement *element = self.rootElement.subElement[1];
-        NSLog(@"%@", element.subElement);
-    }
-    else {
-        NSLog(@"failed to parse the xml");
-    }
-    
-    
+	
+	
 
-    //add end
+    
     
    // self.pageWebView.scrollView.scrollEnabled=YES;
    // self.pageWebView.scrollView.bounces=YES;
@@ -119,15 +99,15 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    largerFontBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"A" style:UIBarButtonItemStyleBordered target:self action:@selector(largerFontBarButtonClick:)] autorelease];
-    smallerFontBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"a" style:UIBarButtonItemStyleBordered target:self action:@selector(smallFontBarButtonClick:)] autorelease];
+    navigationBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"Navigation" style:UIBarButtonItemStyleBordered target:self action:@selector(NavigationBarButtonClick:)] autorelease];
+    moreBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"More" style:UIBarButtonItemStyleBordered target:self action:@selector(moreBarButtonClick:)] autorelease];
 //    settingBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"Setting" style:UIBarButtonItemStyleBordered target:self action:@selector(settingButtonClick:)] autorelease];
     UIBarItem* space = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:
 						 UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
     toolBar = [[[UIToolbar alloc] initWithFrame:CGRectZero] autorelease];
 	toolBar.tintColor = [UIColor blueColor];
-	NSArray *toolItems=[NSArray arrayWithObjects:smallerFontBarButton,space,
-                        largerFontBarButton,space,
+	NSArray *toolItems=[NSArray arrayWithObjects:navigationBarButton,space,
+                        moreBarButton,space,
                         settingBarButton,
                         nil ];
 	[toolBar setItems:toolItems animated:NO];
@@ -178,10 +158,15 @@
     [URLTextField release];
     [pageWebView release];
     [_goButton release];
-    [xmlParser release];
-    [rootElement release];
-    [currentElementPointer release];
     [super dealloc];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"showMoreSegue"])
+    {
+        [[segue destinationViewController] setTitle:self.title];
+    }
+    
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
@@ -262,55 +247,6 @@
     [alterview release];
 }
 
-// add by lxl
-
-- (void) parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
-{
-    if(self.rootElement == nil)
-    {
-        self.rootElement = [[xmlElement alloc] init];
-        self.currentElementPointer = self.rootElement;
-    }
-    else {
-        xmlElement *newElement = [[xmlElement alloc] init];
-        newElement.parent = self.currentElementPointer;
-        [self.currentElementPointer.subElement addObject:newElement];
-        self.currentElementPointer = newElement;
-    }
-    
-    self.currentElementPointer.name = elementName;
-    self.currentElementPointer.attributes = attributeDict;
-}
-
--(void) parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
-{
-    if([self.currentElementPointer.text length] > 0)
-    {
-        self.currentElementPointer.text = [self.currentElementPointer.text stringByAppendingString:string];
-        
-    }
-    else {
-        self.currentElementPointer.text = string;
-    }
-}
-
--(void) parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
-{
-    self.currentElementPointer = self.currentElementPointer.parent;
-}
-
--(void) parserDidEndDocument:(NSXMLParser *)parser
-{
-    self.currentElementPointer = nil;
-}
-
--(void) parserDidStartDocument:(NSXMLParser *)parser
-{
-    self.rootElement = nil;
-    self.currentElementPointer = nil;
-}
-
-// add end
 
 
 @end

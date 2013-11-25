@@ -2,37 +2,51 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Boston</key>
-	<string>http://locaohost:8886/test2.svc/City?$filter=name eq &apos;Boston&apos;</string>
-	<key>Back Bay</key>
+	<key>New York</key>
+	<string>http://www.baidu.com</string>
+	<key>Los Angeles</key>
 	<string></string>
-	<key>Beacon Hill</key>
+	<key>Chicago</key>
 	<string></string>
-	<key>Charlestown</key>
+	<key>Houston</key>
 	<string></string>
-	<key>Chinatown</key>
+	<key>Phoenix</key>
 	<string></string>
-	<key>Dorchester</key>
+	<key>Philadelphia</key>
 	<string></string>
-	<key>Downtown</key>
+	<key>San Antonio</key>
 	<string></string>
-	<key>East Boston</key>
+	<key>San Diego</key>
 	<string></string>
-	<key>Fenway-Kenmore</key>
+	<key>Dalias</key>
 	<string></string>
-	<key>Financial District</key>
+	<key>San Jose</key>
 	<string></string>
-	<key>Jamaica Plain</key>
+	<key>Detroit</key>
 	<string></string>
-	<key>Mission Hill</key>
+	<key>Jacksonvile</key>
 	<string></string>
-	<key>North End</key>
+	<key>Indianapolis</key>
 	<string></string>
-	<key>Roxbury</key>
+	<key>San Francisco</key>
 	<string></string>
-	<key>South Boston</key>
+	<key>Columbus</key>
+	<string></string>
+	<key>Austin</key>
 	<string>http://www.gmail.com</string>
-	<key>South End</key>
+	<key>Memphis</key>
+	<string></string>
+	<key>Fort Worth</key>
+	<string></string>
+	<key>Baltimore</key>
+	<string></string>
+	<key>Charlotte</key>
+	<string></string>
+	<key>El Paso</key>
+	<string></string>
+	<key>Boston</key>
+	<string></string>
+	<key>Seattle</key>
 	<string></string>
 </dict>
 </plist>
