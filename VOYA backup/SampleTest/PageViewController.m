@@ -157,6 +157,14 @@
     [super dealloc];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"showMoreSuegue"])
+    {
+        [[segue destinationViewController] setTitle:self.title];
+    }
+    
+}
+
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     if (![URLTextField.text isEqualToString:@""] ) {
 		[textField resignFirstResponder];
