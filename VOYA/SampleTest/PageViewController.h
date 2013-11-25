@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "NorthwindEntities.h"
 
 @interface PageViewController : UIViewController
 <UITextFieldDelegate,UIWebViewDelegate, NSXMLParserDelegate>

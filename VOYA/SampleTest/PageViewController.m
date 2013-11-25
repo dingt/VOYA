@@ -9,6 +9,7 @@
 #import "PageViewController.h"
 #import "PersonalInfoViewController.h"
 #import "VOYAData.h"
+#import "NorthwindEntities.h"
 
 @interface PageViewController ()
 
@@ -62,6 +63,7 @@
     
 }
 - (IBAction)navigationItemClicked:(UIBarButtonItem *)sender {
+   // [self.prepareForSegue ];
     
 }
 
@@ -87,6 +89,13 @@
 	activityItem = [[UIBarButtonItem alloc] initWithCustomView:spinner];
    
 
+    //add test for odata query
+    NSLog(@"begin");
+    NorthwindEntities *proxy = [[NorthwindEntities alloc] initWithUri:@"http://localhost:8886/test2.svc/" credential:nil];
+    QueryOperationResponse *response = [proxy execute:@"City?$filter=name eq 'Boston'&$expand=District"];
+    NSMutableArray *citiesArray  = [response getResult];
+    NorthwindModel_City* city1 = [citiesArray objectAtIndex:0];
+    NSLog(@"City Name = %@===%@", [city1 getname], [city1 getdistricts] );
     
    // self.pageWebView.scrollView.scrollEnabled=YES;
    // self.pageWebView.scrollView.bounces=YES;
@@ -141,6 +150,16 @@
     [self.navigationController.view addSubview:toolBar];
      [self.view addSubview:pageWebView];
 
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"showMore"])
+    {
+        
+      
+        [[segue destinationViewController] setTitle:self.title];
+    }
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];

@@ -38,6 +38,61 @@
 		5C4A2063183536F600C09BAD /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4A2057183536F600C09BAD /* SBJsonWriter.m */; };
 		5C5CDD4218396FB2005AF8C2 /* VOYAData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CDD4118396FB2005AF8C2 /* VOYAData.m */; };
 		5C60DD491844041100D1EDFA /* libMSODataLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C60DD481844041100D1EDFA /* libMSODataLib.a */; };
+		5C60DD4C18440AE600D1EDFA /* NorthwindEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD4A18440AE600D1EDFA /* NorthwindEntities.m */; };
+		5C60DDC818440D4D00D1EDFA /* TableEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD5018440D4C00D1EDFA /* TableEntry.m */; };
+		5C60DDC918440D4D00D1EDFA /* Tables.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD5218440D4C00D1EDFA /* Tables.m */; };
+		5C60DDCA18440D4D00D1EDFA /* ACSUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD5518440D4C00D1EDFA /* ACSUtil.m */; };
+		5C60DDCB18440D4D00D1EDFA /* AzureTableUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD5718440D4C00D1EDFA /* AzureTableUtil.m */; };
+		5C60DDCC18440D4D00D1EDFA /* ClientType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD5918440D4C00D1EDFA /* ClientType.m */; };
+		5C60DDCD18440D4D00D1EDFA /* Dictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD5B18440D4C00D1EDFA /* Dictionary.m */; };
+		5C60DDCE18440D4D00D1EDFA /* ODataBool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD5D18440D4C00D1EDFA /* ODataBool.m */; };
+		5C60DDCF18440D4D00D1EDFA /* ODataGUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD5F18440D4C00D1EDFA /* ODataGUID.m */; };
+		5C60DDD018440D4D00D1EDFA /* Pair.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD6118440D4C00D1EDFA /* Pair.m */; };
+		5C60DDD118440D4D00D1EDFA /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD6318440D4C00D1EDFA /* Utility.m */; };
+		5C60DDD218440D4D00D1EDFA /* constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD6618440D4C00D1EDFA /* constants.m */; };
+		5C60DDD318440D4D00D1EDFA /* ContentStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD6818440D4C00D1EDFA /* ContentStream.m */; };
+		5C60DDD418440D4D00D1EDFA /* DataServiceQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD6A18440D4C00D1EDFA /* DataServiceQuery.m */; };
+		5C60DDD518440D4D00D1EDFA /* DataServiceQueryContinuation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD6C18440D4C00D1EDFA /* DataServiceQueryContinuation.m */; };
+		5C60DDD618440D4D00D1EDFA /* DataServiceRequestArgs.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD6E18440D4C00D1EDFA /* DataServiceRequestArgs.m */; };
+		5C60DDD718440D4D00D1EDFA /* DataServiceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD7018440D4C00D1EDFA /* DataServiceResponse.m */; };
+		5C60DDD818440D4D00D1EDFA /* DataServiceSaveStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD7218440D4C00D1EDFA /* DataServiceSaveStream.m */; };
+		5C60DDD918440D4D00D1EDFA /* DataServiceStreamResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD7418440D4C00D1EDFA /* DataServiceStreamResponse.m */; };
+		5C60DDDA18440D4D00D1EDFA /* HTTPHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD7718440D4C00D1EDFA /* HTTPHandler.m */; };
+		5C60DDDB18440D4D00D1EDFA /* ObjectContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD7A18440D4C00D1EDFA /* ObjectContext.m */; };
+		5C60DDDC18440D4D00D1EDFA /* ODataSVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD7E18440D4C00D1EDFA /* ODataSVC.m */; };
+		5C60DDDD18440D4D00D1EDFA /* OperationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD8018440D4C00D1EDFA /* OperationResponse.m */; };
+		5C60DDDE18440D4D00D1EDFA /* QueryComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD8218440D4C00D1EDFA /* QueryComponents.m */; };
+		5C60DDDF18440D4D00D1EDFA /* QueryOperationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD8418440D4C00D1EDFA /* QueryOperationResponse.m */; };
+		5C60DDE018440D4D00D1EDFA /* RelatedEnd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD8618440D4C00D1EDFA /* RelatedEnd.m */; };
+		5C60DDE118440D4D00D1EDFA /* ResourceBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD8818440D4C00D1EDFA /* ResourceBox.m */; };
+		5C60DDE218440D4D00D1EDFA /* SaveResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD8A18440D4C00D1EDFA /* SaveResult.m */; };
+		5C60DDE318440D4D00D1EDFA /* ACSCredential.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD8D18440D4C00D1EDFA /* ACSCredential.m */; };
+		5C60DDE418440D4D00D1EDFA /* AzureTableCredential.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD8F18440D4C00D1EDFA /* AzureTableCredential.m */; };
+		5C60DDE518440D4D00D1EDFA /* CredentialBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD9118440D4C00D1EDFA /* CredentialBase.m */; };
+		5C60DDE618440D4D00D1EDFA /* CredentialType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD9318440D4C00D1EDFA /* CredentialType.m */; };
+		5C60DDE718440D4D00D1EDFA /* WindowsCredential.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD9518440D4C00D1EDFA /* WindowsCredential.m */; };
+		5C60DDE818440D4D00D1EDFA /* ACSUtilException.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD9818440D4C00D1EDFA /* ACSUtilException.m */; };
+		5C60DDE918440D4D00D1EDFA /* DataServiceRequestException.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD9A18440D4C00D1EDFA /* DataServiceRequestException.m */; };
+		5C60DDEA18440D4D00D1EDFA /* ODataServiceException.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD9C18440D4C00D1EDFA /* ODataServiceException.m */; };
+		5C60DDEB18440D4D00D1EDFA /* mProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DD9F18440D4C00D1EDFA /* mProperties.m */; };
+		5C60DDEC18440D4D00D1EDFA /* ODataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DDA118440D4C00D1EDFA /* ODataEntity.m */; };
+		5C60DDED18440D4D00D1EDFA /* ODataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DDA318440D4C00D1EDFA /* ODataObject.m */; };
+		5C60DDEE18440D4D00D1EDFA /* AtomEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DDAA18440D4D00D1EDFA /* AtomEntry.m */; };
+		5C60DDEF18440D4D00D1EDFA /* AtomParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DDAC18440D4D00D1EDFA /* AtomParser.m */; };
+		5C60DDF018440D4D00D1EDFA /* ODataNameSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DDAE18440D4D00D1EDFA /* ODataNameSpace.m */; };
+		5C60DDF118440D4D00D1EDFA /* ODataRTTI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DDB018440D4D00D1EDFA /* ODataRTTI.m */; };
+		5C60DDF218440D4D00D1EDFA /* ODataXMLElements.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DDB218440D4D00D1EDFA /* ODataXMLElements.m */; };
+		5C60DDF318440D4D00D1EDFA /* ODataXMlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DDB418440D4D00D1EDFA /* ODataXMlParser.m */; };
+		5C60DDF418440D4D00D1EDFA /* XMLBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DDB618440D4D00D1EDFA /* XMLBuilder.m */; };
+		5C60DDF518440D4D00D1EDFA /* XMLGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DDB818440D4D00D1EDFA /* XMLGenerator.m */; };
+		5C60DDF618440D4D00D1EDFA /* HttpBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DDBB18440D4D00D1EDFA /* HttpBatchRequest.m */; };
+		5C60DDF718440D4D00D1EDFA /* HttpBatchResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DDBD18440D4D00D1EDFA /* HttpBatchResponse.m */; };
+		5C60DDF818440D4D00D1EDFA /* HTTPHeaders.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DDBF18440D4D00D1EDFA /* HTTPHeaders.m */; };
+		5C60DDF918440D4D00D1EDFA /* HttpProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DDC118440D4D00D1EDFA /* HttpProxy.m */; };
+		5C60DDFA18440D4D00D1EDFA /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DDC318440D4D00D1EDFA /* HttpRequest.m */; };
+		5C60DDFB18440D4D00D1EDFA /* HttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DDC518440D4D00D1EDFA /* HttpResponse.m */; };
+		5C60DDFC18440D4D00D1EDFA /* Microsoft_Http_Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DDC718440D4D00D1EDFA /* Microsoft_Http_Response.m */; };
+		5C60DE02184411DC00D1EDFA /* OdataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C60DE01184411DC00D1EDFA /* OdataViewController.m */; };
 		5CDC8FEE1842A5CA004D09E4 /* travel1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CDC8FED1842A5CA004D09E4 /* travel1.jpg */; };
 		5CDC8FF01842A7C7004D09E4 /* travel2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CDC8FEF1842A7C7004D09E4 /* travel2.jpg */; };
 		5CDC8FF21842AD57004D09E4 /* travel1-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CDC8FF11842AD57004D09E4 /* travel1-2.jpg */; };
@@ -54,6 +109,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4EC63F011834DE7F00D4E90A;
 			remoteInfo = SampleTest;
+		};
+		5C60DDFE18440D4D00D1EDFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C60DDA418440D4C00D1EDFA /* MSODataLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = MSODataLib;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -110,6 +172,122 @@
 		5C5CDD4018396FB2005AF8C2 /* VOYAData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VOYAData.h; path = ../VOYAData.h; sourceTree = "<group>"; };
 		5C5CDD4118396FB2005AF8C2 /* VOYAData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VOYAData.m; path = ../VOYAData.m; sourceTree = "<group>"; };
 		5C60DD481844041100D1EDFA /* libMSODataLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMSODataLib.a; path = "OData-OData4ObjC-f61cbf7/Framework/bin/odatalib/lib/iPhoneDeviceLibs/iPhone_Device_4.3/release/libMSODataLib.a"; sourceTree = "<group>"; };
+		5C60DD4A18440AE600D1EDFA /* NorthwindEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NorthwindEntities.m; sourceTree = "<group>"; };
+		5C60DD4B18440AE600D1EDFA /* NorthwindEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NorthwindEntities.h; sourceTree = "<group>"; };
+		5C60DD4F18440D4C00D1EDFA /* TableEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableEntry.h; sourceTree = "<group>"; };
+		5C60DD5018440D4C00D1EDFA /* TableEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableEntry.m; sourceTree = "<group>"; };
+		5C60DD5118440D4C00D1EDFA /* Tables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tables.h; sourceTree = "<group>"; };
+		5C60DD5218440D4C00D1EDFA /* Tables.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tables.m; sourceTree = "<group>"; };
+		5C60DD5418440D4C00D1EDFA /* ACSUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACSUtil.h; sourceTree = "<group>"; };
+		5C60DD5518440D4C00D1EDFA /* ACSUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACSUtil.m; sourceTree = "<group>"; };
+		5C60DD5618440D4C00D1EDFA /* AzureTableUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AzureTableUtil.h; sourceTree = "<group>"; };
+		5C60DD5718440D4C00D1EDFA /* AzureTableUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AzureTableUtil.m; sourceTree = "<group>"; };
+		5C60DD5818440D4C00D1EDFA /* ClientType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientType.h; sourceTree = "<group>"; };
+		5C60DD5918440D4C00D1EDFA /* ClientType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientType.m; sourceTree = "<group>"; };
+		5C60DD5A18440D4C00D1EDFA /* Dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dictionary.h; sourceTree = "<group>"; };
+		5C60DD5B18440D4C00D1EDFA /* Dictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dictionary.m; sourceTree = "<group>"; };
+		5C60DD5C18440D4C00D1EDFA /* ODataBool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODataBool.h; sourceTree = "<group>"; };
+		5C60DD5D18440D4C00D1EDFA /* ODataBool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODataBool.m; sourceTree = "<group>"; };
+		5C60DD5E18440D4C00D1EDFA /* ODataGUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODataGUID.h; sourceTree = "<group>"; };
+		5C60DD5F18440D4C00D1EDFA /* ODataGUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODataGUID.m; sourceTree = "<group>"; };
+		5C60DD6018440D4C00D1EDFA /* Pair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pair.h; sourceTree = "<group>"; };
+		5C60DD6118440D4C00D1EDFA /* Pair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pair.m; sourceTree = "<group>"; };
+		5C60DD6218440D4C00D1EDFA /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		5C60DD6318440D4C00D1EDFA /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		5C60DD6518440D4C00D1EDFA /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		5C60DD6618440D4C00D1EDFA /* constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = constants.m; sourceTree = "<group>"; };
+		5C60DD6718440D4C00D1EDFA /* ContentStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentStream.h; sourceTree = "<group>"; };
+		5C60DD6818440D4C00D1EDFA /* ContentStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentStream.m; sourceTree = "<group>"; };
+		5C60DD6918440D4C00D1EDFA /* DataServiceQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataServiceQuery.h; sourceTree = "<group>"; };
+		5C60DD6A18440D4C00D1EDFA /* DataServiceQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataServiceQuery.m; sourceTree = "<group>"; };
+		5C60DD6B18440D4C00D1EDFA /* DataServiceQueryContinuation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataServiceQueryContinuation.h; sourceTree = "<group>"; };
+		5C60DD6C18440D4C00D1EDFA /* DataServiceQueryContinuation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataServiceQueryContinuation.m; sourceTree = "<group>"; };
+		5C60DD6D18440D4C00D1EDFA /* DataServiceRequestArgs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataServiceRequestArgs.h; sourceTree = "<group>"; };
+		5C60DD6E18440D4C00D1EDFA /* DataServiceRequestArgs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataServiceRequestArgs.m; sourceTree = "<group>"; };
+		5C60DD6F18440D4C00D1EDFA /* DataServiceResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataServiceResponse.h; sourceTree = "<group>"; };
+		5C60DD7018440D4C00D1EDFA /* DataServiceResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataServiceResponse.m; sourceTree = "<group>"; };
+		5C60DD7118440D4C00D1EDFA /* DataServiceSaveStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataServiceSaveStream.h; sourceTree = "<group>"; };
+		5C60DD7218440D4C00D1EDFA /* DataServiceSaveStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataServiceSaveStream.m; sourceTree = "<group>"; };
+		5C60DD7318440D4C00D1EDFA /* DataServiceStreamResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataServiceStreamResponse.h; sourceTree = "<group>"; };
+		5C60DD7418440D4C00D1EDFA /* DataServiceStreamResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataServiceStreamResponse.m; sourceTree = "<group>"; };
+		5C60DD7518440D4C00D1EDFA /* ErrorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorDelegate.h; sourceTree = "<group>"; };
+		5C60DD7618440D4C00D1EDFA /* HTTPHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPHandler.h; sourceTree = "<group>"; };
+		5C60DD7718440D4C00D1EDFA /* HTTPHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPHandler.m; sourceTree = "<group>"; };
+		5C60DD7818440D4C00D1EDFA /* MSODataResponseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSODataResponseDelegate.h; sourceTree = "<group>"; };
+		5C60DD7918440D4C00D1EDFA /* ObjectContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectContext.h; sourceTree = "<group>"; };
+		5C60DD7A18440D4C00D1EDFA /* ObjectContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectContext.m; sourceTree = "<group>"; };
+		5C60DD7B18440D4C00D1EDFA /* ObjectContextDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectContextDelegate.h; sourceTree = "<group>"; };
+		5C60DD7C18440D4C00D1EDFA /* ODataDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODataDelegate.h; sourceTree = "<group>"; };
+		5C60DD7D18440D4C00D1EDFA /* ODataSVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODataSVC.h; sourceTree = "<group>"; };
+		5C60DD7E18440D4C00D1EDFA /* ODataSVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODataSVC.m; sourceTree = "<group>"; };
+		5C60DD7F18440D4C00D1EDFA /* OperationResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationResponse.h; sourceTree = "<group>"; };
+		5C60DD8018440D4C00D1EDFA /* OperationResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationResponse.m; sourceTree = "<group>"; };
+		5C60DD8118440D4C00D1EDFA /* QueryComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryComponents.h; sourceTree = "<group>"; };
+		5C60DD8218440D4C00D1EDFA /* QueryComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryComponents.m; sourceTree = "<group>"; };
+		5C60DD8318440D4C00D1EDFA /* QueryOperationResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryOperationResponse.h; sourceTree = "<group>"; };
+		5C60DD8418440D4C00D1EDFA /* QueryOperationResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryOperationResponse.m; sourceTree = "<group>"; };
+		5C60DD8518440D4C00D1EDFA /* RelatedEnd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelatedEnd.h; sourceTree = "<group>"; };
+		5C60DD8618440D4C00D1EDFA /* RelatedEnd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatedEnd.m; sourceTree = "<group>"; };
+		5C60DD8718440D4C00D1EDFA /* ResourceBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceBox.h; sourceTree = "<group>"; };
+		5C60DD8818440D4C00D1EDFA /* ResourceBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceBox.m; sourceTree = "<group>"; };
+		5C60DD8918440D4C00D1EDFA /* SaveResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveResult.h; sourceTree = "<group>"; };
+		5C60DD8A18440D4C00D1EDFA /* SaveResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveResult.m; sourceTree = "<group>"; };
+		5C60DD8C18440D4C00D1EDFA /* ACSCredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACSCredential.h; sourceTree = "<group>"; };
+		5C60DD8D18440D4C00D1EDFA /* ACSCredential.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACSCredential.m; sourceTree = "<group>"; };
+		5C60DD8E18440D4C00D1EDFA /* AzureTableCredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AzureTableCredential.h; sourceTree = "<group>"; };
+		5C60DD8F18440D4C00D1EDFA /* AzureTableCredential.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AzureTableCredential.m; sourceTree = "<group>"; };
+		5C60DD9018440D4C00D1EDFA /* CredentialBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CredentialBase.h; sourceTree = "<group>"; };
+		5C60DD9118440D4C00D1EDFA /* CredentialBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CredentialBase.m; sourceTree = "<group>"; };
+		5C60DD9218440D4C00D1EDFA /* CredentialType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CredentialType.h; sourceTree = "<group>"; };
+		5C60DD9318440D4C00D1EDFA /* CredentialType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CredentialType.m; sourceTree = "<group>"; };
+		5C60DD9418440D4C00D1EDFA /* WindowsCredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowsCredential.h; sourceTree = "<group>"; };
+		5C60DD9518440D4C00D1EDFA /* WindowsCredential.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowsCredential.m; sourceTree = "<group>"; };
+		5C60DD9718440D4C00D1EDFA /* ACSUtilException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACSUtilException.h; sourceTree = "<group>"; };
+		5C60DD9818440D4C00D1EDFA /* ACSUtilException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACSUtilException.m; sourceTree = "<group>"; };
+		5C60DD9918440D4C00D1EDFA /* DataServiceRequestException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataServiceRequestException.h; sourceTree = "<group>"; };
+		5C60DD9A18440D4C00D1EDFA /* DataServiceRequestException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataServiceRequestException.m; sourceTree = "<group>"; };
+		5C60DD9B18440D4C00D1EDFA /* ODataServiceException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODataServiceException.h; sourceTree = "<group>"; };
+		5C60DD9C18440D4C00D1EDFA /* ODataServiceException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODataServiceException.m; sourceTree = "<group>"; };
+		5C60DD9E18440D4C00D1EDFA /* mProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mProperties.h; sourceTree = "<group>"; };
+		5C60DD9F18440D4C00D1EDFA /* mProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mProperties.m; sourceTree = "<group>"; };
+		5C60DDA018440D4C00D1EDFA /* ODataEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODataEntity.h; sourceTree = "<group>"; };
+		5C60DDA118440D4C00D1EDFA /* ODataEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODataEntity.m; sourceTree = "<group>"; };
+		5C60DDA218440D4C00D1EDFA /* ODataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODataObject.h; sourceTree = "<group>"; };
+		5C60DDA318440D4C00D1EDFA /* ODataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODataObject.m; sourceTree = "<group>"; };
+		5C60DDA418440D4C00D1EDFA /* MSODataLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = MSODataLib.xcodeproj; sourceTree = "<group>"; };
+		5C60DDA718440D4D00D1EDFA /* MSODataLib_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSODataLib_Prefix.pch; sourceTree = "<group>"; };
+		5C60DDA918440D4D00D1EDFA /* AtomEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomEntry.h; sourceTree = "<group>"; };
+		5C60DDAA18440D4D00D1EDFA /* AtomEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomEntry.m; sourceTree = "<group>"; };
+		5C60DDAB18440D4D00D1EDFA /* AtomParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtomParser.h; sourceTree = "<group>"; };
+		5C60DDAC18440D4D00D1EDFA /* AtomParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtomParser.m; sourceTree = "<group>"; };
+		5C60DDAD18440D4D00D1EDFA /* ODataNameSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODataNameSpace.h; sourceTree = "<group>"; };
+		5C60DDAE18440D4D00D1EDFA /* ODataNameSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODataNameSpace.m; sourceTree = "<group>"; };
+		5C60DDAF18440D4D00D1EDFA /* ODataRTTI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODataRTTI.h; sourceTree = "<group>"; };
+		5C60DDB018440D4D00D1EDFA /* ODataRTTI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODataRTTI.m; sourceTree = "<group>"; };
+		5C60DDB118440D4D00D1EDFA /* ODataXMLElements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODataXMLElements.h; sourceTree = "<group>"; };
+		5C60DDB218440D4D00D1EDFA /* ODataXMLElements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODataXMLElements.m; sourceTree = "<group>"; };
+		5C60DDB318440D4D00D1EDFA /* ODataXMlParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODataXMlParser.h; sourceTree = "<group>"; };
+		5C60DDB418440D4D00D1EDFA /* ODataXMlParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODataXMlParser.m; sourceTree = "<group>"; };
+		5C60DDB518440D4D00D1EDFA /* XMLBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLBuilder.h; sourceTree = "<group>"; };
+		5C60DDB618440D4D00D1EDFA /* XMLBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLBuilder.m; sourceTree = "<group>"; };
+		5C60DDB718440D4D00D1EDFA /* XMLGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLGenerator.h; sourceTree = "<group>"; };
+		5C60DDB818440D4D00D1EDFA /* XMLGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLGenerator.m; sourceTree = "<group>"; };
+		5C60DDBA18440D4D00D1EDFA /* HttpBatchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpBatchRequest.h; sourceTree = "<group>"; };
+		5C60DDBB18440D4D00D1EDFA /* HttpBatchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpBatchRequest.m; sourceTree = "<group>"; };
+		5C60DDBC18440D4D00D1EDFA /* HttpBatchResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpBatchResponse.h; sourceTree = "<group>"; };
+		5C60DDBD18440D4D00D1EDFA /* HttpBatchResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpBatchResponse.m; sourceTree = "<group>"; };
+		5C60DDBE18440D4D00D1EDFA /* HTTPHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPHeaders.h; sourceTree = "<group>"; };
+		5C60DDBF18440D4D00D1EDFA /* HTTPHeaders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPHeaders.m; sourceTree = "<group>"; };
+		5C60DDC018440D4D00D1EDFA /* HttpProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpProxy.h; sourceTree = "<group>"; };
+		5C60DDC118440D4D00D1EDFA /* HttpProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpProxy.m; sourceTree = "<group>"; };
+		5C60DDC218440D4D00D1EDFA /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
+		5C60DDC318440D4D00D1EDFA /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
+		5C60DDC418440D4D00D1EDFA /* HttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpResponse.h; sourceTree = "<group>"; };
+		5C60DDC518440D4D00D1EDFA /* HttpResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpResponse.m; sourceTree = "<group>"; };
+		5C60DDC618440D4D00D1EDFA /* Microsoft_Http_Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Microsoft_Http_Response.h; sourceTree = "<group>"; };
+		5C60DDC718440D4D00D1EDFA /* Microsoft_Http_Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Microsoft_Http_Response.m; sourceTree = "<group>"; };
+		5C60DE00184411DC00D1EDFA /* OdataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OdataViewController.h; sourceTree = "<group>"; };
+		5C60DE01184411DC00D1EDFA /* OdataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OdataViewController.m; sourceTree = "<group>"; };
 		5CDC8FED1842A5CA004D09E4 /* travel1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = travel1.jpg; sourceTree = "<group>"; };
 		5CDC8FEF1842A7C7004D09E4 /* travel2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = travel2.jpg; sourceTree = "<group>"; };
 		5CDC8FF11842AD57004D09E4 /* travel1-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "travel1-2.jpg"; sourceTree = "<group>"; };
@@ -151,6 +329,7 @@
 		4EC63EF91834DE7F00D4E90A = {
 			isa = PBXGroup;
 			children = (
+				5C60DD4D18440D4C00D1EDFA /* MSODataLib */,
 				5C4A203D183536A600C09BAD /* JsonFramwork */,
 				4EC63F0B1834DE7F00D4E90A /* SampleTest */,
 				4EC63F2D1834DE7F00D4E90A /* SampleTestTests */,
@@ -183,6 +362,8 @@
 		4EC63F0B1834DE7F00D4E90A /* SampleTest */ = {
 			isa = PBXGroup;
 			children = (
+				5C60DD4A18440AE600D1EDFA /* NorthwindEntities.m */,
+				5C60DD4B18440AE600D1EDFA /* NorthwindEntities.h */,
 				4EC63F141834DE7F00D4E90A /* AppDelegate.h */,
 				4EC63F151834DE7F00D4E90A /* AppDelegate.m */,
 				4EC63F171834DE7F00D4E90A /* Main_iPhone.storyboard */,
@@ -205,6 +386,8 @@
 				A6ED4FC718352C0B00CB85C1 /* PersonalInfoViewController.m */,
 				5C5CDD4018396FB2005AF8C2 /* VOYAData.h */,
 				5C5CDD4118396FB2005AF8C2 /* VOYAData.m */,
+				5C60DE00184411DC00D1EDFA /* OdataViewController.h */,
+				5C60DE01184411DC00D1EDFA /* OdataViewController.m */,
 			);
 			path = SampleTest;
 			sourceTree = "<group>";
@@ -273,6 +456,198 @@
 			name = JsonFramwork;
 			sourceTree = "<group>";
 		};
+		5C60DD4D18440D4C00D1EDFA /* MSODataLib */ = {
+			isa = PBXGroup;
+			children = (
+				5C60DD4E18440D4C00D1EDFA /* Azure */,
+				5C60DD5318440D4C00D1EDFA /* Common */,
+				5C60DD6418440D4C00D1EDFA /* Context */,
+				5C60DD8B18440D4C00D1EDFA /* Credential */,
+				5C60DD9618440D4C00D1EDFA /* Exception */,
+				5C60DD9D18440D4C00D1EDFA /* Interfaces */,
+				5C60DDA418440D4C00D1EDFA /* MSODataLib.xcodeproj */,
+				5C60DDA718440D4D00D1EDFA /* MSODataLib_Prefix.pch */,
+				5C60DDA818440D4D00D1EDFA /* Parser */,
+				5C60DDB918440D4D00D1EDFA /* WebUtil */,
+			);
+			name = MSODataLib;
+			path = "OData-OData4ObjC-f61cbf7/Framework/src/MSODataLib";
+			sourceTree = "<group>";
+		};
+		5C60DD4E18440D4C00D1EDFA /* Azure */ = {
+			isa = PBXGroup;
+			children = (
+				5C60DD4F18440D4C00D1EDFA /* TableEntry.h */,
+				5C60DD5018440D4C00D1EDFA /* TableEntry.m */,
+				5C60DD5118440D4C00D1EDFA /* Tables.h */,
+				5C60DD5218440D4C00D1EDFA /* Tables.m */,
+			);
+			path = Azure;
+			sourceTree = "<group>";
+		};
+		5C60DD5318440D4C00D1EDFA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5C60DD5418440D4C00D1EDFA /* ACSUtil.h */,
+				5C60DD5518440D4C00D1EDFA /* ACSUtil.m */,
+				5C60DD5618440D4C00D1EDFA /* AzureTableUtil.h */,
+				5C60DD5718440D4C00D1EDFA /* AzureTableUtil.m */,
+				5C60DD5818440D4C00D1EDFA /* ClientType.h */,
+				5C60DD5918440D4C00D1EDFA /* ClientType.m */,
+				5C60DD5A18440D4C00D1EDFA /* Dictionary.h */,
+				5C60DD5B18440D4C00D1EDFA /* Dictionary.m */,
+				5C60DD5C18440D4C00D1EDFA /* ODataBool.h */,
+				5C60DD5D18440D4C00D1EDFA /* ODataBool.m */,
+				5C60DD5E18440D4C00D1EDFA /* ODataGUID.h */,
+				5C60DD5F18440D4C00D1EDFA /* ODataGUID.m */,
+				5C60DD6018440D4C00D1EDFA /* Pair.h */,
+				5C60DD6118440D4C00D1EDFA /* Pair.m */,
+				5C60DD6218440D4C00D1EDFA /* Utility.h */,
+				5C60DD6318440D4C00D1EDFA /* Utility.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5C60DD6418440D4C00D1EDFA /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				5C60DD6518440D4C00D1EDFA /* constants.h */,
+				5C60DD6618440D4C00D1EDFA /* constants.m */,
+				5C60DD6718440D4C00D1EDFA /* ContentStream.h */,
+				5C60DD6818440D4C00D1EDFA /* ContentStream.m */,
+				5C60DD6918440D4C00D1EDFA /* DataServiceQuery.h */,
+				5C60DD6A18440D4C00D1EDFA /* DataServiceQuery.m */,
+				5C60DD6B18440D4C00D1EDFA /* DataServiceQueryContinuation.h */,
+				5C60DD6C18440D4C00D1EDFA /* DataServiceQueryContinuation.m */,
+				5C60DD6D18440D4C00D1EDFA /* DataServiceRequestArgs.h */,
+				5C60DD6E18440D4C00D1EDFA /* DataServiceRequestArgs.m */,
+				5C60DD6F18440D4C00D1EDFA /* DataServiceResponse.h */,
+				5C60DD7018440D4C00D1EDFA /* DataServiceResponse.m */,
+				5C60DD7118440D4C00D1EDFA /* DataServiceSaveStream.h */,
+				5C60DD7218440D4C00D1EDFA /* DataServiceSaveStream.m */,
+				5C60DD7318440D4C00D1EDFA /* DataServiceStreamResponse.h */,
+				5C60DD7418440D4C00D1EDFA /* DataServiceStreamResponse.m */,
+				5C60DD7518440D4C00D1EDFA /* ErrorDelegate.h */,
+				5C60DD7618440D4C00D1EDFA /* HTTPHandler.h */,
+				5C60DD7718440D4C00D1EDFA /* HTTPHandler.m */,
+				5C60DD7818440D4C00D1EDFA /* MSODataResponseDelegate.h */,
+				5C60DD7918440D4C00D1EDFA /* ObjectContext.h */,
+				5C60DD7A18440D4C00D1EDFA /* ObjectContext.m */,
+				5C60DD7B18440D4C00D1EDFA /* ObjectContextDelegate.h */,
+				5C60DD7C18440D4C00D1EDFA /* ODataDelegate.h */,
+				5C60DD7D18440D4C00D1EDFA /* ODataSVC.h */,
+				5C60DD7E18440D4C00D1EDFA /* ODataSVC.m */,
+				5C60DD7F18440D4C00D1EDFA /* OperationResponse.h */,
+				5C60DD8018440D4C00D1EDFA /* OperationResponse.m */,
+				5C60DD8118440D4C00D1EDFA /* QueryComponents.h */,
+				5C60DD8218440D4C00D1EDFA /* QueryComponents.m */,
+				5C60DD8318440D4C00D1EDFA /* QueryOperationResponse.h */,
+				5C60DD8418440D4C00D1EDFA /* QueryOperationResponse.m */,
+				5C60DD8518440D4C00D1EDFA /* RelatedEnd.h */,
+				5C60DD8618440D4C00D1EDFA /* RelatedEnd.m */,
+				5C60DD8718440D4C00D1EDFA /* ResourceBox.h */,
+				5C60DD8818440D4C00D1EDFA /* ResourceBox.m */,
+				5C60DD8918440D4C00D1EDFA /* SaveResult.h */,
+				5C60DD8A18440D4C00D1EDFA /* SaveResult.m */,
+			);
+			path = Context;
+			sourceTree = "<group>";
+		};
+		5C60DD8B18440D4C00D1EDFA /* Credential */ = {
+			isa = PBXGroup;
+			children = (
+				5C60DD8C18440D4C00D1EDFA /* ACSCredential.h */,
+				5C60DD8D18440D4C00D1EDFA /* ACSCredential.m */,
+				5C60DD8E18440D4C00D1EDFA /* AzureTableCredential.h */,
+				5C60DD8F18440D4C00D1EDFA /* AzureTableCredential.m */,
+				5C60DD9018440D4C00D1EDFA /* CredentialBase.h */,
+				5C60DD9118440D4C00D1EDFA /* CredentialBase.m */,
+				5C60DD9218440D4C00D1EDFA /* CredentialType.h */,
+				5C60DD9318440D4C00D1EDFA /* CredentialType.m */,
+				5C60DD9418440D4C00D1EDFA /* WindowsCredential.h */,
+				5C60DD9518440D4C00D1EDFA /* WindowsCredential.m */,
+			);
+			path = Credential;
+			sourceTree = "<group>";
+		};
+		5C60DD9618440D4C00D1EDFA /* Exception */ = {
+			isa = PBXGroup;
+			children = (
+				5C60DD9718440D4C00D1EDFA /* ACSUtilException.h */,
+				5C60DD9818440D4C00D1EDFA /* ACSUtilException.m */,
+				5C60DD9918440D4C00D1EDFA /* DataServiceRequestException.h */,
+				5C60DD9A18440D4C00D1EDFA /* DataServiceRequestException.m */,
+				5C60DD9B18440D4C00D1EDFA /* ODataServiceException.h */,
+				5C60DD9C18440D4C00D1EDFA /* ODataServiceException.m */,
+			);
+			path = Exception;
+			sourceTree = "<group>";
+		};
+		5C60DD9D18440D4C00D1EDFA /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				5C60DD9E18440D4C00D1EDFA /* mProperties.h */,
+				5C60DD9F18440D4C00D1EDFA /* mProperties.m */,
+				5C60DDA018440D4C00D1EDFA /* ODataEntity.h */,
+				5C60DDA118440D4C00D1EDFA /* ODataEntity.m */,
+				5C60DDA218440D4C00D1EDFA /* ODataObject.h */,
+				5C60DDA318440D4C00D1EDFA /* ODataObject.m */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		5C60DDA518440D4C00D1EDFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C60DDFF18440D4D00D1EDFA /* libMSODataLib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C60DDA818440D4D00D1EDFA /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				5C60DDA918440D4D00D1EDFA /* AtomEntry.h */,
+				5C60DDAA18440D4D00D1EDFA /* AtomEntry.m */,
+				5C60DDAB18440D4D00D1EDFA /* AtomParser.h */,
+				5C60DDAC18440D4D00D1EDFA /* AtomParser.m */,
+				5C60DDAD18440D4D00D1EDFA /* ODataNameSpace.h */,
+				5C60DDAE18440D4D00D1EDFA /* ODataNameSpace.m */,
+				5C60DDAF18440D4D00D1EDFA /* ODataRTTI.h */,
+				5C60DDB018440D4D00D1EDFA /* ODataRTTI.m */,
+				5C60DDB118440D4D00D1EDFA /* ODataXMLElements.h */,
+				5C60DDB218440D4D00D1EDFA /* ODataXMLElements.m */,
+				5C60DDB318440D4D00D1EDFA /* ODataXMlParser.h */,
+				5C60DDB418440D4D00D1EDFA /* ODataXMlParser.m */,
+				5C60DDB518440D4D00D1EDFA /* XMLBuilder.h */,
+				5C60DDB618440D4D00D1EDFA /* XMLBuilder.m */,
+				5C60DDB718440D4D00D1EDFA /* XMLGenerator.h */,
+				5C60DDB818440D4D00D1EDFA /* XMLGenerator.m */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		5C60DDB918440D4D00D1EDFA /* WebUtil */ = {
+			isa = PBXGroup;
+			children = (
+				5C60DDBA18440D4D00D1EDFA /* HttpBatchRequest.h */,
+				5C60DDBB18440D4D00D1EDFA /* HttpBatchRequest.m */,
+				5C60DDBC18440D4D00D1EDFA /* HttpBatchResponse.h */,
+				5C60DDBD18440D4D00D1EDFA /* HttpBatchResponse.m */,
+				5C60DDBE18440D4D00D1EDFA /* HTTPHeaders.h */,
+				5C60DDBF18440D4D00D1EDFA /* HTTPHeaders.m */,
+				5C60DDC018440D4D00D1EDFA /* HttpProxy.h */,
+				5C60DDC118440D4D00D1EDFA /* HttpProxy.m */,
+				5C60DDC218440D4D00D1EDFA /* HttpRequest.h */,
+				5C60DDC318440D4D00D1EDFA /* HttpRequest.m */,
+				5C60DDC418440D4D00D1EDFA /* HttpResponse.h */,
+				5C60DDC518440D4D00D1EDFA /* HttpResponse.m */,
+				5C60DDC618440D4D00D1EDFA /* Microsoft_Http_Response.h */,
+				5C60DDC718440D4D00D1EDFA /* Microsoft_Http_Response.m */,
+			);
+			path = WebUtil;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -336,6 +711,12 @@
 			mainGroup = 4EC63EF91834DE7F00D4E90A;
 			productRefGroup = 4EC63F031834DE7F00D4E90A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5C60DDA518440D4C00D1EDFA /* Products */;
+					ProjectRef = 5C60DDA418440D4C00D1EDFA /* MSODataLib.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4EC63F011834DE7F00D4E90A /* VOYA */,
@@ -343,6 +724,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		5C60DDFF18440D4D00D1EDFA /* libMSODataLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMSODataLib.a;
+			remoteRef = 5C60DDFE18440D4D00D1EDFA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4EC63F001834DE7F00D4E90A /* Resources */ = {
@@ -377,25 +768,80 @@
 				A6189A27183E740F00BDB2EC /* SearchTableViewController.m in Sources */,
 				5C4A2061183536F600C09BAD /* SBJsonTokeniser.m in Sources */,
 				4EC63F1F1834DE7F00D4E90A /* ViewController.m in Sources */,
+				5C60DDD718440D4D00D1EDFA /* DataServiceResponse.m in Sources */,
+				5C60DDCB18440D4D00D1EDFA /* AzureTableUtil.m in Sources */,
+				5C60DDD318440D4D00D1EDFA /* ContentStream.m in Sources */,
+				5C60DDCD18440D4D00D1EDFA /* Dictionary.m in Sources */,
+				5C60DDCC18440D4D00D1EDFA /* ClientType.m in Sources */,
 				4EC63F451834E6E000D4E90A /* RegisterViewController.m in Sources */,
+				5C60DDD118440D4D00D1EDFA /* Utility.m in Sources */,
 				5C4A205D183536F600C09BAD /* SBJsonStreamParserState.m in Sources */,
 				4EC63F161834DE7F00D4E90A /* AppDelegate.m in Sources */,
+				5C60DDE618440D4D00D1EDFA /* CredentialType.m in Sources */,
+				5C60DDDE18440D4D00D1EDFA /* QueryComponents.m in Sources */,
 				4EC63F121834DE7F00D4E90A /* main.m in Sources */,
 				A6ED4FC818352C0B00CB85C1 /* PersonalInfoViewController.m in Sources */,
+				5C60DDDC18440D4D00D1EDFA /* ODataSVC.m in Sources */,
+				5C60DDFB18440D4D00D1EDFA /* HttpResponse.m in Sources */,
+				5C60DDDF18440D4D00D1EDFA /* QueryOperationResponse.m in Sources */,
+				5C60DDEC18440D4D00D1EDFA /* ODataEntity.m in Sources */,
 				5C4A2063183536F600C09BAD /* SBJsonWriter.m in Sources */,
+				5C60DDC818440D4D00D1EDFA /* TableEntry.m in Sources */,
+				5C60DDD018440D4D00D1EDFA /* Pair.m in Sources */,
+				5C60DDD218440D4D00D1EDFA /* constants.m in Sources */,
+				5C60DDF118440D4D00D1EDFA /* ODataRTTI.m in Sources */,
+				5C60DDE218440D4D00D1EDFA /* SaveResult.m in Sources */,
+				5C60DDE718440D4D00D1EDFA /* WindowsCredential.m in Sources */,
+				5C60DDF618440D4D00D1EDFA /* HttpBatchRequest.m in Sources */,
 				4EC63F421834E6CC00D4E90A /* LoginViewController.m in Sources */,
+				5C60DDF818440D4D00D1EDFA /* HTTPHeaders.m in Sources */,
 				5C4A205B183536F600C09BAD /* SBJsonStreamParserAccumulator.m in Sources */,
+				5C60DDCF18440D4D00D1EDFA /* ODataGUID.m in Sources */,
+				5C60DDC918440D4D00D1EDFA /* Tables.m in Sources */,
+				5C60DDEE18440D4D00D1EDFA /* AtomEntry.m in Sources */,
+				5C60DDCA18440D4D00D1EDFA /* ACSUtil.m in Sources */,
+				5C60DDF718440D4D00D1EDFA /* HttpBatchResponse.m in Sources */,
+				5C60DDE918440D4D00D1EDFA /* DataServiceRequestException.m in Sources */,
+				5C60DDED18440D4D00D1EDFA /* ODataObject.m in Sources */,
+				5C60DDF018440D4D00D1EDFA /* ODataNameSpace.m in Sources */,
+				5C60DDCE18440D4D00D1EDFA /* ODataBool.m in Sources */,
+				5C60DDDA18440D4D00D1EDFA /* HTTPHandler.m in Sources */,
+				5C60DDF318440D4D00D1EDFA /* ODataXMlParser.m in Sources */,
+				5C60DDE318440D4D00D1EDFA /* ACSCredential.m in Sources */,
 				5C4A2059183536F600C09BAD /* SBJsonParser.m in Sources */,
+				5C60DDEB18440D4D00D1EDFA /* mProperties.m in Sources */,
+				5C60DDF218440D4D00D1EDFA /* ODataXMLElements.m in Sources */,
 				5C4A2058183536F600C09BAD /* NSObject+SBJson.m in Sources */,
+				5C60DDEA18440D4D00D1EDFA /* ODataServiceException.m in Sources */,
 				5C4A2062183536F600C09BAD /* SBJsonUTF8Stream.m in Sources */,
+				5C60DDE518440D4D00D1EDFA /* CredentialBase.m in Sources */,
+				5C60DDE018440D4D00D1EDFA /* RelatedEnd.m in Sources */,
+				5C60DDFC18440D4D00D1EDFA /* Microsoft_Http_Response.m in Sources */,
+				5C60DDF518440D4D00D1EDFA /* XMLGenerator.m in Sources */,
+				5C60DDEF18440D4D00D1EDFA /* AtomParser.m in Sources */,
 				A6ED4FC518352BF700CB85C1 /* PageViewController.m in Sources */,
 				5C4A205F183536F600C09BAD /* SBJsonStreamWriterAccumulator.m in Sources */,
+				5C60DDDB18440D4D00D1EDFA /* ObjectContext.m in Sources */,
+				5C60DDF418440D4D00D1EDFA /* XMLBuilder.m in Sources */,
 				5C4A205E183536F600C09BAD /* SBJsonStreamWriter.m in Sources */,
+				5C60DDFA18440D4D00D1EDFA /* HttpRequest.m in Sources */,
+				5C60DDE818440D4D00D1EDFA /* ACSUtilException.m in Sources */,
+				5C60DDD518440D4D00D1EDFA /* DataServiceQueryContinuation.m in Sources */,
 				A6189A2D183E7CA600BDB2EC /* SearchTableView.m in Sources */,
+				5C60DDF918440D4D00D1EDFA /* HttpProxy.m in Sources */,
+				5C60DDD818440D4D00D1EDFA /* DataServiceSaveStream.m in Sources */,
 				5C4A2060183536F600C09BAD /* SBJsonStreamWriterState.m in Sources */,
 				5C4A205A183536F600C09BAD /* SBJsonStreamParser.m in Sources */,
 				5C5CDD4218396FB2005AF8C2 /* VOYAData.m in Sources */,
+				5C60DDD618440D4D00D1EDFA /* DataServiceRequestArgs.m in Sources */,
 				5C4A205C183536F600C09BAD /* SBJsonStreamParserAdapter.m in Sources */,
+				5C60DDD418440D4D00D1EDFA /* DataServiceQuery.m in Sources */,
+				5C60DDD918440D4D00D1EDFA /* DataServiceStreamResponse.m in Sources */,
+				5C60DE02184411DC00D1EDFA /* OdataViewController.m in Sources */,
+				5C60DDE118440D4D00D1EDFA /* ResourceBox.m in Sources */,
+				5C60DD4C18440AE600D1EDFA /* NorthwindEntities.m in Sources */,
+				5C60DDDD18440D4D00D1EDFA /* OperationResponse.m in Sources */,
+				5C60DDE418440D4D00D1EDFA /* AzureTableCredential.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
