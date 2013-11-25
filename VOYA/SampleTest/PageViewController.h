@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface PageViewController : UIViewController
-<UITextFieldDelegate,UIWebViewDelegate>
+<UITextFieldDelegate,UIWebViewDelegate, NSXMLParserDelegate>
 
 @property (retain, nonatomic) IBOutlet UITextField *URLTextField;
 
@@ -28,4 +29,6 @@
 // for http request
 @property (nonatomic,retain)NSString* urlString;
 @property(nonatomic,retain)UIBarButtonItem *activityItem;
+
+
 @end

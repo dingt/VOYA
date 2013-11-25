@@ -39,6 +39,7 @@
 		5C5CDD4218396FB2005AF8C2 /* VOYAData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CDD4118396FB2005AF8C2 /* VOYAData.m */; };
 		A6189A27183E740F00BDB2EC /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6189A26183E740F00BDB2EC /* SearchTableViewController.m */; };
 		A6189A2D183E7CA600BDB2EC /* SearchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6189A2C183E7CA600BDB2EC /* SearchTableView.m */; };
+		A6B508F018429DDE0014E29D /* xmlElement.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B508EF18429DDE0014E29D /* xmlElement.m */; };
 		A6ED4FC518352BF700CB85C1 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED4FC418352BF700CB85C1 /* PageViewController.m */; };
 		A6ED4FC818352C0B00CB85C1 /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED4FC718352C0B00CB85C1 /* PersonalInfoViewController.m */; };
 /* End PBXBuildFile section */
@@ -109,6 +110,8 @@
 		A6189A26183E740F00BDB2EC /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
 		A6189A2B183E7CA600BDB2EC /* SearchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableView.h; sourceTree = "<group>"; };
 		A6189A2C183E7CA600BDB2EC /* SearchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableView.m; sourceTree = "<group>"; };
+		A6B508EE18429DDE0014E29D /* xmlElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmlElement.h; sourceTree = "<group>"; };
+		A6B508EF18429DDE0014E29D /* xmlElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xmlElement.m; sourceTree = "<group>"; };
 		A6ED4FC318352BF700CB85C1 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		A6ED4FC418352BF700CB85C1 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		A6ED4FC618352C0B00CB85C1 /* PersonalInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalInfoViewController.h; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 				A6ED4FC718352C0B00CB85C1 /* PersonalInfoViewController.m */,
 				5C5CDD4018396FB2005AF8C2 /* VOYAData.h */,
 				5C5CDD4118396FB2005AF8C2 /* VOYAData.m */,
+				A6B508EE18429DDE0014E29D /* xmlElement.h */,
+				A6B508EF18429DDE0014E29D /* xmlElement.m */,
 			);
 			path = SampleTest;
 			sourceTree = "<group>";
@@ -368,6 +373,7 @@
 				A6ED4FC818352C0B00CB85C1 /* PersonalInfoViewController.m in Sources */,
 				5C4A2063183536F600C09BAD /* SBJsonWriter.m in Sources */,
 				4EC63F421834E6CC00D4E90A /* LoginViewController.m in Sources */,
+				A6B508F018429DDE0014E29D /* xmlElement.m in Sources */,
 				5C4A205B183536F600C09BAD /* SBJsonStreamParserAccumulator.m in Sources */,
 				5C4A2059183536F600C09BAD /* SBJsonParser.m in Sources */,
 				5C4A2058183536F600C09BAD /* NSObject+SBJson.m in Sources */,
