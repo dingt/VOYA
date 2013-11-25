@@ -37,6 +37,7 @@
 		5C4A2062183536F600C09BAD /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4A2055183536F600C09BAD /* SBJsonUTF8Stream.m */; };
 		5C4A2063183536F600C09BAD /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4A2057183536F600C09BAD /* SBJsonWriter.m */; };
 		5C5CDD4218396FB2005AF8C2 /* VOYAData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CDD4118396FB2005AF8C2 /* VOYAData.m */; };
+		5C60DD491844041100D1EDFA /* libMSODataLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C60DD481844041100D1EDFA /* libMSODataLib.a */; };
 		5CDC8FEE1842A5CA004D09E4 /* travel1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CDC8FED1842A5CA004D09E4 /* travel1.jpg */; };
 		5CDC8FF01842A7C7004D09E4 /* travel2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CDC8FEF1842A7C7004D09E4 /* travel2.jpg */; };
 		5CDC8FF21842AD57004D09E4 /* travel1-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CDC8FF11842AD57004D09E4 /* travel1-2.jpg */; };
@@ -108,6 +109,7 @@
 		5C4A2057183536F600C09BAD /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		5C5CDD4018396FB2005AF8C2 /* VOYAData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VOYAData.h; path = ../VOYAData.h; sourceTree = "<group>"; };
 		5C5CDD4118396FB2005AF8C2 /* VOYAData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VOYAData.m; path = ../VOYAData.m; sourceTree = "<group>"; };
+		5C60DD481844041100D1EDFA /* libMSODataLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMSODataLib.a; path = "OData-OData4ObjC-f61cbf7/Framework/bin/odatalib/lib/iPhoneDeviceLibs/iPhone_Device_4.3/release/libMSODataLib.a"; sourceTree = "<group>"; };
 		5CDC8FED1842A5CA004D09E4 /* travel1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = travel1.jpg; sourceTree = "<group>"; };
 		5CDC8FEF1842A7C7004D09E4 /* travel2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = travel2.jpg; sourceTree = "<group>"; };
 		5CDC8FF11842AD57004D09E4 /* travel1-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "travel1-2.jpg"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C60DD491844041100D1EDFA /* libMSODataLib.a in Frameworks */,
 				4EC63F081834DE7F00D4E90A /* CoreGraphics.framework in Frameworks */,
 				4EC63F0A1834DE7F00D4E90A /* UIKit.framework in Frameworks */,
 				4EC63F061834DE7F00D4E90A /* Foundation.framework in Frameworks */,
@@ -168,6 +171,7 @@
 		4EC63F041834DE7F00D4E90A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5C60DD481844041100D1EDFA /* libMSODataLib.a */,
 				4EC63F051834DE7F00D4E90A /* Foundation.framework */,
 				4EC63F071834DE7F00D4E90A /* CoreGraphics.framework */,
 				4EC63F091834DE7F00D4E90A /* UIKit.framework */,
@@ -524,7 +528,20 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SampleTest/VOYA-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/Volumes/hdd/Development/VOYA,
+					9.55.26,
+					"AM/VOYA/OData-OData4ObjC-f61cbf7/Framework/bin/odatalib/include/**",
+				);
 				INFOPLIST_FILE = "SampleTest/VOYA-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					/Volumes/hdd/Development/VOYA,
+					9.55.26,
+					"AM/VOYA/OData-OData4ObjC-f61cbf7/Framework/bin/odatalib/lib/iPhoneDeviceLibs/iPhone_Device_4.3/**",
+					"/Volumes/hdd/Development/VOYA\\ 9.55.26\\ AM/VOYA/OData-OData4ObjC-f61cbf7/Framework/bin/odatalib/lib/iPhoneDeviceLibs/iPhone_Device_4.3/release",
+				);
 				PRODUCT_NAME = VOYA;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -540,7 +557,20 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SampleTest/VOYA-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/Volumes/hdd/Development/VOYA,
+					9.55.26,
+					"AM/VOYA/OData-OData4ObjC-f61cbf7/Framework/bin/odatalib/include/**",
+				);
 				INFOPLIST_FILE = "SampleTest/VOYA-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					/Volumes/hdd/Development/VOYA,
+					9.55.26,
+					"AM/VOYA/OData-OData4ObjC-f61cbf7/Framework/bin/odatalib/lib/iPhoneDeviceLibs/iPhone_Device_4.3/**",
+					"/Volumes/hdd/Development/VOYA\\ 9.55.26\\ AM/VOYA/OData-OData4ObjC-f61cbf7/Framework/bin/odatalib/lib/iPhoneDeviceLibs/iPhone_Device_4.3/release",
+				);
 				PRODUCT_NAME = VOYA;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
