@@ -59,7 +59,7 @@
 		else			[self setUri:[NSString stringWithString:@""]];
 		
 		if(aHttpMethod) [self setMethod:[NSString stringWithString:aHttpMethod]];
-		else			[self setMethod:[NSString stringWithString:@""]];
+		else			[self setMethod:@""];
 		
 		if(aCredential) [self setCredential:aCredential];
 		else			[self setCredential:nil];

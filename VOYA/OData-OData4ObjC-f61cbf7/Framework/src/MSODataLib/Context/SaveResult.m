@@ -83,7 +83,7 @@
 		
 		m_changedEntries = [[mergedDictionary sortObjects] retain];
 		[self setBatchBoundary:[NSString stringWithFormat:@"batch_%@",[ODataGUID GetNewGuid]]];
-		[self setChangesetBoundry:[NSString stringWithString:@""]];
+		[self setChangesetBoundry:@""];
 		self.m_completed = NO;
 		
 		self.m_processingMediaLinkEntry = NO;
@@ -139,7 +139,7 @@
 				NSString *changesetBody = [self createChangeSetBody:index replaceOnUpdateOption:aReplaceOnUpdateOption];
 				if (changesetBody != nil)
 				{
-					[Utility WriteLine:[NSString stringWithFormat:@"Content-Length: %d",strlen([changesetBody UTF8String])] inStream:changesetHeader];	
+					[Utility WriteLine:[NSString stringWithFormat:@"Content-Length: %lu",strlen([changesetBody UTF8String])] inStream:changesetHeader];
 				}
 								
 				[Utility WriteLine:changesetHeader inStream:m_batchRequestBody];
@@ -775,7 +775,7 @@
 								
 	if (Deleted != [aResourceBox getState])
 	{
-			[Utility WriteLine:[NSString stringWithString:@"Content-Type: application/atom+xml;type=entry;charset=utf-8"] inStream:changesetHeaderForResource];
+			[Utility WriteLine:@"Content-Type: application/atom+xml;type=entry;charset=utf-8" inStream:changesetHeaderForResource];
 	}
 	return [changesetHeaderForResource autorelease];
 }
