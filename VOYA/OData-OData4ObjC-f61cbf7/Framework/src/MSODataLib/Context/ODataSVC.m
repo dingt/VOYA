@@ -111,7 +111,7 @@
 		if(anUrl)
 			[self setBaseUrl:anUrl];
 		else
-			[self setBaseUrl:[NSString stringWithString:@""]];
+			[self setBaseUrl:@""];
 		
 		if(theWorkspaces)
 			[self setWorkspaces:theWorkspaces];

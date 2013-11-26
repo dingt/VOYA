@@ -10,6 +10,7 @@
 #import "PersonalInfoViewController.h"
 #import "VOYAData.h"
 #import "NorthwindEntities.h"
+#import "OdataViewController.h"
 
 @interface PageViewController ()
 
@@ -54,16 +55,17 @@
     //[self.pageWebView loadRequest:[[NSURLRequest alloc] initWithURL:url]];
     
 }
-- (void)largerFontBarButtonClick:(UIBarButtonItem *)sender {
-    
-    
-}
-- (void)smallFontBarButtonClick:(UIBarButtonItem *)sender {
-    
-    
-}
+
+
 - (IBAction)navigationItemClicked:(UIBarButtonItem *)sender {
-   // [self.prepareForSegue ];
+    
+    
+}
+
+- (IBAction)showmoreItemClicked:(UIBarButtonItem *)sender {
+    OdataViewController *odata = [[OdataViewController alloc] init];
+    [self.navigationController pushViewController:odata animated:YES];
+    [odata release];
     
 }
 
@@ -105,8 +107,8 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    largerFontBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"Navigation" style:UIBarButtonItemStyleBordered target:self action:@selector(largerFontBarButtonClick:)] autorelease];
-    smallerFontBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"More" style:UIBarButtonItemStyleBordered target:self action:@selector(navigationItemClicked:)] autorelease];
+    largerFontBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"Navigation" style:UIBarButtonItemStyleBordered target:self action:@selector(navigationItemClicked:)] autorelease];
+    smallerFontBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"More" style:UIBarButtonItemStyleBordered target:self action:@selector(showmoreItemClicked:)] autorelease];
     
     
 //    settingBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"Setting" style:UIBarButtonItemStyleBordered target:self action:@selector(settingButtonClick:)] autorelease];
