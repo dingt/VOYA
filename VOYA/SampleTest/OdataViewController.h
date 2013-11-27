@@ -16,4 +16,6 @@
 
 @property (retain, nonatomic) IBOutlet UILabel *seeLabel;
 
+@property (retain, nonatomic) IBOutlet UILabel *cityLabel;
+
 @end

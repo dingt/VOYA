@@ -38,63 +38,12 @@
 
 
 /**
- * @interface:District
+ * @interface:Play
  * @Type:EntityType
  
  * @key:id* 
  */
-@interface NorthwindModel_District : ODataObject
-{
-	
-	/**
-	* @Type:EntityProperty
-	* @EdmType:Edm.String
-	* @MaxLength:
-	* @FixedLength:
-	*/
-	NSString *m_understand;
-	
-	/**
-	* @Type:EntityProperty
-	* @EdmType:Edm.String
-	* @MaxLength:
-	* @FixedLength:
-	*/
-	NSString *m_name;
-	
-	/**
-	* @Type:EntityProperty
-	* @EdmType:Edm.Int32
-	*/
-	NSNumber *m_id;
-	
-	/**
-	* @Type:NavigationProperty
-	* @Relationship:FK_District_City
-	* @FromRole:District
-	* @ToRole:City
-	*/
-	NSMutableArray *m_city;
-	
-}
-
-@property ( nonatomic , retain , getter=getunderstand , setter=setunderstand: ) NSString *m_understand;
-@property ( nonatomic , retain , getter=getname , setter=setname: ) NSString *m_name;
-@property ( nonatomic , retain , getter=getid , setter=setid: )NSNumber *m_id;
-@property ( nonatomic , retain , getter=getcity , setter=setcity: )NSMutableArray *m_city;
-
-+ (id) CreateDistrict;
-- (id) init;
-- (id) initWithUri:(NSString*)anUri;
-@end
-
-/**
- * @interface:See
- * @Type:EntityType
- 
- * @key:id* 
- */
-@interface NorthwindModel_See : ODataObject
+@interface NorthwindModel_Play : ODataObject
 {
 	
 	/**
@@ -106,10 +55,10 @@
 	/**
 	* @Type:EntityProperty
 	* @EdmType:Edm.String
-	* @MaxLength:255
+	* @MaxLength:
 	* @FixedLength:
 	*/
-	NSString *m_placeName;
+	NSString *m_cityName;
 	
 	/**
 	* @Type:EntityProperty
@@ -117,12 +66,28 @@
 	* @MaxLength:
 	* @FixedLength:
 	*/
-	NSString *m_intro;
+	NSString *m_explain;
+	
+	/**
+	* @Type:EntityProperty
+	* @EdmType:Edm.String
+	* @MaxLength:
+	* @FixedLength:
+	*/
+	NSString *m_type;
+	
+	/**
+	* @Type:EntityProperty
+	* @EdmType:Edm.String
+	* @MaxLength:
+	* @FixedLength:
+	*/
+	NSString *m_location;
 	
 	/**
 	* @Type:NavigationProperty
-	* @Relationship:FK_See_City
-	* @FromRole:See
+	* @Relationship:FK_Play_City
+	* @FromRole:Play
 	* @ToRole:City
 	*/
 	NSMutableArray *m_city;
@@ -130,11 +95,13 @@
 }
 
 @property ( nonatomic , retain , getter=getid , setter=setid: )NSNumber *m_id;
-@property ( nonatomic , retain , getter=getplaceName , setter=setplaceName: ) NSString *m_placeName;
-@property ( nonatomic , retain , getter=getintro , setter=setintro: ) NSString *m_intro;
+@property ( nonatomic , retain , getter=getcityName , setter=setcityName: ) NSString *m_cityName;
+@property ( nonatomic , retain , getter=getexplain , setter=setexplain: ) NSString *m_explain;
+@property ( nonatomic , retain , getter=gettype , setter=settype: ) NSString *m_type;
+@property ( nonatomic , retain , getter=getlocation , setter=setlocation: ) NSString *m_location;
 @property ( nonatomic , retain , getter=getcity , setter=setcity: )NSMutableArray *m_city;
 
-+ (id) CreateSee;
++ (id) CreatePlay;
 - (id) init;
 - (id) initWithUri:(NSString*)anUri;
 @end
@@ -158,6 +125,214 @@
 	
 	/**
 	* @Type:EntityProperty
+	* @EdmType:Edm.String
+	* @MaxLength:
+	* @FixedLength:
+	*/
+	NSString *m_location;
+	
+	/**
+	* @Type:EntityProperty
+	* @EdmType:Edm.String
+	* @MaxLength:
+	* @FixedLength:
+	*/
+	NSString *m_name;
+	
+	/**
+	* @Type:EntityProperty
+	* @EdmType:Edm.Int32
+	*/
+	NSNumber *m_id;
+	
+	/**
+	* @Type:NavigationProperty
+	* @Relationship:FK_Play_City
+	* @FromRole:City
+	* @ToRole:Play
+	*/
+	NSMutableArray *m_plays;
+	
+	/**
+	* @Type:NavigationProperty
+	* @Relationship:FK_District_City
+	* @FromRole:City
+	* @ToRole:District
+	*/
+	NSMutableArray *m_districts;
+	
+	/**
+	* @Type:NavigationProperty
+	* @Relationship:FK_Understand_City
+	* @FromRole:City
+	* @ToRole:Understand
+	*/
+	NSMutableArray *m_understands;
+	
+	/**
+	* @Type:NavigationProperty
+	* @Relationship:FK_See_City
+	* @FromRole:City
+	* @ToRole:See
+	*/
+	NSMutableArray *m_sees;
+	
+}
+
+@property ( nonatomic , retain , getter=geturl , setter=seturl: ) NSString *m_url;
+@property ( nonatomic , retain , getter=getlocation , setter=setlocation: ) NSString *m_location;
+@property ( nonatomic , retain , getter=getname , setter=setname: ) NSString *m_name;
+@property ( nonatomic , retain , getter=getid , setter=setid: )NSNumber *m_id;
+@property ( nonatomic , retain , getter=getplays , setter=setplays: )NSMutableArray *m_plays;
+@property ( nonatomic , retain , getter=getdistricts , setter=setdistricts: )NSMutableArray *m_districts;
+@property ( nonatomic , retain , getter=getunderstands , setter=setunderstands: )NSMutableArray *m_understands;
+@property ( nonatomic , retain , getter=getsees , setter=setsees: )NSMutableArray *m_sees;
+
++ (id) CreateCity;
+- (id) init;
+- (id) initWithUri:(NSString*)anUri;
+@end
+
+/**
+ * @interface:Understand
+ * @Type:EntityType
+ 
+ * @key:id* 
+ */
+@interface NorthwindModel_Understand : ODataObject
+{
+	
+	/**
+	* @Type:EntityProperty
+	* @EdmType:Edm.String
+	* @MaxLength:
+	* @FixedLength:
+	*/
+	NSString *m_cityName;
+	
+	/**
+	* @Type:EntityProperty
+	* @EdmType:Edm.String
+	* @MaxLength:
+	* @FixedLength:
+	*/
+	NSString *m_history;
+	
+	/**
+	* @Type:EntityProperty
+	* @EdmType:Edm.String
+	* @MaxLength:
+	* @FixedLength:
+	*/
+	NSString *m_visitTime;
+	
+	/**
+	* @Type:EntityProperty
+	* @EdmType:Edm.String
+	* @MaxLength:
+	* @FixedLength:
+	*/
+	NSString *m_today;
+	
+	/**
+	* @Type:EntityProperty
+	* @EdmType:Edm.Int32
+	*/
+	NSNumber *m_id;
+	
+	/**
+	* @Type:NavigationProperty
+	* @Relationship:FK_Understand_City
+	* @FromRole:Understand
+	* @ToRole:City
+	*/
+	NSMutableArray *m_city;
+	
+}
+
+@property ( nonatomic , retain , getter=getcityName , setter=setcityName: ) NSString *m_cityName;
+@property ( nonatomic , retain , getter=gethistory , setter=sethistory: ) NSString *m_history;
+@property ( nonatomic , retain , getter=getvisitTime , setter=setvisitTime: ) NSString *m_visitTime;
+@property ( nonatomic , retain , getter=gettoday , setter=settoday: ) NSString *m_today;
+@property ( nonatomic , retain , getter=getid , setter=setid: )NSNumber *m_id;
+@property ( nonatomic , retain , getter=getcity , setter=setcity: )NSMutableArray *m_city;
+
++ (id) CreateUnderstand;
+- (id) init;
+- (id) initWithUri:(NSString*)anUri;
+@end
+
+/**
+ * @interface:See
+ * @Type:EntityType
+ 
+ * @key:id* 
+ */
+@interface NorthwindModel_See : ODataObject
+{
+	
+	/**
+	* @Type:EntityProperty
+	* @EdmType:Edm.String
+	* @MaxLength:
+	* @FixedLength:
+	*/
+	NSString *m_placeName;
+	
+	/**
+	* @Type:EntityProperty
+	* @EdmType:Edm.Int32
+	*/
+	NSNumber *m_id;
+	
+	/**
+	* @Type:EntityProperty
+	* @EdmType:Edm.String
+	* @MaxLength:
+	* @FixedLength:
+	*/
+	NSString *m_intro;
+	
+	/**
+	* @Type:EntityProperty
+	* @EdmType:Edm.String
+	* @MaxLength:
+	* @FixedLength:
+	*/
+	NSString *m_cityName;
+	
+	/**
+	* @Type:NavigationProperty
+	* @Relationship:FK_See_City
+	* @FromRole:See
+	* @ToRole:City
+	*/
+	NSMutableArray *m_city;
+	
+}
+
+@property ( nonatomic , retain , getter=getplaceName , setter=setplaceName: ) NSString *m_placeName;
+@property ( nonatomic , retain , getter=getid , setter=setid: )NSNumber *m_id;
+@property ( nonatomic , retain , getter=getintro , setter=setintro: ) NSString *m_intro;
+@property ( nonatomic , retain , getter=getcityName , setter=setcityName: ) NSString *m_cityName;
+@property ( nonatomic , retain , getter=getcity , setter=setcity: )NSMutableArray *m_city;
+
++ (id) CreateSee;
+- (id) init;
+- (id) initWithUri:(NSString*)anUri;
+@end
+
+/**
+ * @interface:District
+ * @Type:EntityType
+ 
+ * @key:id* 
+ */
+@interface NorthwindModel_District : ODataObject
+{
+	
+	/**
+	* @Type:EntityProperty
 	* @EdmType:Edm.Int32
 	*/
 	NSNumber *m_id;
@@ -176,172 +351,33 @@
 	* @MaxLength:
 	* @FixedLength:
 	*/
-	NSString *m_location;
+	NSString *m_understand;
 	
 	/**
-	* @Type:NavigationProperty
-	* @Relationship:FK_See_City
-	* @FromRole:City
-	* @ToRole:See
+	* @Type:EntityProperty
+	* @EdmType:Edm.String
+	* @MaxLength:
+	* @FixedLength:
 	*/
-	NSMutableArray *m_sees;
-	
-	/**
-	* @Type:NavigationProperty
-	* @Relationship:FK_Understand_City
-	* @FromRole:City
-	* @ToRole:Understand
-	*/
-	NSMutableArray *m_understands;
-	
-	/**
-	* @Type:NavigationProperty
-	* @Relationship:FK_Play_City
-	* @FromRole:City
-	* @ToRole:Play
-	*/
-	NSMutableArray *m_plays;
+	NSString *m_cityName;
 	
 	/**
 	* @Type:NavigationProperty
 	* @Relationship:FK_District_City
-	* @FromRole:City
-	* @ToRole:District
+	* @FromRole:District
+	* @ToRole:City
 	*/
-	NSMutableArray *m_districts;
+	NSMutableArray *m_city;
 	
 }
 
-@property ( nonatomic , retain , getter=geturl , setter=seturl: ) NSString *m_url;
 @property ( nonatomic , retain , getter=getid , setter=setid: )NSNumber *m_id;
 @property ( nonatomic , retain , getter=getname , setter=setname: ) NSString *m_name;
-@property ( nonatomic , retain , getter=getlocation , setter=setlocation: ) NSString *m_location;
-@property ( nonatomic , retain , getter=getsees , setter=setsees: )NSMutableArray *m_sees;
-@property ( nonatomic , retain , getter=getunderstands , setter=setunderstands: )NSMutableArray *m_understands;
-@property ( nonatomic , retain , getter=getplays , setter=setplays: )NSMutableArray *m_plays;
-@property ( nonatomic , retain , getter=getdistricts , setter=setdistricts: )NSMutableArray *m_districts;
-
-+ (id) CreateCity;
-- (id) init;
-- (id) initWithUri:(NSString*)anUri;
-@end
-
-/**
- * @interface:Play
- * @Type:EntityType
- 
- * @key:id* 
- */
-@interface NorthwindModel_Play : ODataObject
-{
-	
-	/**
-	* @Type:EntityProperty
-	* @EdmType:Edm.String
-	* @MaxLength:
-	* @FixedLength:
-	*/
-	NSString *m_location;
-	
-	/**
-	* @Type:EntityProperty
-	* @EdmType:Edm.String
-	* @MaxLength:
-	* @FixedLength:
-	*/
-	NSString *m_explane;
-	
-	/**
-	* @Type:EntityProperty
-	* @EdmType:Edm.Int32
-	*/
-	NSNumber *m_id;
-	
-	/**
-	* @Type:EntityProperty
-	* @EdmType:Edm.String
-	* @MaxLength:
-	* @FixedLength:
-	*/
-	NSString *m_tpy;
-	
-	/**
-	* @Type:NavigationProperty
-	* @Relationship:FK_Play_City
-	* @FromRole:Play
-	* @ToRole:City
-	*/
-	NSMutableArray *m_city;
-	
-}
-
-@property ( nonatomic , retain , getter=getlocation , setter=setlocation: ) NSString *m_location;
-@property ( nonatomic , retain , getter=getexplane , setter=setexplane: ) NSString *m_explane;
-@property ( nonatomic , retain , getter=getid , setter=setid: )NSNumber *m_id;
-@property ( nonatomic , retain , getter=gettpy , setter=settpy: ) NSString *m_tpy;
+@property ( nonatomic , retain , getter=getunderstand , setter=setunderstand: ) NSString *m_understand;
+@property ( nonatomic , retain , getter=getcityName , setter=setcityName: ) NSString *m_cityName;
 @property ( nonatomic , retain , getter=getcity , setter=setcity: )NSMutableArray *m_city;
 
-+ (id) CreatePlay;
-- (id) init;
-- (id) initWithUri:(NSString*)anUri;
-@end
-
-/**
- * @interface:Understand
- * @Type:EntityType
- 
- * @key:id* 
- */
-@interface NorthwindModel_Understand : ODataObject
-{
-	
-	/**
-	* @Type:EntityProperty
-	* @EdmType:Edm.String
-	* @MaxLength:255
-	* @FixedLength:
-	*/
-	NSString *m_visitTime;
-	
-	/**
-	* @Type:EntityProperty
-	* @EdmType:Edm.Int32
-	*/
-	NSNumber *m_id;
-	
-	/**
-	* @Type:EntityProperty
-	* @EdmType:Edm.String
-	* @MaxLength:
-	* @FixedLength:
-	*/
-	NSString *m_today;
-	
-	/**
-	* @Type:EntityProperty
-	* @EdmType:Edm.String
-	* @MaxLength:
-	* @FixedLength:
-	*/
-	NSString *m_history;
-	
-	/**
-	* @Type:NavigationProperty
-	* @Relationship:FK_Understand_City
-	* @FromRole:Understand
-	* @ToRole:City
-	*/
-	NSMutableArray *m_city;
-	
-}
-
-@property ( nonatomic , retain , getter=getvisitTime , setter=setvisitTime: ) NSString *m_visitTime;
-@property ( nonatomic , retain , getter=getid , setter=setid: )NSNumber *m_id;
-@property ( nonatomic , retain , getter=gettoday , setter=settoday: ) NSString *m_today;
-@property ( nonatomic , retain , getter=gethistory , setter=sethistory: ) NSString *m_history;
-@property ( nonatomic , retain , getter=getcity , setter=setcity: )NSMutableArray *m_city;
-
-+ (id) CreateUnderstand;
++ (id) CreateDistrict;
 - (id) init;
 - (id) initWithUri:(NSString*)anUri;
 @end
@@ -352,32 +388,32 @@
 @interface NorthwindEntities : ObjectContext
 {
 	 NSString *m_OData_etag;
-	 DataServiceQuery *m_District;
-	 DataServiceQuery *m_See;
-	 DataServiceQuery *m_City;
 	 DataServiceQuery *m_Play;
+	 DataServiceQuery *m_City;
 	 DataServiceQuery *m_Understand;
+	 DataServiceQuery *m_See;
+	 DataServiceQuery *m_District;
 	
 }
 
 @property ( nonatomic , retain , getter=getEtag , setter=setEtag: )NSString *m_OData_etag;
-@property ( nonatomic , retain , getter=getDistrict , setter=setDistrict: ) DataServiceQuery *m_District;
-@property ( nonatomic , retain , getter=getSee , setter=setSee: ) DataServiceQuery *m_See;
-@property ( nonatomic , retain , getter=getCity , setter=setCity: ) DataServiceQuery *m_City;
 @property ( nonatomic , retain , getter=getPlay , setter=setPlay: ) DataServiceQuery *m_Play;
+@property ( nonatomic , retain , getter=getCity , setter=setCity: ) DataServiceQuery *m_City;
 @property ( nonatomic , retain , getter=getUnderstand , setter=setUnderstand: ) DataServiceQuery *m_Understand;
+@property ( nonatomic , retain , getter=getSee , setter=setSee: ) DataServiceQuery *m_See;
+@property ( nonatomic , retain , getter=getDistrict , setter=setDistrict: ) DataServiceQuery *m_District;
 
 - (id) init;
 - (id) initWithUri:(NSString*)anUri credential:(id)acredential;
-- (id) district;
-- (id) see;
-- (id) city;
 - (id) play;
+- (id) city;
 - (id) understand;
-- (void) addToDistrict:(id)anObject;
-- (void) addToSee:(id)anObject;
-- (void) addToCity:(id)anObject;
+- (id) see;
+- (id) district;
 - (void) addToPlay:(id)anObject;
+- (void) addToCity:(id)anObject;
 - (void) addToUnderstand:(id)anObject;
+- (void) addToSee:(id)anObject;
+- (void) addToDistrict:(id)anObject;
 
 @end

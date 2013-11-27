@@ -31,11 +31,11 @@
 
 	@synthesize m_OData_etag;
 
-	@synthesize m_District;
-	@synthesize m_See;
-	@synthesize m_City;
 	@synthesize m_Play;
+	@synthesize m_City;
 	@synthesize m_Understand;
+	@synthesize m_See;
+	@synthesize m_District;
 /**
  * The initializer for NorthwindEntities accepting service URI
  */
@@ -69,11 +69,11 @@
 
 		NSMutableArray* tempEntities=[[NSMutableArray alloc]init];
 		
-		[tempEntities addObject:@"District"];
-		[tempEntities addObject:@"See"];
-		[tempEntities addObject:@"City"];
 		[tempEntities addObject:@"Play"];
+		[tempEntities addObject:@"City"];
 		[tempEntities addObject:@"Understand"];
+		[tempEntities addObject:@"See"];
+		[tempEntities addObject:@"District"];
 
 		if([tempEntities count] > 0 )
 		{
@@ -83,19 +83,19 @@
 
 		NSMutableArray* tempEntitiySetKey=[[NSMutableArray alloc]init];
 		
-		[tempEntitiySetKey addObject:@"district"];
-		[tempEntitiySetKey addObject:@"see"];
-		[tempEntitiySetKey addObject:@"city"];
 		[tempEntitiySetKey addObject:@"play"];
+		[tempEntitiySetKey addObject:@"city"];
 		[tempEntitiySetKey addObject:@"understand"];
+		[tempEntitiySetKey addObject:@"see"];
+		[tempEntitiySetKey addObject:@"district"];
 
 		NSMutableArray* tempEntitiyTypeobj=[[NSMutableArray alloc]init];
 		
-		[tempEntitiyTypeobj addObject:@"District"];
-		[tempEntitiyTypeobj addObject:@"See"];
-		[tempEntitiyTypeobj addObject:@"City"];
 		[tempEntitiyTypeobj addObject:@"Play"];
+		[tempEntitiyTypeobj addObject:@"City"];
 		[tempEntitiyTypeobj addObject:@"Understand"];
+		[tempEntitiyTypeobj addObject:@"See"];
+		[tempEntitiyTypeobj addObject:@"District"];
 
 		if( ( [tempEntitiySetKey count] > 0 ) && ( [tempEntitiyTypeobj count] > 0 ) )
 		{
@@ -108,18 +108,18 @@
 
 		NSMutableArray* tempEntitiyTypeKey=[[NSMutableArray alloc]init];
 		
-		[tempEntitiyTypeKey addObject:@"district"];
-		[tempEntitiyTypeKey addObject:@"see"];
-		[tempEntitiyTypeKey addObject:@"city"];
 		[tempEntitiyTypeKey addObject:@"play"];
+		[tempEntitiyTypeKey addObject:@"city"];
 		[tempEntitiyTypeKey addObject:@"understand"];
+		[tempEntitiyTypeKey addObject:@"see"];
+		[tempEntitiyTypeKey addObject:@"district"];
 		NSMutableArray* tempEntitySetObj=[[NSMutableArray alloc]init];
 		
-		[tempEntitySetObj addObject:@"District"];
-		[tempEntitySetObj addObject:@"See"];
-		[tempEntitySetObj addObject:@"City"];
 		[tempEntitySetObj addObject:@"Play"];
+		[tempEntitySetObj addObject:@"City"];
 		[tempEntitySetObj addObject:@"Understand"];
+		[tempEntitySetObj addObject:@"See"];
+		[tempEntitySetObj addObject:@"District"];
 
 		if( ( [tempEntitiyTypeKey count] > 0 ) && ( [tempEntitySetObj count] > 0 ) )
 		{
@@ -130,29 +130,15 @@
 		[tempEntitySetObj release];
 
 		NSMutableArray* foreignKeys=[[NSMutableArray alloc]init];		
-		[foreignKeys addObject:@"FK_District_City"];
-		[foreignKeys addObject:@"FK_See_City"];
 		[foreignKeys addObject:@"FK_Play_City"];
 		[foreignKeys addObject:@"FK_Understand_City"];
+		[foreignKeys addObject:@"FK_See_City"];
+		[foreignKeys addObject:@"FK_District_City"];
 
 		NSMutableArray *arrOfDictionaries=[[NSMutableArray alloc]initWithCapacity:[foreignKeys count]];
 
 		NSMutableArray *arr;
  
-		arr=[[NSMutableArray alloc]init];
-		[arr addObject:[[[NSDictionary alloc]initWithObjectsAndKeys:@"District",@"EndRole",@"District",@"Type",@"*",@"Multiplicity",nil] autorelease]];
-		[arr addObject:[[[NSDictionary alloc]initWithObjectsAndKeys:@"City",@"EndRole",@"City",@"Type",@"0..1",@"Multiplicity",nil] autorelease]];
-		[arrOfDictionaries addObject:arr];
-		[arr release];
-
-
-		arr=[[NSMutableArray alloc]init];
-		[arr addObject:[[[NSDictionary alloc]initWithObjectsAndKeys:@"See",@"EndRole",@"See",@"Type",@"*",@"Multiplicity",nil] autorelease]];
-		[arr addObject:[[[NSDictionary alloc]initWithObjectsAndKeys:@"City",@"EndRole",@"City",@"Type",@"0..1",@"Multiplicity",nil] autorelease]];
-		[arrOfDictionaries addObject:arr];
-		[arr release];
-
-
 		arr=[[NSMutableArray alloc]init];
 		[arr addObject:[[[NSDictionary alloc]initWithObjectsAndKeys:@"Play",@"EndRole",@"Play",@"Type",@"*",@"Multiplicity",nil] autorelease]];
 		[arr addObject:[[[NSDictionary alloc]initWithObjectsAndKeys:@"City",@"EndRole",@"City",@"Type",@"0..1",@"Multiplicity",nil] autorelease]];
@@ -166,6 +152,20 @@
 		[arrOfDictionaries addObject:arr];
 		[arr release];
 
+
+		arr=[[NSMutableArray alloc]init];
+		[arr addObject:[[[NSDictionary alloc]initWithObjectsAndKeys:@"See",@"EndRole",@"See",@"Type",@"*",@"Multiplicity",nil] autorelease]];
+		[arr addObject:[[[NSDictionary alloc]initWithObjectsAndKeys:@"City",@"EndRole",@"City",@"Type",@"0..1",@"Multiplicity",nil] autorelease]];
+		[arrOfDictionaries addObject:arr];
+		[arr release];
+
+
+		arr=[[NSMutableArray alloc]init];
+		[arr addObject:[[[NSDictionary alloc]initWithObjectsAndKeys:@"District",@"EndRole",@"District",@"Type",@"*",@"Multiplicity",nil] autorelease]];
+		[arr addObject:[[[NSDictionary alloc]initWithObjectsAndKeys:@"City",@"EndRole",@"City",@"Type",@"0..1",@"Multiplicity",nil] autorelease]];
+		[arrOfDictionaries addObject:arr];
+		[arr release];
+
 		if( ( [foreignKeys count] > 0 ) && ( [arrOfDictionaries count] > 0 ) )
 		{
 			[super setAssociationforObjects:arrOfDictionaries forKeys:foreignKeys];
@@ -173,11 +173,11 @@
 		[foreignKeys release];
 		[arrOfDictionaries release];
 
-		m_District = [[DataServiceQuery alloc]initWithUri:@"District" objectContext: self];
-		m_See = [[DataServiceQuery alloc]initWithUri:@"See" objectContext: self];
-		m_City = [[DataServiceQuery alloc]initWithUri:@"City" objectContext: self];
 		m_Play = [[DataServiceQuery alloc]initWithUri:@"Play" objectContext: self];
+		m_City = [[DataServiceQuery alloc]initWithUri:@"City" objectContext: self];
 		m_Understand = [[DataServiceQuery alloc]initWithUri:@"Understand" objectContext: self];
+		m_See = [[DataServiceQuery alloc]initWithUri:@"See" objectContext: self];
+		m_District = [[DataServiceQuery alloc]initWithUri:@"District" objectContext: self];
 		
 	}
 	return self;
@@ -186,22 +186,12 @@
 
 /**
  * Method returns DataServiceQuery reference for
- * the entityset District
+ * the entityset Play
  */
-- (id) district
+- (id) play
 {
-	[self.m_District clearAllOptions];
-	return self.m_District;
-}
-
-/**
- * Method returns DataServiceQuery reference for
- * the entityset See
- */
-- (id) see
-{
-	[self.m_See clearAllOptions];
-	return self.m_See;
+	[self.m_Play clearAllOptions];
+	return self.m_Play;
 }
 
 /**
@@ -216,16 +206,6 @@
 
 /**
  * Method returns DataServiceQuery reference for
- * the entityset Play
- */
-- (id) play
-{
-	[self.m_Play clearAllOptions];
-	return self.m_Play;
-}
-
-/**
- * Method returns DataServiceQuery reference for
  * the entityset Understand
  */
 - (id) understand
@@ -235,17 +215,32 @@
 }
 
 /**
+ * Method returns DataServiceQuery reference for
+ * the entityset See
+ */
+- (id) see
+{
+	[self.m_See clearAllOptions];
+	return self.m_See;
+}
+
+/**
+ * Method returns DataServiceQuery reference for
+ * the entityset District
+ */
+- (id) district
+{
+	[self.m_District clearAllOptions];
+	return self.m_District;
+}
+
+/**
  * Methods for adding object to the entityset/collection
  */
 
-- (void) addToDistrict:(id)anObject
+- (void) addToPlay:(id)anObject
 {
-	[super addObject:@"District" object:anObject];
-}
-
-- (void) addToSee:(id)anObject
-{
-	[super addObject:@"See" object:anObject];
+	[super addObject:@"Play" object:anObject];
 }
 
 - (void) addToCity:(id)anObject
@@ -253,14 +248,19 @@
 	[super addObject:@"City" object:anObject];
 }
 
-- (void) addToPlay:(id)anObject
-{
-	[super addObject:@"Play" object:anObject];
-}
-
 - (void) addToUnderstand:(id)anObject
 {
 	[super addObject:@"Understand" object:anObject];
+}
+
+- (void) addToSee:(id)anObject
+{
+	[super addObject:@"See" object:anObject];
+}
+
+- (void) addToDistrict:(id)anObject
+{
+	[super addObject:@"District" object:anObject];
 }
 
 - (void) dealloc
@@ -268,310 +268,17 @@
 	[ m_OData_etag release];
 	m_OData_etag = nil;
 	
-	[m_District release];
-	m_District = nil;
-	[m_See release];
-	m_See = nil;
-	[m_City release];
-	m_City = nil;
 	[m_Play release];
 	m_Play = nil;
+	[m_City release];
+	m_City = nil;
 	[m_Understand release];
 	m_Understand = nil;
+	[m_See release];
+	m_See = nil;
+	[m_District release];
+	m_District = nil;
 
-	[super dealloc];
-}
-
-@end
-/**
- * @interface:District
- * @key:id
- */
-@implementation NorthwindModel_District
-	@synthesize m_understand;
-	@synthesize m_name;
-	@synthesize m_id;
-	@synthesize m_city;
-
-/**
- *Method to create an instance of District
- */
-+ (id) CreateDistrict
-{
-	NorthwindModel_District *aDistrict = [[NorthwindModel_District alloc]init];
-	return aDistrict;
-}
-/**
- * Initialising object for District
- */
-- (id) init
-{
-	self=[self initWithUri:nil];
-	return self;
-}
-
-- (id) initWithUri:(NSString*)anUri 
-{
-	if(self=[super initWithUri:anUri])
-	{
-		[self setBaseURI:anUri];
-		m_OData_hasStream.booleanvalue=NO;
-		[m_OData_entityMap setObject:@"City" forKey:@"city"];
-		mProperties *obj;
-		
-		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
-		[m_OData_propertiesMap setObject:obj forKey:@"m_understand"];
-		[obj release];
-		
-		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
-		[m_OData_propertiesMap setObject:obj forKey:@"m_name"];
-		[obj release];
-		
-		obj=[[mProperties alloc]initWithEdmType:@"Edm.Int32" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
-		[m_OData_propertiesMap setObject:obj forKey:@"m_id"];
-		[obj release];
-		
-		[m_OData_entityFKRelation setObject:@"FK_District_City" forKey:@"City"];
-
-		NSMutableArray *anEntityKey=[[NSMutableArray alloc]init];
-		[anEntityKey addObject:@"id"];
-		[m_OData_entityKey setObject:anEntityKey forKey:@"District"];
-		[anEntityKey release];
-	}
-	return self;
-}
-
--(NSMutableArray *)getSyndicateArray
-{
-	NSMutableArray *syndicateArray=[[NSMutableArray alloc]init];
-	
-	return [syndicateArray autorelease];
-}
--(NorthwindModel_District *)getDeepCopy
-{
-	NorthwindModel_District *obj=[[NorthwindModel_District alloc]initWithUri:[self getBaseURI]];
-	[obj setunderstand:[self getunderstand]];
-	[obj setname:[self getname]];
-	[obj setid:[self getid]];
-	[obj setcity:[self getcity]];
-
-	return [obj autorelease];
-}
-- (void) dealloc
-{
-	[m_understand release];
-	m_understand = nil;
-	[m_name release];
-	m_name = nil;
-	[m_id release];
-	m_id = nil;
-	
-	[m_city release];
-	m_city = nil;
-	[super dealloc];
-}
-
-@end
-/**
- * @interface:See
- * @key:id
- */
-@implementation NorthwindModel_See
-	@synthesize m_id;
-	@synthesize m_placeName;
-	@synthesize m_intro;
-	@synthesize m_city;
-
-/**
- *Method to create an instance of See
- */
-+ (id) CreateSee
-{
-	NorthwindModel_See *aSee = [[NorthwindModel_See alloc]init];
-	return aSee;
-}
-/**
- * Initialising object for See
- */
-- (id) init
-{
-	self=[self initWithUri:nil];
-	return self;
-}
-
-- (id) initWithUri:(NSString*)anUri 
-{
-	if(self=[super initWithUri:anUri])
-	{
-		[self setBaseURI:anUri];
-		m_OData_hasStream.booleanvalue=NO;
-		[m_OData_entityMap setObject:@"City" forKey:@"city"];
-		mProperties *obj;
-		
-		obj=[[mProperties alloc]initWithEdmType:@"Edm.Int32" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
-		[m_OData_propertiesMap setObject:obj forKey:@"m_id"];
-		[obj release];
-		
-		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"255" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
-		[m_OData_propertiesMap setObject:obj forKey:@"m_placeName"];
-		[obj release];
-		
-		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
-		[m_OData_propertiesMap setObject:obj forKey:@"m_intro"];
-		[obj release];
-		
-		[m_OData_entityFKRelation setObject:@"FK_See_City" forKey:@"City"];
-
-		NSMutableArray *anEntityKey=[[NSMutableArray alloc]init];
-		[anEntityKey addObject:@"id"];
-		[m_OData_entityKey setObject:anEntityKey forKey:@"See"];
-		[anEntityKey release];
-	}
-	return self;
-}
-
--(NSMutableArray *)getSyndicateArray
-{
-	NSMutableArray *syndicateArray=[[NSMutableArray alloc]init];
-	
-	return [syndicateArray autorelease];
-}
--(NorthwindModel_See *)getDeepCopy
-{
-	NorthwindModel_See *obj=[[NorthwindModel_See alloc]initWithUri:[self getBaseURI]];
-	[obj setid:[self getid]];
-	[obj setplaceName:[self getplaceName]];
-	[obj setintro:[self getintro]];
-	[obj setcity:[self getcity]];
-
-	return [obj autorelease];
-}
-- (void) dealloc
-{
-	[m_id release];
-	m_id = nil;
-	[m_placeName release];
-	m_placeName = nil;
-	[m_intro release];
-	m_intro = nil;
-	
-	[m_city release];
-	m_city = nil;
-	[super dealloc];
-}
-
-@end
-/**
- * @interface:City
- * @key:id
- */
-@implementation NorthwindModel_City
-	@synthesize m_url;
-	@synthesize m_id;
-	@synthesize m_name;
-	@synthesize m_location;
-	@synthesize m_sees;
-	@synthesize m_understands;
-	@synthesize m_plays;
-	@synthesize m_districts;
-
-/**
- *Method to create an instance of City
- */
-+ (id) CreateCity
-{
-	NorthwindModel_City *aCity = [[NorthwindModel_City alloc]init];
-	return aCity;
-}
-/**
- * Initialising object for City
- */
-- (id) init
-{
-	self=[self initWithUri:nil];
-	return self;
-}
-
-- (id) initWithUri:(NSString*)anUri 
-{
-	if(self=[super initWithUri:anUri])
-	{
-		[self setBaseURI:anUri];
-		m_OData_hasStream.booleanvalue=NO;
-		[m_OData_entityMap setObject:@"See" forKey:@"sees"];
-		[m_OData_entityMap setObject:@"Understand" forKey:@"understands"];
-		[m_OData_entityMap setObject:@"Play" forKey:@"plays"];
-		[m_OData_entityMap setObject:@"District" forKey:@"districts"];
-		mProperties *obj;
-		
-		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
-		[m_OData_propertiesMap setObject:obj forKey:@"m_url"];
-		[obj release];
-		
-		obj=[[mProperties alloc]initWithEdmType:@"Edm.Int32" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
-		[m_OData_propertiesMap setObject:obj forKey:@"m_id"];
-		[obj release];
-		
-		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
-		[m_OData_propertiesMap setObject:obj forKey:@"m_name"];
-		[obj release];
-		
-		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
-		[m_OData_propertiesMap setObject:obj forKey:@"m_location"];
-		[obj release];
-		
-		[m_OData_entityFKRelation setObject:@"FK_See_City" forKey:@"See"];
-		[m_OData_entityFKRelation setObject:@"FK_Understand_City" forKey:@"Understand"];
-		[m_OData_entityFKRelation setObject:@"FK_Play_City" forKey:@"Play"];
-		[m_OData_entityFKRelation setObject:@"FK_District_City" forKey:@"District"];
-
-		NSMutableArray *anEntityKey=[[NSMutableArray alloc]init];
-		[anEntityKey addObject:@"id"];
-		[m_OData_entityKey setObject:anEntityKey forKey:@"City"];
-		[anEntityKey release];
-	}
-	return self;
-}
-
--(NSMutableArray *)getSyndicateArray
-{
-	NSMutableArray *syndicateArray=[[NSMutableArray alloc]init];
-	
-	return [syndicateArray autorelease];
-}
--(NorthwindModel_City *)getDeepCopy
-{
-	NorthwindModel_City *obj=[[NorthwindModel_City alloc]initWithUri:[self getBaseURI]];
-	[obj seturl:[self geturl]];
-	[obj setid:[self getid]];
-	[obj setname:[self getname]];
-	[obj setlocation:[self getlocation]];
-	[obj setsees:[self getsees]];
-	[obj setunderstands:[self getunderstands]];
-	[obj setplays:[self getplays]];
-	[obj setdistricts:[self getdistricts]];
-
-	return [obj autorelease];
-}
-- (void) dealloc
-{
-	[m_url release];
-	m_url = nil;
-	[m_id release];
-	m_id = nil;
-	[m_name release];
-	m_name = nil;
-	[m_location release];
-	m_location = nil;
-	
-	[m_sees release];
-	m_sees = nil;
-	[m_understands release];
-	m_understands = nil;
-	[m_plays release];
-	m_plays = nil;
-	[m_districts release];
-	m_districts = nil;
 	[super dealloc];
 }
 
@@ -581,10 +288,11 @@
  * @key:id
  */
 @implementation NorthwindModel_Play
-	@synthesize m_location;
-	@synthesize m_explane;
 	@synthesize m_id;
-	@synthesize m_tpy;
+	@synthesize m_cityName;
+	@synthesize m_explain;
+	@synthesize m_type;
+	@synthesize m_location;
 	@synthesize m_city;
 
 /**
@@ -613,20 +321,24 @@
 		[m_OData_entityMap setObject:@"City" forKey:@"city"];
 		mProperties *obj;
 		
-		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
-		[m_OData_propertiesMap setObject:obj forKey:@"m_location"];
-		[obj release];
-		
-		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
-		[m_OData_propertiesMap setObject:obj forKey:@"m_explane"];
-		[obj release];
-		
 		obj=[[mProperties alloc]initWithEdmType:@"Edm.Int32" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
 		[m_OData_propertiesMap setObject:obj forKey:@"m_id"];
 		[obj release];
 		
 		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
-		[m_OData_propertiesMap setObject:obj forKey:@"m_tpy"];
+		[m_OData_propertiesMap setObject:obj forKey:@"m_cityName"];
+		[obj release];
+		
+		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
+		[m_OData_propertiesMap setObject:obj forKey:@"m_explain"];
+		[obj release];
+		
+		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
+		[m_OData_propertiesMap setObject:obj forKey:@"m_type"];
+		[obj release];
+		
+		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
+		[m_OData_propertiesMap setObject:obj forKey:@"m_location"];
 		[obj release];
 		
 		[m_OData_entityFKRelation setObject:@"FK_Play_City" forKey:@"City"];
@@ -648,27 +360,145 @@
 -(NorthwindModel_Play *)getDeepCopy
 {
 	NorthwindModel_Play *obj=[[NorthwindModel_Play alloc]initWithUri:[self getBaseURI]];
-	[obj setlocation:[self getlocation]];
-	[obj setexplane:[self getexplane]];
 	[obj setid:[self getid]];
-	[obj settpy:[self gettpy]];
+	[obj setcityName:[self getcityName]];
+	[obj setexplain:[self getexplain]];
+	[obj settype:[self gettype]];
+	[obj setlocation:[self getlocation]];
 	[obj setcity:[self getcity]];
 
 	return [obj autorelease];
 }
 - (void) dealloc
 {
-	[m_location release];
-	m_location = nil;
-	[m_explane release];
-	m_explane = nil;
 	[m_id release];
 	m_id = nil;
-	[m_tpy release];
-	m_tpy = nil;
+	[m_cityName release];
+	m_cityName = nil;
+	[m_explain release];
+	m_explain = nil;
+	[m_type release];
+	m_type = nil;
+	[m_location release];
+	m_location = nil;
 	
 	[m_city release];
 	m_city = nil;
+	[super dealloc];
+}
+
+@end
+/**
+ * @interface:City
+ * @key:id
+ */
+@implementation NorthwindModel_City
+	@synthesize m_url;
+	@synthesize m_location;
+	@synthesize m_name;
+	@synthesize m_id;
+	@synthesize m_plays;
+	@synthesize m_districts;
+	@synthesize m_understands;
+	@synthesize m_sees;
+
+/**
+ *Method to create an instance of City
+ */
++ (id) CreateCity
+{
+	NorthwindModel_City *aCity = [[NorthwindModel_City alloc]init];
+	return aCity;
+}
+/**
+ * Initialising object for City
+ */
+- (id) init
+{
+	self=[self initWithUri:nil];
+	return self;
+}
+
+- (id) initWithUri:(NSString*)anUri 
+{
+	if(self=[super initWithUri:anUri])
+	{
+		[self setBaseURI:anUri];
+		m_OData_hasStream.booleanvalue=NO;
+		[m_OData_entityMap setObject:@"Play" forKey:@"plays"];
+		[m_OData_entityMap setObject:@"District" forKey:@"districts"];
+		[m_OData_entityMap setObject:@"Understand" forKey:@"understands"];
+		[m_OData_entityMap setObject:@"See" forKey:@"sees"];
+		mProperties *obj;
+		
+		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
+		[m_OData_propertiesMap setObject:obj forKey:@"m_url"];
+		[obj release];
+		
+		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
+		[m_OData_propertiesMap setObject:obj forKey:@"m_location"];
+		[obj release];
+		
+		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
+		[m_OData_propertiesMap setObject:obj forKey:@"m_name"];
+		[obj release];
+		
+		obj=[[mProperties alloc]initWithEdmType:@"Edm.Int32" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
+		[m_OData_propertiesMap setObject:obj forKey:@"m_id"];
+		[obj release];
+		
+		[m_OData_entityFKRelation setObject:@"FK_Play_City" forKey:@"Play"];
+		[m_OData_entityFKRelation setObject:@"FK_District_City" forKey:@"District"];
+		[m_OData_entityFKRelation setObject:@"FK_Understand_City" forKey:@"Understand"];
+		[m_OData_entityFKRelation setObject:@"FK_See_City" forKey:@"See"];
+
+		NSMutableArray *anEntityKey=[[NSMutableArray alloc]init];
+		[anEntityKey addObject:@"id"];
+		[m_OData_entityKey setObject:anEntityKey forKey:@"City"];
+		[anEntityKey release];
+	}
+	return self;
+}
+
+-(NSMutableArray *)getSyndicateArray
+{
+	NSMutableArray *syndicateArray=[[NSMutableArray alloc]init];
+	
+	return [syndicateArray autorelease];
+}
+-(NorthwindModel_City *)getDeepCopy
+{
+	NorthwindModel_City *obj=[[NorthwindModel_City alloc]initWithUri:[self getBaseURI]];
+	[obj seturl:[self geturl]];
+	[obj setlocation:[self getlocation]];
+	[obj setname:[self getname]];
+	[obj setid:[self getid]];
+	[obj setplays:[self getplays]];
+	[obj setdistricts:[self getdistricts]];
+	[obj setunderstands:[self getunderstands]];
+	[obj setsees:[self getsees]];
+
+	return [obj autorelease];
+}
+- (void) dealloc
+{
+	[m_url release];
+	m_url = nil;
+	[m_location release];
+	m_location = nil;
+	[m_name release];
+	m_name = nil;
+	[m_id release];
+	m_id = nil;
+	
+	[m_plays release];
+	m_plays = nil;
+	[m_districts release];
+	m_districts = nil;
+	[m_understands release];
+	m_understands = nil;
+	[m_sees release];
+	m_sees = nil;
 	[super dealloc];
 }
 
@@ -678,10 +508,11 @@
  * @key:id
  */
 @implementation NorthwindModel_Understand
-	@synthesize m_visitTime;
-	@synthesize m_id;
-	@synthesize m_today;
+	@synthesize m_cityName;
 	@synthesize m_history;
+	@synthesize m_visitTime;
+	@synthesize m_today;
+	@synthesize m_id;
 	@synthesize m_city;
 
 /**
@@ -710,20 +541,24 @@
 		[m_OData_entityMap setObject:@"City" forKey:@"city"];
 		mProperties *obj;
 		
-		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"255" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
-		[m_OData_propertiesMap setObject:obj forKey:@"m_visitTime"];
+		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
+		[m_OData_propertiesMap setObject:obj forKey:@"m_cityName"];
 		[obj release];
 		
-		obj=[[mProperties alloc]initWithEdmType:@"Edm.Int32" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
-		[m_OData_propertiesMap setObject:obj forKey:@"m_id"];
+		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
+		[m_OData_propertiesMap setObject:obj forKey:@"m_history"];
+		[obj release];
+		
+		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
+		[m_OData_propertiesMap setObject:obj forKey:@"m_visitTime"];
 		[obj release];
 		
 		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
 		[m_OData_propertiesMap setObject:obj forKey:@"m_today"];
 		[obj release];
 		
-		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
-		[m_OData_propertiesMap setObject:obj forKey:@"m_history"];
+		obj=[[mProperties alloc]initWithEdmType:@"Edm.Int32" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
+		[m_OData_propertiesMap setObject:obj forKey:@"m_id"];
 		[obj release];
 		
 		[m_OData_entityFKRelation setObject:@"FK_Understand_City" forKey:@"City"];
@@ -745,24 +580,221 @@
 -(NorthwindModel_Understand *)getDeepCopy
 {
 	NorthwindModel_Understand *obj=[[NorthwindModel_Understand alloc]initWithUri:[self getBaseURI]];
-	[obj setvisitTime:[self getvisitTime]];
-	[obj setid:[self getid]];
-	[obj settoday:[self gettoday]];
+	[obj setcityName:[self getcityName]];
 	[obj sethistory:[self gethistory]];
+	[obj setvisitTime:[self getvisitTime]];
+	[obj settoday:[self gettoday]];
+	[obj setid:[self getid]];
 	[obj setcity:[self getcity]];
 
 	return [obj autorelease];
 }
 - (void) dealloc
 {
-	[m_visitTime release];
-	m_visitTime = nil;
-	[m_id release];
-	m_id = nil;
-	[m_today release];
-	m_today = nil;
+	[m_cityName release];
+	m_cityName = nil;
 	[m_history release];
 	m_history = nil;
+	[m_visitTime release];
+	m_visitTime = nil;
+	[m_today release];
+	m_today = nil;
+	[m_id release];
+	m_id = nil;
+	
+	[m_city release];
+	m_city = nil;
+	[super dealloc];
+}
+
+@end
+/**
+ * @interface:See
+ * @key:id
+ */
+@implementation NorthwindModel_See
+	@synthesize m_placeName;
+	@synthesize m_id;
+	@synthesize m_intro;
+	@synthesize m_cityName;
+	@synthesize m_city;
+
+/**
+ *Method to create an instance of See
+ */
++ (id) CreateSee
+{
+	NorthwindModel_See *aSee = [[NorthwindModel_See alloc]init];
+	return aSee;
+}
+/**
+ * Initialising object for See
+ */
+- (id) init
+{
+	self=[self initWithUri:nil];
+	return self;
+}
+
+- (id) initWithUri:(NSString*)anUri 
+{
+	if(self=[super initWithUri:anUri])
+	{
+		[self setBaseURI:anUri];
+		m_OData_hasStream.booleanvalue=NO;
+		[m_OData_entityMap setObject:@"City" forKey:@"city"];
+		mProperties *obj;
+		
+		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
+		[m_OData_propertiesMap setObject:obj forKey:@"m_placeName"];
+		[obj release];
+		
+		obj=[[mProperties alloc]initWithEdmType:@"Edm.Int32" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
+		[m_OData_propertiesMap setObject:obj forKey:@"m_id"];
+		[obj release];
+		
+		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
+		[m_OData_propertiesMap setObject:obj forKey:@"m_intro"];
+		[obj release];
+		
+		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
+		[m_OData_propertiesMap setObject:obj forKey:@"m_cityName"];
+		[obj release];
+		
+		[m_OData_entityFKRelation setObject:@"FK_See_City" forKey:@"City"];
+
+		NSMutableArray *anEntityKey=[[NSMutableArray alloc]init];
+		[anEntityKey addObject:@"id"];
+		[m_OData_entityKey setObject:anEntityKey forKey:@"See"];
+		[anEntityKey release];
+	}
+	return self;
+}
+
+-(NSMutableArray *)getSyndicateArray
+{
+	NSMutableArray *syndicateArray=[[NSMutableArray alloc]init];
+	
+	return [syndicateArray autorelease];
+}
+-(NorthwindModel_See *)getDeepCopy
+{
+	NorthwindModel_See *obj=[[NorthwindModel_See alloc]initWithUri:[self getBaseURI]];
+	[obj setplaceName:[self getplaceName]];
+	[obj setid:[self getid]];
+	[obj setintro:[self getintro]];
+	[obj setcityName:[self getcityName]];
+	[obj setcity:[self getcity]];
+
+	return [obj autorelease];
+}
+- (void) dealloc
+{
+	[m_placeName release];
+	m_placeName = nil;
+	[m_id release];
+	m_id = nil;
+	[m_intro release];
+	m_intro = nil;
+	[m_cityName release];
+	m_cityName = nil;
+	
+	[m_city release];
+	m_city = nil;
+	[super dealloc];
+}
+
+@end
+/**
+ * @interface:District
+ * @key:id
+ */
+@implementation NorthwindModel_District
+	@synthesize m_id;
+	@synthesize m_name;
+	@synthesize m_understand;
+	@synthesize m_cityName;
+	@synthesize m_city;
+
+/**
+ *Method to create an instance of District
+ */
++ (id) CreateDistrict
+{
+	NorthwindModel_District *aDistrict = [[NorthwindModel_District alloc]init];
+	return aDistrict;
+}
+/**
+ * Initialising object for District
+ */
+- (id) init
+{
+	self=[self initWithUri:nil];
+	return self;
+}
+
+- (id) initWithUri:(NSString*)anUri 
+{
+	if(self=[super initWithUri:anUri])
+	{
+		[self setBaseURI:anUri];
+		m_OData_hasStream.booleanvalue=NO;
+		[m_OData_entityMap setObject:@"City" forKey:@"city"];
+		mProperties *obj;
+		
+		obj=[[mProperties alloc]initWithEdmType:@"Edm.Int32" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
+		[m_OData_propertiesMap setObject:obj forKey:@"m_id"];
+		[obj release];
+		
+		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
+		[m_OData_propertiesMap setObject:obj forKey:@"m_name"];
+		[obj release];
+		
+		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
+		[m_OData_propertiesMap setObject:obj forKey:@"m_understand"];
+		[obj release];
+		
+		obj=[[mProperties alloc]initWithEdmType:@"Edm.String" MaxLength:@"" MinLength:@"" FixedLength:NO Nullable:YES Unicode:NO ConcurrencyMode:@"" FC_TargetPath:@"" FC_KeepInContent:YES FC_SourcePath:@"" FC_ContentKind:@"" FC_NsPrefix:@"" FC_NsUri:@""];
+		[m_OData_propertiesMap setObject:obj forKey:@"m_cityName"];
+		[obj release];
+		
+		[m_OData_entityFKRelation setObject:@"FK_District_City" forKey:@"City"];
+
+		NSMutableArray *anEntityKey=[[NSMutableArray alloc]init];
+		[anEntityKey addObject:@"id"];
+		[m_OData_entityKey setObject:anEntityKey forKey:@"District"];
+		[anEntityKey release];
+	}
+	return self;
+}
+
+-(NSMutableArray *)getSyndicateArray
+{
+	NSMutableArray *syndicateArray=[[NSMutableArray alloc]init];
+	
+	return [syndicateArray autorelease];
+}
+-(NorthwindModel_District *)getDeepCopy
+{
+	NorthwindModel_District *obj=[[NorthwindModel_District alloc]initWithUri:[self getBaseURI]];
+	[obj setid:[self getid]];
+	[obj setname:[self getname]];
+	[obj setunderstand:[self getunderstand]];
+	[obj setcityName:[self getcityName]];
+	[obj setcity:[self getcity]];
+
+	return [obj autorelease];
+}
+- (void) dealloc
+{
+	[m_id release];
+	m_id = nil;
+	[m_name release];
+	m_name = nil;
+	[m_understand release];
+	m_understand = nil;
+	[m_cityName release];
+	m_cityName = nil;
 	
 	[m_city release];
 	m_city = nil;
