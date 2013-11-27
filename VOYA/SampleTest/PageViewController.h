@@ -20,15 +20,14 @@
 
 @property (retain, nonatomic) IBOutlet UIButton *goButton;
 
-@property (retain, nonatomic) UIBarButtonItem *smallerFontBarButton;
+@property (retain, nonatomic) IBOutlet UIBarButtonItem *showMoreBarButton;
 
-@property (retain, nonatomic)  UIBarButtonItem *largerFontBarButton;
-
-@property (retain, nonatomic) IBOutlet UIBarButtonItem *settingBarButton;
+@property (retain, nonatomic) IBOutlet UIBarButtonItem *navigationBarButton;
 @property(nonatomic,retain)UIToolbar *toolBar;
 // for http request
 @property (nonatomic,retain)NSString* urlString;
 @property(nonatomic,retain)UIBarButtonItem *activityItem;
+@property (retain, nonatomic) IBOutlet UIBarButtonItem *settingBarButton;
 
 
 @end

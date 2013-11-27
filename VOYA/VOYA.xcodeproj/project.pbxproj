@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EBEA64A18459B4100DB560F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBEA64918459B4100DB560F /* MapViewController.m */; };
+		4EBEA64D18459DE800DB560F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBEA64C18459DE800DB560F /* MapKit.framework */; };
 		4EBEC1BD183EF23D007B007A /* CityList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EBEC1BC183EF23D007B007A /* CityList.plist */; };
 		4EC63F061834DE7F00D4E90A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC63F051834DE7F00D4E90A /* Foundation.framework */; };
 		4EC63F081834DE7F00D4E90A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC63F071834DE7F00D4E90A /* CoreGraphics.framework */; };
@@ -24,6 +26,8 @@
 		4EC63F341834DE7F00D4E90A /* SampleTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC63F331834DE7F00D4E90A /* SampleTestTests.m */; };
 		4EC63F421834E6CC00D4E90A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC63F411834E6CC00D4E90A /* LoginViewController.m */; };
 		4EC63F451834E6E000D4E90A /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC63F441834E6E000D4E90A /* RegisterViewController.m */; };
+		5C1909881845B67900145B4C /* Boston_Sports_Trail.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 5C1909871845B67900145B4C /* Boston_Sports_Trail.gpx */; };
+		5C19098B1845B6BE00145B4C /* 20131126204354-00881-data.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 5C19098A1845B6BE00145B4C /* 20131126204354-00881-data.gpx */; };
 		5C4A2058183536F600C09BAD /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4A2040183536F600C09BAD /* NSObject+SBJson.m */; };
 		5C4A2059183536F600C09BAD /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4A2043183536F600C09BAD /* SBJsonParser.m */; };
 		5C4A205A183536F600C09BAD /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4A2045183536F600C09BAD /* SBJsonStreamParser.m */; };
@@ -120,6 +124,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4EBEA64818459B4100DB560F /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		4EBEA64918459B4100DB560F /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		4EBEA64C18459DE800DB560F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4EBEC1BC183EF23D007B007A /* CityList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CityList.plist; sourceTree = "<group>"; };
 		4EC63F021834DE7F00D4E90A /* VOYA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VOYA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC63F051834DE7F00D4E90A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -144,6 +151,8 @@
 		4EC63F411834E6CC00D4E90A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4EC63F431834E6E000D4E90A /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		4EC63F441834E6E000D4E90A /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		5C1909871845B67900145B4C /* Boston_Sports_Trail.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Boston_Sports_Trail.gpx; sourceTree = "<group>"; };
+		5C19098A1845B6BE00145B4C /* 20131126204354-00881-data.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "20131126204354-00881-data.gpx"; sourceTree = "<group>"; };
 		5C4A203F183536F600C09BAD /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		5C4A2040183536F600C09BAD /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		5C4A2041183536F600C09BAD /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -306,6 +315,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EBEA64D18459DE800DB560F /* MapKit.framework in Frameworks */,
 				5C60DD491844041100D1EDFA /* libMSODataLib.a in Frameworks */,
 				4EC63F081834DE7F00D4E90A /* CoreGraphics.framework in Frameworks */,
 				4EC63F0A1834DE7F00D4E90A /* UIKit.framework in Frameworks */,
@@ -329,6 +339,8 @@
 		4EC63EF91834DE7F00D4E90A = {
 			isa = PBXGroup;
 			children = (
+				5C19098A1845B6BE00145B4C /* 20131126204354-00881-data.gpx */,
+				5C1909871845B67900145B4C /* Boston_Sports_Trail.gpx */,
 				5C60DD4D18440D4C00D1EDFA /* MSODataLib */,
 				5C4A203D183536A600C09BAD /* JsonFramwork */,
 				4EC63F0B1834DE7F00D4E90A /* SampleTest */,
@@ -350,6 +362,7 @@
 		4EC63F041834DE7F00D4E90A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4EBEA64C18459DE800DB560F /* MapKit.framework */,
 				5C60DD481844041100D1EDFA /* libMSODataLib.a */,
 				4EC63F051834DE7F00D4E90A /* Foundation.framework */,
 				4EC63F071834DE7F00D4E90A /* CoreGraphics.framework */,
@@ -388,6 +401,8 @@
 				5C5CDD4118396FB2005AF8C2 /* VOYAData.m */,
 				5C60DE00184411DC00D1EDFA /* OdataViewController.h */,
 				5C60DE01184411DC00D1EDFA /* OdataViewController.m */,
+				4EBEA64818459B4100DB560F /* MapViewController.h */,
+				4EBEA64918459B4100DB560F /* MapViewController.m */,
 			);
 			path = SampleTest;
 			sourceTree = "<group>";
@@ -746,6 +761,8 @@
 				4EC63F191834DE7F00D4E90A /* Main_iPhone.storyboard in Resources */,
 				5CDC8FEE1842A5CA004D09E4 /* travel1.jpg in Resources */,
 				4EBEC1BD183EF23D007B007A /* CityList.plist in Resources */,
+				5C19098B1845B6BE00145B4C /* 20131126204354-00881-data.gpx in Resources */,
+				5C1909881845B67900145B4C /* Boston_Sports_Trail.gpx in Resources */,
 				4EC63F101834DE7F00D4E90A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -798,6 +815,7 @@
 				5C4A205B183536F600C09BAD /* SBJsonStreamParserAccumulator.m in Sources */,
 				5C60DDCF18440D4D00D1EDFA /* ODataGUID.m in Sources */,
 				5C60DDC918440D4D00D1EDFA /* Tables.m in Sources */,
+				4EBEA64A18459B4100DB560F /* MapViewController.m in Sources */,
 				5C60DDEE18440D4D00D1EDFA /* AtomEntry.m in Sources */,
 				5C60DDCA18440D4D00D1EDFA /* ACSUtil.m in Sources */,
 				5C60DDF718440D4D00D1EDFA /* HttpBatchResponse.m in Sources */,

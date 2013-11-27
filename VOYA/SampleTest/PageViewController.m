@@ -11,7 +11,7 @@
 #import "VOYAData.h"
 #import "NorthwindEntities.h"
 #import "OdataViewController.h"
-
+#import "MapViewController.h"
 @interface PageViewController ()
 
 
@@ -23,7 +23,7 @@
 @synthesize pageWebView ;
 @synthesize activityItem;
 @synthesize toolBar;
-@synthesize smallerFontBarButton,largerFontBarButton,settingBarButton;
+@synthesize showMoreBarButton,navigationBarButton,settingBarButton;
 
 //@synthesize cityLabel = _cityLabel;
 //
@@ -56,25 +56,35 @@
     
 }
 
-
-- (IBAction)navigationItemClicked:(UIBarButtonItem *)sender {
+- (IBAction)showmoreItemClicked:(id )sender {
     
-    
-}
-
-- (IBAction)showmoreItemClicked:(UIBarButtonItem *)sender {
     OdataViewController *odata = [[OdataViewController alloc] init];
     [self.navigationController pushViewController:odata animated:YES];
     [odata release];
     
 }
+- (IBAction)navigationItemClicked:(id)sender {
+    MapViewController *mapViewController=[[MapViewController alloc] init];
+    [self.navigationController pushViewController:mapViewController animated:YES];
+    [mapViewController release];
+}
 
-- (void)settingButtonClick:(UIBarButtonItem *)sender {
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"mapView"])
+    {
+        [[segue destinationViewController] setTitle:self.title];
+    }
+}
+
+- (IBAction)settingButtonDidClick:(UIBarButtonItem *)sender {
     PersonalInfoViewController *info=[[PersonalInfoViewController alloc] init];
     [self.navigationController pushViewController:info animated:YES];
     [info release];
-    
 }
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -92,12 +102,12 @@
    
 
     //add test for odata query
-    NSLog(@"begin");
-    NorthwindEntities *proxy = [[NorthwindEntities alloc] initWithUri:@"http://localhost:8886/test2.svc/" credential:nil];
-    QueryOperationResponse *response = [proxy execute:@"District(1)"];
-    NSMutableArray *citiesArray  = [response getResult];
-    NorthwindModel_City* city1 = [citiesArray objectAtIndex:0];
-    NSLog(@"City Name = %@===%@", [city1 getname], [city1 getunderstand] );
+//    NSLog(@"begin");
+//    NorthwindEntities *proxy = [[NorthwindEntities alloc] initWithUri:@"http://localhost:8886/test2.svc/" credential:nil];
+//    QueryOperationResponse *response = [proxy execute:@"District(1)"];
+//    NSMutableArray *citiesArray  = [response getResult];
+//    NorthwindModel_City* city1 = [citiesArray objectAtIndex:0];
+//    NSLog(@"City Name = %@===%@", [city1 getname], [city1 getunderstand] );
     
    // self.pageWebView.scrollView.scrollEnabled=YES;
    // self.pageWebView.scrollView.bounces=YES;
@@ -107,17 +117,16 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    largerFontBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"Navigation" style:UIBarButtonItemStyleBordered target:self action:@selector(navigationItemClicked:)] autorelease];
-    smallerFontBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"More" style:UIBarButtonItemStyleBordered target:self action:@selector(showmoreItemClicked:)] autorelease];
-    
-    
+//    navigationBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"Navigation" style:UIBarButtonItemStyleBordered target:self action:@selector(navigationItemClicked:)] autorelease];
+//    showMoreBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"More" style:UIBarButtonItemStyleBordered target:self action:@selector(showmoreItemClicked:)] autorelease];    
+   
 //    settingBarButton=[[[UIBarButtonItem alloc] initWithTitle:@"Setting" style:UIBarButtonItemStyleBordered target:self action:@selector(settingButtonClick:)] autorelease];
     UIBarItem* space = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:
 						 UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
     toolBar = [[[UIToolbar alloc] initWithFrame:CGRectZero] autorelease];
 	toolBar.tintColor = [UIColor blueColor];
-	NSArray *toolItems=[NSArray arrayWithObjects:smallerFontBarButton,space,
-                        largerFontBarButton,space,
+	NSArray *toolItems=[NSArray arrayWithObjects:navigationBarButton,space,
+                        showMoreBarButton,space,
                         settingBarButton,
                         nil ];
 	[toolBar setItems:toolItems animated:NO];
@@ -154,15 +163,13 @@
 
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if([segue.identifier isEqualToString:@"showMore"])
-    {
-        
-      
-        [[segue destinationViewController] setTitle:self.title];
-    }
-}
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    if([segue.identifier isEqualToString:@"showMore"])
+//    {
+//        [[segue destinationViewController] setTitle:self.title];
+//    }
+//}
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [toolBar removeFromSuperview];
@@ -175,9 +182,12 @@
 }
 
 - (void)dealloc {
+    [showMoreBarButton release];
+    [navigationBarButton release];
     [URLTextField release];
     [pageWebView release];
     [_goButton release];
+    [settingBarButton release];
     [super dealloc];
 }
 

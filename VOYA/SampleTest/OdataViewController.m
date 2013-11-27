@@ -31,11 +31,11 @@
     
     //add test for odata query
     NSLog(@"begin");
-    NorthwindEntities *proxy = [[NorthwindEntities alloc] initWithUri:@"http://localhost:8886/test2.svc/" credential:nil];
-    QueryOperationResponse *response = [proxy execute:@"City?$filter=name eq 'Boston'"];
-    NSMutableArray *citiesArray  = [response getResult];
-    NorthwindModel_City* city = [citiesArray objectAtIndex:0];
-    NSLog(@"City Name = %@", [city getdistricts] );
+     NorthwindEntities *proxy = [[NorthwindEntities alloc] initWithUri:@"http://localhost:8886/test2.svc/" credential:nil];
+     QueryOperationResponse *response = [proxy execute:@"District?$filter=city_id eq ‘1’"];
+     NSMutableArray *citiesArray  = [response getResult];
+     NorthwindModel_City* city = [citiesArray objectAtIndex:0];
+     NSLog(@"City Name = %@", [city getdistricts] );
    // self.distributesLabel.text = [NSString alloc] initwith [city getdistricts];
 }
 

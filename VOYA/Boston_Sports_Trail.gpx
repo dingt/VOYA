@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="Geovative Solutions GeoTours" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+
+<metadata>
+  <name>Boston Sports Trail</name>
+  <desc>Both die-hards and bandwagon jumpers alike can get their sports fix even on off days by visiting stops along the Boston Sports Trail.</desc>
+  <author>
+    <name>features@boston.com, using GeoTours</name>
+    <link href="http://www.geovative.com/view?t=LIGE">
+      <text>Boston Sports Trail</text>
+    </link>
+  </author>
+  <link href="http://www.geovative.com/view?t=LIGE">
+    <text>Boston Sports Trail</text>
+  </link>
+  <time>2011-04-15T05:24:00</time>
+  <keywords>Fenway Park
+Boston Garden
+Sports Museum
+Boston Athletic Association
+Boston Public Library
+Matthews Arena
+Bleacher Bar
+Agganis Arena
+Cabot Physical Education Center</keywords>
+</metadata>
+
+
+<wpt lat="42.365802" lon="-71.060734">
+<name>Boston Sports Museum</name>
+<desc>The Sports Museum offers an excellent introduction to Boston's favorite pastimes.</desc>
+<link href="Data/Location8531-1"/>
+<sym>Waypoint</sym>
+<extensions>
+        <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensions/v3/GpxExtensionsv3.xsd">
+            <gpxx:Proximity>152.4</gpxx:Proximity>
+            <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+</extensions>
+</wpt>
+
+<wpt lat="42.360459" lon="-71.057439">
+<name>Red Auerbach Statue</name>
+<desc>The statue of legendary Celtics coach Red Auerbach shows him clutching his signature stogie and holding court from a bench outside Quincy Market.</desc>
+<link href="Data/Location8531-2"/>
+<sym>Waypoint</sym>
+<extensions>
+        <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensions/v3/GpxExtensionsv3.xsd">
+            <gpxx:Proximity>152.4</gpxx:Proximity>
+            <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+</extensions>
+</wpt>
+
+<wpt lat="42.356451" lon="-71.066373">
+<name>Oneida Football Club Monument</name>
+<desc>In the Boston Common's northwest corner is a monument to the Oneida Football Club, considered America's first organized football club.</desc>
+<link href="Data/Location8531-3"/>
+<sym>Waypoint</sym>
+<extensions>
+        <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensions/v3/GpxExtensionsv3.xsd">
+            <gpxx:Proximity>152.4</gpxx:Proximity>
+            <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+</extensions>
+</wpt>
+
+<wpt lat="42.348519" lon="-71.075373">
+<name>Boston Athletic Association</name>
+<desc>Running aficionados will enjoy the small exhibit of Boston Marathon memorabilia on display at the headquarters of the Boston Athletic Association.</desc>
+<link href="Data/Location8531-4"/>
+<sym>Waypoint</sym>
+<extensions>
+        <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensions/v3/GpxExtensionsv3.xsd">
+            <gpxx:Proximity>152.4</gpxx:Proximity>
+            <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+</extensions>
+</wpt>
+
+<wpt lat="42.350338" lon="-71.076136">
+<name>Boston Marathon Winners Medallion</name>
+<desc>In nearby Copley Square, a 15-foot granite medallion embedded on the Boylston Street side features geographic and topographical maps of the marathon course.</desc>
+<sym>Waypoint</sym>
+<extensions>
+        <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensions/v3/GpxExtensionsv3.xsd">
+            <gpxx:Proximity>152.4</gpxx:Proximity>
+            <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+</extensions>
+</wpt>
+
+<wpt lat="42.34951" lon="-71.079467">
+<name>Boston Public Library</name>
+<desc>The city's great palace of the written word is also the repository for the McGreevey Collection, which includes baseball photographs from 1875 to 1916.</desc>
+<link href="Data/Location8531-6"/>
+<sym>Waypoint</sym>
+<extensions>
+        <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensions/v3/GpxExtensionsv3.xsd">
+            <gpxx:Proximity>152.4</gpxx:Proximity>
+            <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+</extensions>
+</wpt>
+
+<wpt lat="42.339641" lon="-71.090397">
+<name>Huntington Avenue Grounds</name>
+<desc>A small plaque on the front of Northeastern University's Cabot Center commemorates the Huntington Avenue Grounds, the first home of the Red Sox.</desc>
+<link href="Data/Location8531-7"/>
+<sym>Waypoint</sym>
+<extensions>
+        <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensions/v3/GpxExtensionsv3.xsd">
+            <gpxx:Proximity>152.4</gpxx:Proximity>
+            <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+</extensions>
+</wpt>
+
+<wpt lat="42.336846" lon="-71.089526">
+<name>South End Grounds</name>
+<desc>The Ruggles T station has an historical marker noting it was at one time the site of the South End Grounds, which hosted the city's first professional team, the Red Stockings, beginning in 1871.</desc>
+<link href="Data/Location8531-8"/>
+<sym>Waypoint</sym>
+<extensions>
+        <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensions/v3/GpxExtensionsv3.xsd">
+            <gpxx:Proximity>152.4</gpxx:Proximity>
+            <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+</extensions>
+</wpt>
+
+<wpt lat="42.341481" lon="-71.084891">
+<name>Matthews Arena</name>
+<desc>Matthews Arena, home of the university's hockey and men's basketball teams. The building, which opened in 1910, is the oldest artificial ice arena in the world.</desc>
+<link href="Data/Location8531-9"/>
+<sym>Waypoint</sym>
+<extensions>
+        <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensions/v3/GpxExtensionsv3.xsd">
+            <gpxx:Proximity>152.4</gpxx:Proximity>
+            <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+</extensions>
+</wpt>
+
+<wpt lat="42.347159" lon="-71.097902">
+<name>The Bleacher Bar</name>
+<desc>With a sellout streak dating to 2003, seeing a game at Fenway is tough, but it's easy to glimpse the field. The Bleacher Bar has a huge window looking directly out to Fenway's emerald grass.</desc>
+<link href="Data/Location8531-10"/>
+<sym>Waypoint</sym>
+<extensions>
+        <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensions/v3/GpxExtensionsv3.xsd">
+            <gpxx:Proximity>152.4</gpxx:Proximity>
+            <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+</extensions>
+</wpt>
+
+<wpt lat="42.346777" lon="-71.098935">
+<name>Fenway Park</name>
+<desc>After the Red Sox left the Huntington Avenue Grounds, they moved across the Fens to their new home. Nearly a century later, the Red Sox still call the hallowed ground of Fenway Park home.</desc>
+<link href="Data/Location8531-11"/>
+<sym>Waypoint</sym>
+<extensions>
+        <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensions/v3/GpxExtensionsv3.xsd">
+            <gpxx:Proximity>152.4</gpxx:Proximity>
+            <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+</extensions>
+</wpt>
+
+<wpt lat="42.351436" lon="-71.117541">
+<name>Agganis Arena</name>
+<desc>The home of Boston University's NCAA championship men's hockey team is named after BU football and baseball great, Harry Agganis, who was also a Red Sox first baseman.</desc>
+<link href="Data/Location8531-12"/>
+<sym>Waypoint</sym>
+<extensions>
+        <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensions/v3/GpxExtensionsv3.xsd">
+            <gpxx:Proximity>152.4</gpxx:Proximity>
+            <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+</extensions>
+</wpt>
+
+<wpt lat="42.353826" lon="-71.12083">
+<name>Nickerson Field</name>
+<desc>Nickerson Field was the first home of the Patriots. The stadium is also the former site of Braves Field, home to the city's National League franchise from 1915 to 1952.</desc>
+<link href="Data/Location8531-13"/>
+<sym>Waypoint</sym>
+<extensions>
+        <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensions/v3/GpxExtensionsv3.xsd">
+            <gpxx:Proximity>152.4</gpxx:Proximity>
+            <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        </gpxx:WaypointExtension>
+</extensions>
+</wpt>
+</gpx>

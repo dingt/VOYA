@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "NorthwindEntities.h"
 
-@interface OdataViewController : ViewController
+@interface OdataViewController : UIViewController
 @property (retain, nonatomic) IBOutlet UILabel *distributesLabel;
 
 @property (retain, nonatomic) IBOutlet UILabel *playLabel;

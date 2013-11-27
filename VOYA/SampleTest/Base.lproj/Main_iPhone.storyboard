@@ -80,6 +80,30 @@
             </objects>
             <point key="canvasLocation" x="406" y="109"/>
         </scene>
+        <!--Map View Controller - Map-->
+        <scene sceneID="bE1-oN-FQJ">
+            <objects>
+                <viewController id="atV-AP-j55" customClass="MapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XlV-Sl-9Eh">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="lxv-jf-CuE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="TUM-pG-sOp"/>
+                    <connections>
+                        <outlet property="view" destination="XlV-Sl-9Eh" id="egr-Oa-27z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Obo-uZ-gwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-343" y="1590"/>
+        </scene>
         <!--Personal Info View Controller - Item-->
         <scene sceneID="uas-4z-OVu">
             <objects>
@@ -197,9 +221,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EN3-gn-81m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="877" y="861"/>
+            <point key="canvasLocation" x="492" y="912"/>
         </scene>
-        <!--Odata View Controller-->
+        <!--Odata View Controller - More-->
         <scene sceneID="Ufx-7g-20W">
             <objects>
                 <viewController id="4sw-f1-YiJ" customClass="OdataViewController" sceneMemberID="viewController">
@@ -214,7 +238,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OMa-BG-cUl">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="see" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OMa-BG-cUl">
                                 <rect key="frame" x="31" y="241" width="239" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -228,7 +252,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nsT-ZK-q56">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="play" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nsT-ZK-q56">
                                 <rect key="frame" x="31" y="167" width="239" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -238,16 +262,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qAD-y1-DXD"/>
+                    <navigationItem key="navigationItem" title="More" id="qAD-y1-DXD"/>
                     <connections>
                         <outlet property="distributesLabel" destination="sf7-Rq-UPo" id="j02-9e-rmY"/>
                         <outlet property="playLabel" destination="nsT-ZK-q56" id="NmE-Lu-nbi"/>
                         <outlet property="seeLabel" destination="OMa-BG-cUl" id="Nrk-RS-qQU"/>
+                        <outlet property="view" destination="i7B-IB-oy8" id="u2f-C7-hWD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NyK-Le-OgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-127" y="797"/>
+            <point key="canvasLocation" x="-356" y="912"/>
         </scene>
         <!--Page View Controller - Item-->
         <scene sceneID="Sm3-3R-BZn">
@@ -276,22 +301,28 @@
                                     <action selector="goPageView:" destination="Zh7-9A-QPP" eventType="touchUpInside" id="1FJ-H9-vZb"/>
                                 </connections>
                             </button>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8zL-SQ-dbm">
-                                <rect key="frame" x="0.0" y="460" width="333" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="lwy-PT-XFB">
+                                <rect key="frame" x="0.0" y="460" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="a" id="W3F-k5-buQ">
+                                    <barButtonItem title="Map" id="1cK-YS-7IS">
                                         <connections>
-                                            <action selector="navigationItemClicked:" destination="Zh7-9A-QPP" id="FbI-yo-qHw"/>
-                                            <segue destination="4sw-f1-YiJ" kind="push" identifier="showMore" id="exL-2n-Iru"/>
+                                            <action selector="navigationItemClicked:" destination="Zh7-9A-QPP" id="S8m-Wk-LMz"/>
+                                            <segue destination="atV-AP-j55" kind="push" identifier="mapView" id="dNh-lH-fYd"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="rh8-bA-MlY"/>
-                                    <barButtonItem title="A" id="E9N-oh-nV7"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="BHq-Bb-NKp"/>
-                                    <barButtonItem title="Setting" width="79" id="qWi-ta-Iog">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qD1-fN-XsD"/>
+                                    <barButtonItem title="More" id="jqc-OH-SvS">
                                         <connections>
-                                            <segue destination="P8U-eR-Lms" kind="push" id="7An-Tf-SMw"/>
+                                            <action selector="showmoreItemClicked:" destination="Zh7-9A-QPP" id="b9y-kh-FeE"/>
+                                            <segue destination="4sw-f1-YiJ" kind="push" id="lTD-V2-cU5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="CrR-QG-ZN7"/>
+                                    <barButtonItem title="Setting" id="M8g-gO-IF1">
+                                        <connections>
+                                            <action selector="settingButtonDidClick:" destination="Zh7-9A-QPP" id="6wW-Gu-3Va"/>
+                                            <segue destination="P8U-eR-Lms" kind="push" id="6Uh-7k-ZFw"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -304,12 +335,19 @@
                     <connections>
                         <outlet property="URLTextField" destination="GVC-Wo-chK" id="JNA-Xr-MNt"/>
                         <outlet property="goButton" destination="wKS-Ms-E8o" id="ryI-Rn-MeE"/>
-                        <outlet property="settingBarButton" destination="qWi-ta-Iog" id="Smm-Jr-QNP"/>
+                        <outlet property="navigationBarButton" destination="1cK-YS-7IS" id="asc-s5-RZT"/>
+                        <outlet property="settingBarButton" destination="M8g-gO-IF1" id="kYW-Az-aJH"/>
+                        <outlet property="showMoreBarButton" destination="jqc-OH-SvS" id="i6e-Y2-c09"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jf2-ky-sS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <barButtonItem title="Navigation" id="I2X-gj-bea">
+                    <connections>
+                        <action selector="navigationItemClicked:" destination="Zh7-9A-QPP" id="gdg-MV-KLg"/>
+                    </connections>
+                </barButtonItem>
             </objects>
-            <point key="canvasLocation" x="473" y="861"/>
+            <point key="canvasLocation" x="56" y="912"/>
         </scene>
         <!--Login View Controller - Login-->
         <scene sceneID="nQ7-eN-37l">
@@ -497,6 +535,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="5eY-is-Wj3"/>
+        <segue reference="zeI-oe-B4z"/>
     </inferredMetricsTieBreakers>
 </document>
