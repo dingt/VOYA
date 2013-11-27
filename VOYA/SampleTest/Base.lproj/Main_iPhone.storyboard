@@ -320,7 +320,7 @@
                                     <barButtonItem title="More" id="jqc-OH-SvS">
                                         <connections>
                                             <action selector="showmoreItemClicked:" destination="Zh7-9A-QPP" id="b9y-kh-FeE"/>
-                                            <segue destination="4sw-f1-YiJ" kind="push" id="lTD-V2-cU5"/>
+                                            <segue destination="4sw-f1-YiJ" kind="push" identifier="showMore" id="lTD-V2-cU5"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="CrR-QG-ZN7"/>

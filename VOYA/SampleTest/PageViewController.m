@@ -76,6 +76,12 @@
     {
         [[segue destinationViewController] setTitle:self.title];
     }
+    
+    if ([segue.identifier isEqualToString:@"showMore"])
+    {
+        [[segue destinationViewController] setTitle:self.title];
+    }
+    
 }
 
 - (IBAction)settingButtonDidClick:(UIBarButtonItem *)sender {

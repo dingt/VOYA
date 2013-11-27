@@ -33,6 +33,7 @@
     //add test for odata query
     NSLog(@"begin");
     NSString *cityName = self.title;
+    NSLog(@"cityName = %@", cityName);
     NSString *searchCity = [[NSString alloc] initWithFormat:@"City?$filter=name eq '%@'", cityName];
     NorthwindEntities *proxy = [[NorthwindEntities alloc] initWithUri:@"http://localhost:8886/test2.svc/" credential:nil];
     QueryOperationResponse *response = [proxy execute:searchCity];
