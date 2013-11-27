@@ -100,8 +100,6 @@
 		5CDC8FEE1842A5CA004D09E4 /* travel1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CDC8FED1842A5CA004D09E4 /* travel1.jpg */; };
 		5CDC8FF01842A7C7004D09E4 /* travel2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CDC8FEF1842A7C7004D09E4 /* travel2.jpg */; };
 		5CDC8FF21842AD57004D09E4 /* travel1-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CDC8FF11842AD57004D09E4 /* travel1-2.jpg */; };
-		A6189A27183E740F00BDB2EC /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6189A26183E740F00BDB2EC /* SearchTableViewController.m */; };
-		A6189A2D183E7CA600BDB2EC /* SearchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6189A2C183E7CA600BDB2EC /* SearchTableView.m */; };
 		A6ED4FC518352BF700CB85C1 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED4FC418352BF700CB85C1 /* PageViewController.m */; };
 		A6ED4FC818352C0B00CB85C1 /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED4FC718352C0B00CB85C1 /* PersonalInfoViewController.m */; };
 /* End PBXBuildFile section */
@@ -300,10 +298,6 @@
 		5CDC8FED1842A5CA004D09E4 /* travel1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = travel1.jpg; sourceTree = "<group>"; };
 		5CDC8FEF1842A7C7004D09E4 /* travel2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = travel2.jpg; sourceTree = "<group>"; };
 		5CDC8FF11842AD57004D09E4 /* travel1-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "travel1-2.jpg"; sourceTree = "<group>"; };
-		A6189A25183E740F00BDB2EC /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
-		A6189A26183E740F00BDB2EC /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
-		A6189A2B183E7CA600BDB2EC /* SearchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableView.h; sourceTree = "<group>"; };
-		A6189A2C183E7CA600BDB2EC /* SearchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableView.m; sourceTree = "<group>"; };
 		A6ED4FC318352BF700CB85C1 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		A6ED4FC418352BF700CB85C1 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		A6ED4FC618352C0B00CB85C1 /* PersonalInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalInfoViewController.h; sourceTree = "<group>"; };
@@ -380,10 +374,6 @@
 				4EC63F141834DE7F00D4E90A /* AppDelegate.h */,
 				4EC63F151834DE7F00D4E90A /* AppDelegate.m */,
 				4EC63F171834DE7F00D4E90A /* Main_iPhone.storyboard */,
-				A6189A2B183E7CA600BDB2EC /* SearchTableView.h */,
-				A6189A2C183E7CA600BDB2EC /* SearchTableView.m */,
-				A6189A25183E740F00BDB2EC /* SearchTableViewController.h */,
-				A6189A26183E740F00BDB2EC /* SearchTableViewController.m */,
 				4EC63F1D1834DE7F00D4E90A /* ViewController.h */,
 				4EC63F1E1834DE7F00D4E90A /* ViewController.m */,
 				4EC63F401834E6CC00D4E90A /* LoginViewController.h */,
@@ -782,7 +772,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6189A27183E740F00BDB2EC /* SearchTableViewController.m in Sources */,
 				5C4A2061183536F600C09BAD /* SBJsonTokeniser.m in Sources */,
 				4EC63F1F1834DE7F00D4E90A /* ViewController.m in Sources */,
 				5C60DDD718440D4D00D1EDFA /* DataServiceResponse.m in Sources */,
@@ -845,7 +834,6 @@
 				5C60DDFA18440D4D00D1EDFA /* HttpRequest.m in Sources */,
 				5C60DDE818440D4D00D1EDFA /* ACSUtilException.m in Sources */,
 				5C60DDD518440D4D00D1EDFA /* DataServiceQueryContinuation.m in Sources */,
-				A6189A2D183E7CA600BDB2EC /* SearchTableView.m in Sources */,
 				5C60DDF918440D4D00D1EDFA /* HttpProxy.m in Sources */,
 				5C60DDD818440D4D00D1EDFA /* DataServiceSaveStream.m in Sources */,
 				5C4A2060183536F600C09BAD /* SBJsonStreamWriterState.m in Sources */,

@@ -46,7 +46,7 @@
         self.playLabel.text = @"Null";
     }
     else {
-    NorthwindModel_City* city = [citiesArray objectAtIndex:0];
+    NorthwindModel_City *city = [citiesArray objectAtIndex:0];
     
     self.cityLabel.text = [city geturl];
 
