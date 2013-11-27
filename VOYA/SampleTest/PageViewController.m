@@ -104,8 +104,8 @@
     //add test for odata query
     NSLog(@"begin");
     NorthwindEntities *proxy = [[NorthwindEntities alloc] initWithUri:@"http://localhost:8886/test2.svc/" credential:nil];
-    NSString *searchCity = [[NSString alloc] initWithFormat:@"City?$filter=name eq '%@'" ,city];
-    QueryOperationResponse *response = [proxy execute:searchCity];
+    //NSString *searchCity = [[NSString alloc] initWithFormat:@"City?$filter=name eq '%@'" ,city];
+    QueryOperationResponse *response = [proxy execute:[dict objectForKey:city]];
     NSMutableArray *citiesArray  = [response getResult];
     NorthwindModel_City* city1 = [citiesArray objectAtIndex:0];
     NSLog(@"City Name = %@ \n City URL = %@", [city1 getname], [city1 geturl]);

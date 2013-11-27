@@ -2,14 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>New York</key>
+	<string>City?$filter=name eq &apos;New York&apos;</string>
 	<key>Boston</key>
-	<string>http://locaohost:8886/test2.svc/City?$filter=name eq &apos;Boston&apos;</string>
+	<string>City?$filter=name eq &apos;Boston&apos;</string>
 	<key>Back Bay</key>
-	<string></string>
+	<string>District?$filter=name eq &apos;Back Bay&apos;</string>
 	<key>Beacon Hill</key>
-	<string></string>
+	<string>District?$filter=name eq &apos;Beacon Hill&apos;</string>
 	<key>Charlestown</key>
-	<string></string>
+	<string>District?$filter=name eq &apos;Charlestown&apos;</string>
 	<key>Chinatown</key>
 	<string></string>
 	<key>Dorchester</key>

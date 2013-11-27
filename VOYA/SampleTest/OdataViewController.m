@@ -37,6 +37,14 @@
     NorthwindEntities *proxy = [[NorthwindEntities alloc] initWithUri:@"http://localhost:8886/test2.svc/" credential:nil];
     QueryOperationResponse *response = [proxy execute:searchCity];
     NSMutableArray *citiesArray  = [response getResult];
+    if (citiesArray == nil)
+    {
+        self.cityLabel.text = @"Null";
+        self.distributesLabel.text = @"Null";
+        self.seeLabel.text = @"Null";
+        self.playLabel.text = @"Null";
+    }
+    else {
     NorthwindModel_City* city = [citiesArray objectAtIndex:0];
     
     self.cityLabel.text = [city geturl];
@@ -101,6 +109,7 @@
     NSString *under = [[NSString alloc] initWithFormat:@"History : %@ \n Today : %@ \n\n Visit Time : %@ ", [understand gethistory]
                        , [understand gettoday], [understand getvisitTime]];
     self.cityLabel.text = under;
+    }
     
 
 }
