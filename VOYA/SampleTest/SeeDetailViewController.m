@@ -41,7 +41,7 @@
         }
         if (self.optionSegment.selectedSegmentIndex == 1)
         {
-            search = [[NSString alloc] initWithFormat:@"See?$filter=name like '%@'", querystring];
+            search = [[NSString alloc] initWithFormat:@"See?$filter=name eq '%@'", querystring];
         }
         if (self.optionSegment.selectedSegmentIndex == 2)
         {
