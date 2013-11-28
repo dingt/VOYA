@@ -16,4 +16,6 @@
 
 @property (retain, nonatomic) IBOutlet UIButton *queryButton;
 
+@property (retain, nonatomic) IBOutlet UITextView *textView;
+
 @end

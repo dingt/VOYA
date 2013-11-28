@@ -51,11 +51,11 @@
         QueryOperationResponse *response = [proxy execute:search];
         NSMutableArray *array = [response getResult];
         
-        self.textField.text = @"";
+        self.textView.text = @"";
         
         for (NorthwindModel_See *obj in array)
         {
-            NSMutableString *text = [[NSMutableString alloc] initWithString:self.textField.text];
+            NSMutableString *text = [[NSMutableString alloc] initWithString:self.textView.text];
             NSLog(@"%@", [obj getid]);
             NSString *seeId = [[NSString alloc] initWithFormat:@"Place Id : %@ \n",[obj getid]];
             NSString *seeName = [[NSString alloc] initWithFormat:@"Place Name : %@ \n",[obj getplaceName]];
@@ -65,7 +65,7 @@
             [text appendString:seeName];
             [text appendString:seeCityName];
             [text appendString:seeIntro];
-            self.textField.text = text;
+            self.textView.text = text;
         }
         
     }
@@ -87,6 +87,7 @@
     [_optionSegment release];
     [_textField release];
     [_queryButton release];
+    [_textView release];
     [super dealloc];
 }
 @end
