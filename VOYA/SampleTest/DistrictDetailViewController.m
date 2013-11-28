@@ -46,6 +46,8 @@
         QueryOperationResponse *response = [proxy execute:search];
         NSMutableArray *array = [response getResult];
         
+        self.resultTextView.text = @"";
+        
         for (NorthwindModel_District *obj in array)
         {
             NSMutableString *text = [[NSMutableString alloc] initWithString:self.resultTextView.text];
