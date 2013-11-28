@@ -31,7 +31,7 @@
 	// Do any additional setup after loading the view.
     
     //add test for odata query
-    NSLog(@"begin");
+    NSLog(@"odataviewbegin");
     NSString *cityName = self.title;
     NSLog(@"cityName = %@", cityName);
     NSString *searchCity = [[NSString alloc] initWithFormat:@"City?$filter=name eq '%@'", cityName];

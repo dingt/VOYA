@@ -28,6 +28,6 @@
 @property (nonatomic,retain)NSString* urlString;
 @property(nonatomic,retain)UIBarButtonItem *activityItem;
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *settingBarButton;
-
+@property (nonatomic, strong) NSString *cityname;
 
 @end

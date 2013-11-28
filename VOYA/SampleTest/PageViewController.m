@@ -24,6 +24,7 @@
 @synthesize activityItem;
 @synthesize toolBar;
 @synthesize showMoreBarButton,navigationBarButton,settingBarButton;
+@synthesize cityname;
 
 //@synthesize cityLabel = _cityLabel;
 //
@@ -31,6 +32,9 @@
 //{
 //    _cityLabel = cityLabel;
 //}
+
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -74,12 +78,13 @@
 {
     if([segue.identifier isEqualToString:@"mapView"])
     {
-        [[segue destinationViewController] setTitle:self.title];
+        [[segue destinationViewController] setTitle: cityname];
     }
     
     if ([segue.identifier isEqualToString:@"showMore"])
     {
-        [[segue destinationViewController] setTitle:self.title];
+        NSLog(@"prepare for segue title:%@ and %@", self.title, cityname);
+        [[segue destinationViewController] setTitle:cityname];
     }
     
 }
@@ -97,6 +102,7 @@
     
     self.URLTextField.delegate=self;
     NSString *city = self.title;
+    cityname = self.title;
     NSDictionary *dict = [[NSDictionary alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"CityList" ofType:@"plist"]];
     NSURL *url = [dict objectForKey:city];
     self.URLTextField.text = (NSString *)url;
