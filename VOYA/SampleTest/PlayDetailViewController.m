@@ -40,7 +40,7 @@
         }
         if (self.optionSegment.selectedSegmentIndex == 1)
         {
-            search = [[NSString alloc] initWithFormat:@"Play?$filter=playTpy eq '%@'", querystring];
+            search = [[NSString alloc] initWithFormat:@"Play?$filter=type eq '%@'", querystring];
         }
         if (self.optionSegment.selectedSegmentIndex == 2)
         {
