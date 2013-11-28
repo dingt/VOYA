@@ -143,6 +143,8 @@
     [_playTextView release];
     [_seeTextView release];
     [_districtDetailButton release];
+    [_playDetailButton release];
+    [_seeDetailButton release];
     [super dealloc];
 }
 @end

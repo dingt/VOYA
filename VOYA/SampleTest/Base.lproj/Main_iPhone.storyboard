@@ -160,6 +160,60 @@
             </objects>
             <point key="canvasLocation" x="20" y="1664"/>
         </scene>
+        <!--See Detail View Controller-->
+        <scene sceneID="Dmh-JZ-HhG">
+            <objects>
+                <viewController id="CyC-w5-Yad" customClass="SeeDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wkb-LU-jxO">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="FXY-1x-suU">
+                                <rect key="frame" x="20" y="20" width="231" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="City Name"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="zqD-65-p2A">
+                                <rect key="frame" x="20" y="61" width="180" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ikc-Ph-GLU">
+                                <rect key="frame" x="208" y="61" width="98" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Odata Query">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="queryButtonClick:" destination="CyC-w5-Yad" eventType="touchUpInside" id="TJK-N6-HTa"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="KjZ-nM-ZJw">
+                                <rect key="frame" x="15" y="99" width="285" height="385"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fnt-0A-9Iv"/>
+                    <connections>
+                        <outlet property="optionSegment" destination="FXY-1x-suU" id="feZ-AD-n2l"/>
+                        <outlet property="queryButton" destination="Ikc-Ph-GLU" id="YDT-lT-Kvu"/>
+                        <outlet property="textField" destination="zqD-65-p2A" id="YVq-LK-UBv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gBY-m6-LeZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="364" y="1659"/>
+        </scene>
         <!--Personal Info View Controller - Item-->
         <scene sceneID="uas-4z-OVu">
             <objects>
@@ -358,6 +412,23 @@
                                     <segue destination="CU9-4N-nFF" kind="push" identifier="DistrictDetail" id="uo8-X1-3Ff"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rWI-r4-nlr">
+                                <rect key="frame" x="116" y="252" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Details">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="CyC-w5-Yad" kind="push" id="0VD-Bf-xuV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6q4-qt-PJm">
+                                <rect key="frame" x="116" y="381" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Details">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -366,7 +437,9 @@
                         <outlet property="cityTextView" destination="alP-2e-IuW" id="e7q-Wi-VVs"/>
                         <outlet property="districtDetailButton" destination="6o5-FL-Im2" id="L8P-g1-r0G"/>
                         <outlet property="districtTextView" destination="Ehx-89-QyQ" id="yrR-e0-Jzq"/>
+                        <outlet property="playDetailButton" destination="rWI-r4-nlr" id="A9o-Uj-wZU"/>
                         <outlet property="playTextView" destination="DMu-vE-RU8" id="pCY-7L-SNz"/>
+                        <outlet property="seeDetailButton" destination="6q4-qt-PJm" id="rDr-O7-oGV"/>
                         <outlet property="seeTextView" destination="s0T-Q7-1PT" id="Ooh-Y7-rys"/>
                         <outlet property="view" destination="i7B-IB-oy8" id="u2f-C7-hWD"/>
                     </connections>

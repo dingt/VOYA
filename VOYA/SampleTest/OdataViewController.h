@@ -21,5 +21,8 @@
 
 @property (retain, nonatomic) IBOutlet UIButton *districtDetailButton;
 
+@property (retain, nonatomic) IBOutlet UIButton *playDetailButton;
+
+@property (retain, nonatomic) IBOutlet UIButton *seeDetailButton;
 
 @end
