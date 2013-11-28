@@ -104,6 +104,7 @@
 		A6ED4FC818352C0B00CB85C1 /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED4FC718352C0B00CB85C1 /* PersonalInfoViewController.m */; };
 		A6FF15361847F68F00BB09C9 /* DistrictDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FF15351847F68F00BB09C9 /* DistrictDetailViewController.m */; };
 		A6FF153A1848019300BB09C9 /* SeeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FF15391848019300BB09C9 /* SeeDetailViewController.m */; };
+		A6FF153D1848059400BB09C9 /* PlayDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FF153C1848059400BB09C9 /* PlayDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -308,6 +309,8 @@
 		A6FF15351847F68F00BB09C9 /* DistrictDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistrictDetailViewController.m; sourceTree = "<group>"; };
 		A6FF15381848019300BB09C9 /* SeeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeeDetailViewController.h; sourceTree = "<group>"; };
 		A6FF15391848019300BB09C9 /* SeeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeeDetailViewController.m; sourceTree = "<group>"; };
+		A6FF153B1848059400BB09C9 /* PlayDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayDetailViewController.h; sourceTree = "<group>"; };
+		A6FF153C1848059400BB09C9 /* PlayDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -403,6 +406,8 @@
 				A6FF15351847F68F00BB09C9 /* DistrictDetailViewController.m */,
 				A6FF15381848019300BB09C9 /* SeeDetailViewController.h */,
 				A6FF15391848019300BB09C9 /* SeeDetailViewController.m */,
+				A6FF153B1848059400BB09C9 /* PlayDetailViewController.h */,
+				A6FF153C1848059400BB09C9 /* PlayDetailViewController.m */,
 			);
 			path = SampleTest;
 			sourceTree = "<group>";
@@ -843,6 +848,7 @@
 				5C60DDDB18440D4D00D1EDFA /* ObjectContext.m in Sources */,
 				5C60DDF418440D4D00D1EDFA /* XMLBuilder.m in Sources */,
 				5C4A205E183536F600C09BAD /* SBJsonStreamWriter.m in Sources */,
+				A6FF153D1848059400BB09C9 /* PlayDetailViewController.m in Sources */,
 				5C60DDFA18440D4D00D1EDFA /* HttpRequest.m in Sources */,
 				5C60DDE818440D4D00D1EDFA /* ACSUtilException.m in Sources */,
 				5C60DDD518440D4D00D1EDFA /* DataServiceQueryContinuation.m in Sources */,
