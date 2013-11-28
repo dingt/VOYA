@@ -19,6 +19,7 @@
 
 @property (retain, nonatomic) IBOutlet UITextView *seeTextView;
 
+@property (retain, nonatomic) IBOutlet UIButton *districtDetailButton;
 
 
 @end

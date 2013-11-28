@@ -102,6 +102,7 @@
 		5CDC8FF21842AD57004D09E4 /* travel1-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CDC8FF11842AD57004D09E4 /* travel1-2.jpg */; };
 		A6ED4FC518352BF700CB85C1 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED4FC418352BF700CB85C1 /* PageViewController.m */; };
 		A6ED4FC818352C0B00CB85C1 /* PersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6ED4FC718352C0B00CB85C1 /* PersonalInfoViewController.m */; };
+		A6FF15361847F68F00BB09C9 /* DistrictDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FF15351847F68F00BB09C9 /* DistrictDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -302,6 +303,8 @@
 		A6ED4FC418352BF700CB85C1 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		A6ED4FC618352C0B00CB85C1 /* PersonalInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalInfoViewController.h; sourceTree = "<group>"; };
 		A6ED4FC718352C0B00CB85C1 /* PersonalInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalInfoViewController.m; sourceTree = "<group>"; };
+		A6FF15341847F68F00BB09C9 /* DistrictDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistrictDetailViewController.h; sourceTree = "<group>"; };
+		A6FF15351847F68F00BB09C9 /* DistrictDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistrictDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -393,6 +396,8 @@
 				5C60DE01184411DC00D1EDFA /* OdataViewController.m */,
 				4EBEA64818459B4100DB560F /* MapViewController.h */,
 				4EBEA64918459B4100DB560F /* MapViewController.m */,
+				A6FF15341847F68F00BB09C9 /* DistrictDetailViewController.h */,
+				A6FF15351847F68F00BB09C9 /* DistrictDetailViewController.m */,
 			);
 			path = SampleTest;
 			sourceTree = "<group>";
@@ -783,6 +788,7 @@
 				5C60DDD118440D4D00D1EDFA /* Utility.m in Sources */,
 				5C4A205D183536F600C09BAD /* SBJsonStreamParserState.m in Sources */,
 				4EC63F161834DE7F00D4E90A /* AppDelegate.m in Sources */,
+				A6FF15361847F68F00BB09C9 /* DistrictDetailViewController.m in Sources */,
 				5C60DDE618440D4D00D1EDFA /* CredentialType.m in Sources */,
 				5C60DDDE18440D4D00D1EDFA /* QueryComponents.m in Sources */,
 				4EC63F121834DE7F00D4E90A /* main.m in Sources */,

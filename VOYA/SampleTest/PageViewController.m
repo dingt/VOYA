@@ -100,31 +100,37 @@
 {
     [super viewDidLoad];
     
-    self.URLTextField.delegate=self;
-    NSString *city = self.title;
-    cityname = self.title;
-    NSDictionary *dict = [[NSDictionary alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"CityList" ofType:@"plist"]];
-    NSURL *url = [dict objectForKey:city];
-    NSLog(@"url=%@", url);
-    self.URLTextField.text = (NSString *)url;
-    self.urlString = [dict objectForKey:city];
-    UIActivityIndicatorView* spinner =
-    [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:
-      UIActivityIndicatorViewStyleWhite] autorelease];
-	[spinner startAnimating];
-	activityItem = [[UIBarButtonItem alloc] initWithCustomView:spinner];
-   
+    @try {
+        self.URLTextField.delegate=self;
+        NSString *city = self.title;
+        cityname = self.title;
+        NSDictionary *dict = [[NSDictionary alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"CityList" ofType:@"plist"]];
+        NSURL *url = [dict objectForKey:city];
+        NSLog(@"url=%@", url);
+        self.URLTextField.text = (NSString *)url;
+        self.urlString = [dict objectForKey:city];
+        UIActivityIndicatorView* spinner =
+        [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:
+          UIActivityIndicatorViewStyleWhite] autorelease];
+        [spinner startAnimating];
+        activityItem = [[UIBarButtonItem alloc] initWithCustomView:spinner];
+        
+        
+        //add test for odata query
+        NSLog(@"begin");
+        NorthwindEntities *proxy = [[NorthwindEntities alloc] initWithUri:@"http://localhost:8886/test2.svc/" credential:nil];
+        //[dict objectForKey:city]
+        NSString *searchCity = [[NSString alloc] initWithFormat:@"City?$filter=name eq '%@'" ,city];
+        QueryOperationResponse *response = [proxy execute:searchCity];
+        NSMutableArray *citiesArray  = [response getResult];
+        NorthwindModel_City* city1 = [citiesArray objectAtIndex:0];
+        NSLog(@"City Name = %@ \n City URL = %@", [city1 getname], [city1 geturl]);
+        URLTextField.text = [city1 geturl];
 
-    //add test for odata query
-    NSLog(@"begin");
-    NorthwindEntities *proxy = [[NorthwindEntities alloc] initWithUri:@"http://localhost:8886/test2.svc/" credential:nil];
-    //[dict objectForKey:city]
-    NSString *searchCity = [[NSString alloc] initWithFormat:@"City?$filter=name eq '%@'" ,city];
-    QueryOperationResponse *response = [proxy execute:searchCity];
-    NSMutableArray *citiesArray  = [response getResult];
-    NorthwindModel_City* city1 = [citiesArray objectAtIndex:0];
-    NSLog(@"City Name = %@ \n City URL = %@", [city1 getname], [city1 geturl]);
-    URLTextField.text = [city1 geturl];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Exception:%@", exception);
+    }
     
    // self.pageWebView.scrollView.scrollEnabled=YES;
    // self.pageWebView.scrollView.bounces=YES;
