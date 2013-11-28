@@ -3,38 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>New York</key>
-	<string>City?$filter=name eq &apos;New York&apos;</string>
+	<string>http://en.wikivoyage.org/wiki/New_York_City</string>
 	<key>Boston</key>
-	<string>City?$filter=name eq &apos;Boston&apos;</string>
-	<key>Back Bay</key>
-	<string>District?$filter=name eq &apos;Back Bay&apos;</string>
-	<key>Beacon Hill</key>
-	<string>District?$filter=name eq &apos;Beacon Hill&apos;</string>
-	<key>Charlestown</key>
-	<string>District?$filter=name eq &apos;Charlestown&apos;</string>
-	<key>Chinatown</key>
-	<string></string>
-	<key>Dorchester</key>
-	<string></string>
-	<key>Downtown</key>
-	<string></string>
-	<key>East Boston</key>
-	<string></string>
-	<key>Fenway-Kenmore</key>
-	<string></string>
-	<key>Financial District</key>
-	<string></string>
-	<key>Jamaica Plain</key>
-	<string></string>
-	<key>Mission Hill</key>
-	<string></string>
-	<key>North End</key>
-	<string></string>
-	<key>Roxbury</key>
-	<string></string>
-	<key>South Boston</key>
-	<string>http://www.gmail.com</string>
-	<key>South End</key>
-	<string></string>
+	<string>http://en.wikivoyage.org/wiki/Boston</string>
+	<key>Las Vegas</key>
+	<string>http://en.wikivoyage.org/wiki/Las_vegas</string>
+	<key>Cambridge</key>
+	<string>http://en.wikivoyage.org/wiki/Cambridge</string>
 </dict>
 </plist>

@@ -10,12 +10,15 @@
 #import "NorthwindEntities.h"
 
 @interface OdataViewController : UIViewController
-@property (retain, nonatomic) IBOutlet UILabel *distributesLabel;
 
-@property (retain, nonatomic) IBOutlet UILabel *playLabel;
+@property (retain, nonatomic) IBOutlet UITextView *cityTextView;
 
-@property (retain, nonatomic) IBOutlet UILabel *seeLabel;
+@property (retain, nonatomic) IBOutlet UITextView *districtTextView;
 
-@property (retain, nonatomic) IBOutlet UILabel *cityLabel;
+@property (retain, nonatomic) IBOutlet UITextView *playTextView;
+
+@property (retain, nonatomic) IBOutlet UITextView *seeTextView;
+
+
 
 @end

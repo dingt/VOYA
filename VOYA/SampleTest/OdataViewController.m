@@ -40,15 +40,15 @@
     NSMutableArray *citiesArray  = [response getResult];
     if (citiesArray == nil)
     {
-        self.cityLabel.text = @"Null";
-        self.distributesLabel.text = @"Null";
-        self.seeLabel.text = @"Null";
-        self.playLabel.text = @"Null";
+        self.cityTextView.text = @"Null";
+        self.districtTextView.text = @"Null";
+        self.seeTextView.text = @"Null";
+        self.playTextView.text = @"Null";
     }
     else {
     NorthwindModel_City *city = [citiesArray objectAtIndex:0];
     
-    self.cityLabel.text = [city geturl];
+    self.cityTextView.text = [city geturl];
 
     
     // search the related districts with current city
@@ -58,14 +58,14 @@
     
     for (NorthwindModel_District *obj in districtArray)
     {
-        NSMutableString *labeltext = [[NSMutableString alloc]initWithString:self.distributesLabel.text];
+        NSMutableString *labeltext = [[NSMutableString alloc]initWithString:self.districtTextView.text];
         NSLog(@"%@", [obj getname]);
         NSString *districtName = [[NSString alloc] initWithFormat:@"District Name : %@ \n", [obj getname]];
         [labeltext appendString:districtName];
         [labeltext appendString:@"District Understanding : \n"];
         NSLog(@"%@", [obj getunderstand]);
         [labeltext appendString:[obj getunderstand]];
-        self.distributesLabel.text = labeltext;
+        self.districtTextView.text = labeltext;
     }
     
     // search the related play with current city
@@ -75,7 +75,7 @@
     
     for (NorthwindModel_Play *obj in playArray)
     {
-        NSMutableString *labelText = [[NSMutableString alloc] initWithString:self.playLabel.text];
+        NSMutableString *labelText = [[NSMutableString alloc] initWithString:self.playTextView.text];
         NSLog(@"see type : %@", [obj gettype]);
         NSString *playType = [[NSString alloc] initWithFormat:@"Play Type : %@ \n", [obj gettype]];
         [labelText appendString:playType];
@@ -83,7 +83,7 @@
         NSLog(@"see location : %@", [obj getlocation]);
         [labelText appendString:[obj getexplain]];
         NSLog(@"see explain : %@", [obj getexplain]);
-        self.playLabel.text = labelText;
+        self.playTextView.text = labelText;
     }
     
     //search the related see with current city
@@ -93,12 +93,12 @@
     
     for (NorthwindModel_See *obj in seeArray)
     {
-        NSMutableString *labeltext = [[NSMutableString alloc] initWithString:self.seeLabel.text];
+        NSMutableString *labeltext = [[NSMutableString alloc] initWithString:self.seeTextView.text];
         NSLog(@"place name : %@", [obj getplaceName]);
         NSLog(@"intro : %@", [obj getintro]);
         NSString *place = [[NSString alloc] initWithFormat:@"Place Name : %@ \n Introduction : %@ \n", [obj getplaceName], [obj getintro]];
         [labeltext appendString:place];
-        self.seeLabel.text = labeltext;
+        self.seeTextView.text = labeltext;
     }
     
     // search understand of the city
@@ -109,7 +109,7 @@
     NorthwindModel_Understand *understand = [understandArray objectAtIndex:0];
     NSString *under = [[NSString alloc] initWithFormat:@"History : %@ \n Today : %@ \n\n Visit Time : %@ ", [understand gethistory]
                        , [understand gettoday], [understand getvisitTime]];
-    self.cityLabel.text = under;
+    self.cityTextView.text = under;
     }
     
 
@@ -122,10 +122,10 @@
 }
 
 - (void)dealloc {
-    [_distributesLabel release];
-    [_playLabel release];
-    [_seeLabel release];
-    [_cityLabel release];
+    [_cityTextView release];
+    [_districtTextView release];
+    [_playTextView release];
+    [_seeTextView release];
     [super dealloc];
 }
 @end
