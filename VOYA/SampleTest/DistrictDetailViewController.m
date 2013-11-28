@@ -40,7 +40,7 @@
         }
         if (self.queryOption.selectedSegmentIndex == 2)
         {
-            search = [[NSString alloc] initWithFormat:@"District?$filter=cityname eq '%@'", querystring];
+            search = [[NSString alloc] initWithFormat:@"District?$filter=cityName eq '%@'", querystring];
         }
         
         QueryOperationResponse *response = [proxy execute:search];

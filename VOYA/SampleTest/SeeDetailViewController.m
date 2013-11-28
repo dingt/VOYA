@@ -41,11 +41,11 @@
         }
         if (self.optionSegment.selectedSegmentIndex == 1)
         {
-            search = [[NSString alloc] initWithFormat:@"See?$filter=name eq '%@'", querystring];
+            search = [[NSString alloc] initWithFormat:@"See?$filter=placeName eq '%@'", querystring];
         }
         if (self.optionSegment.selectedSegmentIndex == 2)
         {
-            search = [[NSString alloc] initWithFormat:@"See?$filter=cityname eq '%@'", querystring];
+            search = [[NSString alloc] initWithFormat:@"See?$filter=cityName eq '%@'", querystring];
         }
         
         QueryOperationResponse *response = [proxy execute:search];
@@ -71,7 +71,7 @@
     }
     @catch (NSException *e) {
         NSLog(@"Exception: %@", e);
-        self.textField.text = @"Bad Input";
+        self.textView.text = @"Bad Input";
     }
 
     
