@@ -2,8 +2,8 @@
 //  main.m
 //  SampleTest
 //
-//  Created by yangxia on 13-11-14.
-//  Copyright (c) 2013年 yangxia. All rights reserved.
+//  Created by CHIRU on 13-11-14.
+//  Copyright (c) 2013年 CHIRU. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

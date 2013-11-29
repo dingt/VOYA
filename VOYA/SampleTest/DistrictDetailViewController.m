@@ -3,7 +3,7 @@
 //  VOYA
 //
 //  Created by Eva Lin on 11/28/13.
-//  Copyright (c) 2013 yangxia. All rights reserved.
+//  Copyright (c) 2013 Chiru. All rights reserved.
 //
 
 #import "DistrictDetailViewController.h"

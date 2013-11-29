@@ -3,7 +3,7 @@
 //  SampleTest
 //
 //  Created by Tongzu Ding on 11/17/13.
-//  Copyright (c) 2013 yangxia. All rights reserved.
+//  Copyright (c) 2013 CHIRU. All rights reserved.
 //
 
 #import "VOYAData.h"

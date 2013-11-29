@@ -2,8 +2,8 @@
 //  MapViewController.m
 //  VOYA
 //
-//  Created by yangxia on 13-11-27.
-//  Copyright (c) 2013年 yangxia. All rights reserved.
+//  Created by CHIRU on 13-11-27.
+//  Copyright (c) 2013年 CHIRU. All rights reserved.
 //
 
 #import "MapViewController.h"
